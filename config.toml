@@ -47,3 +47,8 @@ url = "/projects"
 [[params.nav.custom]]
 title = "关于"
 url = "/about"
+
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5
