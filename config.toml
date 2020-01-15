@@ -1,0 +1,48 @@
+theme = "hugo-notepadium"
+
+title = "简讯"
+baseURL = "https://lijianxun.top/"
+copyright = "©2016-2020 Jianxun. | 岁月无婷无华✨"
+
+paginate = 10
+paginatePath = "page"
+languageCode = "zh-cn"
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+disqusShortname = "alpha87"
+
+[params.comments]
+enable = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+style = "auto"
+slogan = "唯书与爱，不可辜负。"
+dateFormat = "Monday, January 2, 2006"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[params.syntax]
+use = "hljs"
+theme = "github"
+darkTheme = "vs2015"
+
+[params.nav]
+showCategories = true
+showTags = true
+
+[permalinks]
+post = "/:year/:month/:day/:title/"
+
+[[params.nav.custom]]
+title = "个人项目"
+url = "/projects"
+
+[[params.nav.custom]]
+title = "关于"
+url = "/about"
