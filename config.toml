@@ -30,8 +30,8 @@ noClasses = false
 
 [params.syntax]
 use = "hljs"
-theme = "solarized-light"
-darkTheme = "solarized-dark"
+theme = "atom-one-light"
+darkTheme = "atom-one-dark"
 
 [params.nav]
 showCategories = true
