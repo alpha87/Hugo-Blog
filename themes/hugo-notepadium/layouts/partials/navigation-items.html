@@ -1,6 +1,7 @@
 {{- $nav := . -}}
 {{- if or $nav.showCategories $nav.showTags $nav.custom -}}
-<div class="nav wrap"><nav class="nav">
+<div class="nav wrap">
+    <nav class="nav">
     {{- if $nav.showCategories -}}
         <a class="nav item" href="{{- `/categories/` | relLangURL -}}">分类</a>
     {{- end -}}
@@ -14,5 +15,9 @@
             {{- if strings.HasPrefix $url "http" -}}target="_blank"
             {{- end -}}>{{- .title -}}</a>
     {{- end -}}
-</nav></div>
+
+    <!-- 搜索框 -->
+    <!-- <input id="search-item" autocomplete='off' autocorrect='off' placeholder="搜索..." spellcheck='false' type='text'> -->
+    </nav>
+</div>
 {{- end -}}

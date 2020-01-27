@@ -30,8 +30,8 @@ noClasses = false
 
 [params.syntax]
 use = "hljs"
-theme = "github"
-darkTheme = "vs2015"
+theme = "solarized-light"
+darkTheme = "solarized-dark"
 
 [params.nav]
 showCategories = true
