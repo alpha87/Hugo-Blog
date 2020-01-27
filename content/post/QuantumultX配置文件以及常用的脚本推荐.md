@@ -184,4 +184,4 @@ $done({ body: JSON.stringify(obj) });
 
 如果你还想自定义定时任务，可以使用这个工具来检查 cron 语法是否存在问题：[https://tool.lu/crontab/](https://tool.lu/crontab/)
 
-> 打个小广告，如果有需要购买 QuantumultX 的同学可以找我代购。**链接：[https://k.ruyu.com/50ymZGlc](https://k.ruyu.com/50ymZGlc)**
+> 打个小广告，如果有需要购买 QuantumultX 的同学可以找我代购。**[请猛戳我！](https://k.ruyu.com/50ymZGlc)**
