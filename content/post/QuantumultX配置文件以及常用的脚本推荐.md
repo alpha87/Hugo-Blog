@@ -112,7 +112,7 @@ hostname=mp.weixin.qq.com, api.ithome.com, appfan.im, ssp-x.yoloho.com, *.google
 
 使用脚本的话需要在脚本头部注释填写你的设备 ID。设备 ID 在其他设置里可以找到：
 
-![设备 ID]](https://i.loli.net/2020/01/27/4Jpwm2SH3xezQYf.jpg)
+![设备 ID](https://i.loli.net/2020/01/27/4Jpwm2SH3xezQYf.jpg)
 
 ```javascript
 /**
