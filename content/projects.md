@@ -4,7 +4,7 @@ date: 2019-06-13
 comments: false
 ---
 
-![Desktop](https://i.loli.net/2020/01/27/EhaTPJNQKMvFt5u.jpg " ")
+![Desktop](https://i.loli.net/2020/01/27/2XTH4YQm8nhidwG.jpg " ")
 
  - 知乎看图小程序
  - 表白墙社交小程序
