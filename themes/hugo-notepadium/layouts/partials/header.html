@@ -4,7 +4,7 @@
                 {{- if $logo -}}
                 <img class="site logo" src="{{- $logo | relURL -}}" alt />
                 {{- end -}}
-                <span class="site name">{{- site.Title | safeHTML -}}</span></a></span>
+                <span class="site name" style="font-size: 24px;">{{- site.Title | safeHTML -}}</span></a></span>
         <span class="header right-side">
             {{- partial "navigation-items.html" site.Params.nav -}}
         </span></div>
@@ -17,8 +17,9 @@
 <script>
     // 添加打字机功能
     var typed = new Typed('.title', {
-      strings: ["唯书与爱，不可辜负。"], //输入内容, 支持html标签
-      typeSpeed: 75, //打字速度
-      backSpeed: 50 //回退速度
+      strings: ["唯书与爱，不可辜负。", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95, //打字速度
+      backSpeed: 35 //回退速度
     });
 </script>

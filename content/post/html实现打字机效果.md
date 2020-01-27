@@ -54,3 +54,7 @@ bower install typed.js
 
 </html>
 ```
+
+# 官方示例
+
+可以参考这个网页的效果：[http://mattboldt.github.io/typed.js/](http://mattboldt.github.io/typed.js/)
