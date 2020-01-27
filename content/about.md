@@ -4,6 +4,8 @@ date: 2016-04-06
 comments: false
 ---
 
+![okok](https://i.loli.net/2020/01/27/Jph7edZWwCS5fjT.jpg " ")
+
 ## 简讯
 
 超业余码农。

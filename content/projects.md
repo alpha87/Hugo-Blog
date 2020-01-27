@@ -4,6 +4,8 @@ date: 2019-06-13
 comments: false
 ---
 
+![Desktop](https://i.loli.net/2020/01/27/EhaTPJNQKMvFt5u.jpg " ")
+
  - 知乎看图小程序
  - 表白墙社交小程序
  - Django 用户认证系统
@@ -18,11 +20,11 @@ comments: false
 
 **简单展示**
 
-![IMG_4101.jpg](https://i.loli.net/2019/06/13/5d019a195272716328.jpg)
+![宅宅生活收藏夹](https://i.loli.net/2020/01/27/rtYlf9aNAPKyREG.jpg)
 
 **小程序码**
 
-![gh_e89caa7aa825_258.jpg](https://i.loli.net/2019/06/13/5d0199e86527257104.jpg)
+![宅宅生活收藏夹小程序](https://i.loli.net/2019/06/13/5d0199e86527257104.jpg)
 
 欢迎大家使用。
 
