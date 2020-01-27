@@ -1,7 +1,7 @@
 ---
 title: "强大的Mac自动化工具——Hammerspoon"
 date: 2019-04-16
-categories: ['应用推荐']
+categories: ['好物推荐']
 tags: ['脚本', 'Hammerspoon']
 keywords: [ ]
 draft: false

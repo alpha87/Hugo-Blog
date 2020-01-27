@@ -1,7 +1,7 @@
 ---
 title: "Pythonista 使用小记"
 date: 2019-12-28
-categories: ['应用推荐']
+categories: ['好物推荐']
 tags: ['脚本', '工具', '应用推荐']
 keywords: ['Python', '脚本']
 draft: false

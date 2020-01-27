@@ -1,7 +1,7 @@
 ---
 title: "管理Mac启动台（Launchpad）图标，删除或移动"
 date: 2020-01-01
-categories: ['贵在折腾']
+categories: ['好物推荐']
 tags: ['Mac', '工具', '应用推荐']
 keywords: [ ]
 draft: false
