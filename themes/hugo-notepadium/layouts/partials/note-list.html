@@ -31,11 +31,11 @@
             <p class="note labels">
                 {{- range .Params.categories -}}
                 {{- $url := print "/categories/" (. | urlize) "/" -}}
-                <a class="note category" href="{{- $url | relLangURL -}}"><span class="hashtag"># </span>{{- . -}}</a>
+                <a class="note category" href="{{- $url | relLangURL -}}"><span class="hashtag"><i class="fas fa-align-left"></i> </span>{{- . -}}</a>
                 {{- end -}}
                 {{- range .Params.tags -}}
                 {{- $url := print "/tags/" ( . | urlize) "/" -}}
-                <a class="note tag" href="{{- $url | relLangURL -}}"><span class="hashtag">\</span>{{- . -}}</a>
+                <a class="note tag" href="{{- $url | relLangURL -}}"><span class="hashtag"><i class="fas fa-tag"></i> </span>{{- . -}}</a>
                 {{- end -}}
             </p>
         {{- end -}}

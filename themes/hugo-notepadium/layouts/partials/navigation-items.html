@@ -3,21 +3,38 @@
 <div class="nav wrap">
     <nav class="nav">
     {{- if $nav.showCategories -}}
-        <a class="nav item" href="{{- `/categories/` | relLangURL -}}">分类</a>
+        <a class="nav item" href="{{- `/categories/` | relLangURL -}}">
+            <i class="fas fa-align-left"></i> 分类
+        </a>
     {{- end -}}
     {{- if $nav.showTags -}}
-        <a class="nav item" href="{{- `/tags/` | relLangURL -}}">标签</a>
+        <a class="nav item" href="{{- `/tags/` | relLangURL -}}">
+            <i class="fas fa-tags"></i> 标签
+        </a>
     {{- end -}}
     {{- range $nav.custom -}}
         {{- $url := .url | safeURL -}}
         {{- if strings.HasPrefix $url "/" -}}{{- $url = $url | relLangURL -}}{{- end -}}
         <a class="nav item" href="{{- $url -}}" 
             {{- if strings.HasPrefix $url "http" -}}target="_blank"
-            {{- end -}}>{{- .title -}}</a>
-    {{- end -}}
+            {{- end -}}>
+            
+            <!-- 根据页面标题使用不同图标 -->
+            {{- if (eq .title "个人项目")}}
+            <i class="fas fa-cubes"></i>&nbsp;
+            {{- .title -}}
+            {{- end -}}
+            
+            {{- if (eq .title "关于")}}
+            <i class="fas fa-feather-alt"></i>&nbsp;
+            {{- .title -}}
+            {{- end -}}
 
-    <!-- 搜索框 -->
-    <!-- <input id="search-item" autocomplete='off' autocorrect='off' placeholder="搜索..." spellcheck='false' type='text'> -->
+        </a>
+    {{- end -}}
+    <button class="nav item">
+        <i class="fas fa-search"></i> 搜索
+    </button>
     </nav>
 </div>
 {{- end -}}
