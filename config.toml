@@ -2,7 +2,7 @@ theme = "hugo-notepadium"
 
 title = "简讯"
 baseURL = "https://lijianxun.top/"
-copyright = "©2016-2020 Jianxun. | 岁月无婷无华✨"
+copyright = "2016-2020 Jianxun. | 岁月无婷无华✨"
 
 paginate = 10
 paginatePath = "page"
