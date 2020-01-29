@@ -3,18 +3,18 @@
     {{- range .Params.categories -}}
     {{- $url := print "/categories/" (. | urlize) "/" -}}
     <a class="article category" href={{- $url | relLangURL -}}><span class="hashtag">
-        <i class="fas fa-align-left"></i> 
+        <i class="fas fa-align-left"></i>&nbsp;
     </span>{{- . -}}</a>
     {{- end -}}
     {{- range .Params.tags -}}
     {{- $url := print "/tags/" ( . | urlize) "/" -}}
     <a class="article tag" href={{- $url | relLangURL -}}><span class="hashtag">
-        <i class="fas fa-tags"></i>
+        <i class="fas fa-tags"></i>&nbsp;
     </span>{{- . -}}</a>
     {{- end -}}
     {{- range .Params.keywords -}}
     <span class="article keyword"><span class="hashtag">
-        <i class="fas fa-ellipsis-v"></i>
+        <i class="fas fa-ellipsis-v"></i>&nbsp;
     </span>{{- . -}}</span>
     {{- end -}}
 </section>
