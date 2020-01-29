@@ -37,7 +37,7 @@ draft: false
 
 ------
 
-👉 领取地址：https://start.1password.com/sign-up/family?c=CANVA2020&l=zh
+👉 领取地址：[https://start.1password.com/sign-up/family?c=CANVA2020&l=zh](https://start.1password.com/sign-up/family?c=CANVA2020&l=zh)
 
 👉 平台：macOS、iOS、Windows
 
