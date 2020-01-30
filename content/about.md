@@ -8,7 +8,7 @@ comments: false
 
 ## 简讯
 
-超业余码农，。
+超业余码农。
 
 没事会写写 **Python**，**JavaScript** 代码。
 
