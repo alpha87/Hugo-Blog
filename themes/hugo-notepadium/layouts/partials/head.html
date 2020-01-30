@@ -7,6 +7,21 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 <!-- <script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"></script> -->
 <script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script>
+<script async>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+    
 
 {{- define "title" -}}
     {{- $title := .Title -}}
