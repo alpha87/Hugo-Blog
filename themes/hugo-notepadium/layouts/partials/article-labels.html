@@ -9,7 +9,7 @@
     {{- range .Params.tags -}}
     {{- $url := print "/tags/" ( . | urlize) "/" -}}
     <a class="article tag" href={{- $url | relLangURL -}}><span class="hashtag">
-        <i class="fas fa-tags"></i>
+        <i class="fas fa-tag"></i>
     </span>{{- . -}}</a>
     {{- end -}}
     <!-- {{- range .Params.keywords -}}
