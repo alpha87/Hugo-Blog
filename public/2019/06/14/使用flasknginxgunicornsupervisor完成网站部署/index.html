@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>使用Flask，Nginx，Gunicorn，Supervisor完成网站部署&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">使用Flask，Nginx，Gunicorn，Supervisor完成网站部署</h1><p class="article date">Friday, June 14, 2019<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p><strong>宅宅生活收藏夹</strong>小程序的 web 后端是 flask，因为只涉及到几个接口，flask 简单快速。</p>
+<p>这篇文章记录一下整个部署的过程。</p>
+<!-- more -->
+<p>当我们使用 flask 开发完成 web 应用后，关键是部署到云服务器上，这样才能真正在网络上让用户读者访问。</p>
+<p>部署过程看似复杂，但只要安装好这几个工具，一步一步来就没有问题。</p>
+<p>服务器使用的版本是 Ubuntu 16.04.6 LTS。</p>
+<h1 id="安装-flask-gunicorn-supervisor">安装 Flask, Gunicorn, Supervisor</h1>
+<p>因为使用的是 python3，避免 pip 安装错位置，终端输入命令：</p>
+<p><code>python3 -m pip install flask gunicorn supervisor</code></p>
+<p>等待安装完成。</p>
+<h1 id="flask">Flask</h1>
+<p>写一个简单的 flask demo。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># app.py</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">/</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">return</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">Hello, World!</span><span class="s1">&#39;</span>
+
+</code></pre></div><p>终端输入：</p>
+<p><code>flask run -h 0.0.0.0 -p 8000</code></p>
+<p>如果你的云服务器安全组规则开启了 <code>8000</code> 端口，那么你在浏览器访问服务器的公网 IP，8000 端口下会显示 <code>Hello, World!</code>。</p>
+<p>怎么配置安全组规则还请查看各自服务商的文档。</p>
+<p>阿里云如下配置：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://user-images.githubusercontent.com/25655581/60378263-760bee80-9a52-11e9-9c5f-353ab3901908.png"><img  src="https://user-images.githubusercontent.com/25655581/60378263-760bee80-9a52-11e9-9c5f-353ab3901908.png"
+        alt="配置安全组规则"/></a></p>
+<h1 id="使用-gunicorn-启动程序">使用 gunicorn 启动程序</h1>
+<p>当我们部署到服务器上时，需要一个性能更优的<code>WSGI</code>服务器。</p>
+<p>终端输入：</p>
+<p><code>gunicorn --workers=4 --bind=0.0.0.0:8000 app:app</code></p>
+<p>如果正常启动，没有报错，在浏览器应该会看到 flask 返回的 <code>Hello, World!</code>。</p>
+<p><code>workers</code> 用来定义工作线程的数量，一般 <code>worker</code> 的数量为 <code>(2 × $num_cores) + 1</code>。官方文档中介绍到虽然这个公式并不十分科学，但它基于这样一个假设: 对于给定的核心数，一个工作线程将从套接字读取或写入数据，而另一个工作线程处理请求。</p>
+<p><code>bind</code> 用来绑定程序运行的主机地址和端口。</p>
+<p>如果设置了SSL证书，命令为:</p>
+<p><code>gunicorn --keyfile=&lt;私钥文件&gt; --certfile=&lt;SSL 证书文件&gt; --ca-certs=&lt;CA 证书文件&gt; --bind=0.0.0.0:443 app:app</code></p>
+<p>更多参数还请自行查看 <a href="https://docs.gunicorn.org/en/stable/"target="_blank">gunicorn 文档</a>。</p>
+<h1 id="安装并配置-nginx">安装并配置 Nginx</h1>
+<p>我们需要 Nginx 作为反向代理使用。</p>
+<p>输入以下命令安装 nginx：</p>
+<p><code>apt-get install nginx -y</code></p>
+<p>安装完成后进入：</p>
+<p><code>cd /etc/nginx/sites-enabled</code></p>
+<p>删除 default 文件：</p>
+<p><code>rm default</code></p>
+<p>编辑新的配置文件，命名为 <code>app</code>：</p>
+<pre><code>server {
+    listen 80;
+
+    server_name _; # 如果有域名可以写到这里
+
+    access_log  /var/log/nginx/access.log;
+    error_log  /var/log/nginx/error.log;
+
+    location / {
+        proxy_pass         http://127.0.0.1:8000/;
+        proxy_redirect     off;
+
+        proxy_set_header   Host                 $host;
+        proxy_set_header   X-Real-IP            $remote_addr;
+        proxy_set_header   X-Forwarded-For      $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto    $scheme;
+    }
+}
+</code></pre><p>配置文件来自 <a href="http://flask.pocoo.org/docs/1.0/deploying/wsgi-standalone/#proxy-setups"target="_blank">flask 文档</a>。</p>
+<p>输入：</p>
+<p><code>nginx -t</code></p>
+<p>测试一下 nginx 配置有无问题。</p>
+<p>没有问题的话重启服务：</p>
+<p><code>service nginx restart</code></p>
+<p>有关 nginx 的配置完成。</p>
+<h1 id="使用-supervisor-管理进程">使用 supervisor 管理进程</h1>
+<p>Supervisor 是一个<code>客户端/服务器</code>系统，允许其用户在类<code>UNIX</code>操作系统上控制进程。当进程被意外杀死，Supervisor 可以主动将其拉起。</p>
+<p>使用如下命令构建配置文件：</p>
+<p><code>echo_supervisord_conf &gt; /etc/supervisord.conf</code></p>
+<p>编辑配置文件，加入以下内容：</p>
+<pre><code>[program:gunicorn]
+user = root             ; root 用户启动
+directory = /root       ; flask 文件所在目录
+command = /usr/local/bin/gunicorn --workers=4 --bind=0.0.0.0:8000 app:app ; 程序启动命令（第一个 app 是 flask 的文件名，第二个是 application 的缩写）
+startsecs = 5           ; 启动 5 秒后没有异常退出，视作正常启动
+autostart = true        ; 在 supervisord 启动时自动启动
+autorestart = true      ; 程序异常退出后重启
+redirect_stderr = true  ; stderr 也重定向至 stdout
+stdout_logfile = /root/logs/gunicorn.log ; stdout 日志文件，需要手动创建日志存放目录
+</code></pre><p><code>gunicorn</code> 路径可以这样找到：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">➜  ~ which gunicorn
+/usr/local/bin/gunicorn
+</code></pre></div><p>输入：</p>
+<p><code>supervisord -c /etc/supervisord.conf</code></p>
+<p>启动服务。</p>
+<p>常用命令如下：（具体可查看<a href="http://supervisord.org/running.html#supervisorctl-actions"target="_blank">官方文档</a>）</p>
+<pre><code>supervisorctl status                # Get all process status info.
+supervisorctl stop gunicorn         # Stop a process.
+supervisorctl start gunicorn        # Start a process.
+supervisorctl restart gunicorn      # Restart a process Note: restart does not reread config files.
+supervisorctl reread                # Reload the daemon’s configuration files, without add/remove (no restarts).
+supervisorctl update                # Reload config and add/remove as necessary, and will restart affected programs.
+</code></pre><p>全部配置完成就实现了 flask 的部署。</p>
+</article><section class="article labels"><a class="article category" href=/categories/flask/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Flask</a><a class="article tag" href=/tags/flask/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Flask</a><a class="article tag" href=/tags/nginx/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Nginx</a><a class="article tag" href=/tags/gunicorn/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Gunicorn</a><a class="article tag" href=/tags/supervisor/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Supervisor</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/"><span class="li"></span>微信小程序输入框的使用</a></p><p><a class="link" href="/2019/05/28/windows%E7%B3%BB%E7%BB%9F%E5%90%84%E7%A7%8D%E9%94%99%E8%AF%AF%E4%BF%AE%E5%A4%8D%E8%AE%B0%E5%BD%95/"><span class="li"></span>Windows系统各种错误修复记录</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

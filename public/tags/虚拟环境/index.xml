@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>虚拟环境 on 简讯</title>
+    <link>/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</link>
+    <description>Recent content in 虚拟环境 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用virtualenv和virtualenvwrapper搭建python虚拟环境</title>
+      <link>/2018/12/15/%E4%BD%BF%E7%94%A8virtualenv%E5%92%8Cvirtualenvwrapper%E6%90%AD%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/12/15/%E4%BD%BF%E7%94%A8virtualenv%E5%92%8Cvirtualenvwrapper%E6%90%AD%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;使用python语言编程的过程中，难免会在系统里安装多个python版本。可能根据开发项目的需要，同一库会使用到不同版本，不同库之间版本不一致出现冲突等情况。这时候可以使用virtualenv管理虚拟环境。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

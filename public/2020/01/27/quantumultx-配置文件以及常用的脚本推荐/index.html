@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>QuantumultX 配置文件以及常用的脚本推荐&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">QuantumultX 配置文件以及常用的脚本推荐</h1><p class="article date">Monday, January 27, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><p>这一段时间把科学上网工具（iOS 平台）从小火箭换成了 QuantumultX，因为不论是颜值，性能，还是自定义配置文件，QuantumultX 都完胜小火箭。当然小火箭的更新速度和协议支持是大部分工具无法比拟的。</p>
+<p>所以就把我自己使用的极简策略和常用脚本（去广告脚本，签到脚本）推荐出来，小白可以参考一下。在参考以后，配合默认配置文件估计就可以很快上手更新自己独有的策略。</p>
+<!-- more -->
+<h1 id="配置文件">配置文件</h1>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># - QuantumultX CONFIG - #</span>
+
+<span class="o">[</span>general<span class="o">]</span>
+<span class="nv">server_check_url</span><span class="o">=</span>http://www.qualcomm.cn/generate_204
+<span class="nv">dns_exclusion_list</span><span class="o">=</span>*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com
+<span class="nv">geo_location_checker</span><span class="o">=</span>http://ip-api.com/json/?lang<span class="o">=</span>zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
+
+<span class="o">[</span>dns<span class="o">]</span>
+<span class="nv">server</span><span class="o">=</span>223.5.5.5
+
+<span class="o">[</span>policy<span class="o">]</span>
+
+<span class="o">[</span>server_remote<span class="o">]</span>
+
+<span class="o">[</span>filter_remote<span class="o">]</span>
+https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/QuantumultX.list, <span class="nv">tag</span><span class="o">=</span>机场域名, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Global.list, <span class="nv">tag</span><span class="o">=</span>国外路线, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/ForeignMedia.list, <span class="nv">tag</span><span class="o">=</span>国外视频, force-policy<span class="o">=</span>proxy, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Media/YouTube.list, <span class="nv">tag</span><span class="o">=</span>YouTube, force-policy<span class="o">=</span>proxy, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/DomesticMedia.list, <span class="nv">tag</span><span class="o">=</span>国内视频, force-policy<span class="o">=</span>direct, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/China.list, <span class="nv">tag</span><span class="o">=</span>国内路线, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Hijacking.list, <span class="nv">tag</span><span class="o">=</span>运营商劫持及恶意网站, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list, <span class="nv">tag</span><span class="o">=</span>去广告, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Unbreak.list, <span class="nv">tag</span><span class="o">=</span>UNBREAK, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/AdRule.list, <span class="nv">tag</span><span class="o">=</span>NobyDa去广告, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="o">[</span>rewrite_remote<span class="o">]</span>
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, <span class="nv">tag</span><span class="o">=</span>默认, <span class="nv">enabled</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="o">[</span>server_local<span class="o">]</span>
+
+<span class="o">[</span>filter_local<span class="o">]</span>
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+geoip, cn, direct
+final, proxy
+
+<span class="o">[</span>rewrite_local<span class="o">]</span>
+<span class="p">;</span> YouTube 去广告
+^https?:<span class="se">\/</span><span class="se">\/</span>.+<span class="se">\.</span>googlevideo<span class="se">\.</span>com<span class="se">\/</span>.+<span class="p">&amp;</span>oad url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>.+<span class="se">\.</span>googlevideo<span class="se">\.</span>com<span class="se">\/</span>.+ctier url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>youtubei<span class="se">\.</span>googleapis<span class="se">\.</span>com<span class="se">\/</span>youtubei<span class="se">\/</span>.+ad_ url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>youtubei<span class="se">\.</span>googleapis<span class="se">\.</span>com<span class="se">\/</span>youtubei<span class="se">\/</span>.+log_ url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>.+<span class="se">\.</span>youtube<span class="se">\.</span>com<span class="se">\/</span>get_midroll_ url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>premiumyva<span class="se">\.</span>appspot<span class="se">\.</span>com<span class="se">\/</span>vmclickstoadvertisersite url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>.+<span class="se">\.</span>youtube<span class="se">\.</span>com<span class="se">\/</span>api<span class="se">\/</span>stats<span class="se">\/</span>ads url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>.+<span class="se">\.</span>youtube<span class="se">\.</span>com<span class="se">\/</span>api<span class="se">\/</span>stats<span class="se">\/</span>.+adformat url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>.+<span class="se">\.</span>youtube<span class="se">\.</span>com<span class="se">\/</span>pagead<span class="se">\/</span> url reject-img
+^https?:<span class="se">\/</span><span class="se">\/</span>.+<span class="se">\.</span>youtube<span class="se">\.</span>com<span class="se">\/</span>ptracking url reject-img
+
+<span class="p">;</span> 去除微信公众号文章内广告
+^https?:<span class="se">\/</span><span class="se">\/</span>mp<span class="se">\.</span>weixin<span class="se">\.</span>qq<span class="se">\.</span>com<span class="se">\/</span>mp<span class="se">\/</span>getappmsgad url script-response-body WeChat.js
+
+<span class="p">;</span> 去除 IT 之家新闻列表广告
+^https?:<span class="se">\/</span><span class="se">\/</span>api<span class="se">\.</span>ithome<span class="se">\.</span>com<span class="se">\/</span>json<span class="se">\/</span>slide<span class="se">\/</span>index url script-response-body ITHome.js
+^https?:<span class="se">\/</span><span class="se">\/</span>api<span class="se">\.</span>ithome<span class="se">\.</span>com<span class="se">\/</span>json<span class="se">\/</span>newslist<span class="se">\/</span>news url script-response-body ITHome.js
+^https?:<span class="se">\/</span><span class="se">\/</span>api<span class="se">\.</span>ithome<span class="se">\.</span>com<span class="se">\/</span>json<span class="se">\/</span>listpage<span class="se">\/</span>news.* url script-response-body ITHome.js
+
+<span class="p">;</span> PriceTag 去首页广告
+^https?:<span class="se">\/</span><span class="se">\/</span>appfan<span class="se">\.</span>im<span class="se">\/</span>api<span class="se">\/</span>v2<span class="se">\/</span>topics<span class="se">\/</span>.*?/posts.* url script-response-body PriceTagAD.js
+
+<span class="p">;</span> 大姨妈去广告
+^https?:<span class="se">\/</span><span class="se">\/</span>ssp-x<span class="se">\.</span>yoloho<span class="se">\.</span>com<span class="se">\/</span>api<span class="se">\/</span>ad.* url script-response-body Dayima.js
+
+<span class="o">[</span>mitm<span class="o">]</span>
+<span class="nv">hostname</span><span class="o">=</span>mp.weixin.qq.com, api.ithome.com, appfan.im, ssp-x.yoloho.com, *.googlevideo.com, s.youtube.com, www.youtube.com, youtubei.googleapis.com
+</code></pre></div><p><strong>GitHub 地址：<a href="https://raw.githubusercontent.com/alpha87/QuantumultX-Profiles/master/quantumultX_profile.conf"target="_blank">https://raw.githubusercontent.com/alpha87/QuantumultX-Profiles/master/quantumultX_profile.conf</a></strong></p>
+<p>因为我不看 netflix 等，对不同的应用或域名没有特殊节点需求，所以这个配置文件极为简单，没有任何策略。</p>
+<p>这份配置文件已经屏蔽了大部分广告，我又根据自己的需求屏蔽了 YouTube 五秒广告，微信公众号广告，IT 之家新闻列表广告，大姨妈烦人广告。</p>
+<p><strong>去广告脚本地址：<a href="https://github.com/alpha87/QuantumultX-Profiles"target="_blank">https://github.com/alpha87/QuantumultX-Profiles</a></strong></p>
+<p>使用效果类似小火箭，国内直连，国外扶梯，广告拦截。只要开启就可以无缝上网。</p>
+<p>效果图如下：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2020/01/27/Bz9cn6QOeNbrxDo.jpg"><img  src="https://i.loli.net/2020/01/27/Bz9cn6QOeNbrxDo.jpg"
+        alt="首页"/></a></p>
+<h1 id="去广告脚本">去广告脚本</h1>
+<p>去除广告理解起来很简单。可以分为两种去广告方式：</p>
+<ol>
+<li>直接拒绝连接，reject；</li>
+<li>修改 response</li>
+</ol>
+<p>以微信公众号广告为例，我们使用第二种方式，修改响应，去掉广告部分即可。</p>
+<p>使用脚本的话需要在脚本头部注释填写你的设备 ID。设备 ID 在其他设置里可以找到：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2020/01/27/4Jpwm2SH3xezQYf.jpg"><img  src="https://i.loli.net/2020/01/27/4Jpwm2SH3xezQYf.jpg"
+        alt="设备 ID"/></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm"> * @supported 你的设备 ID
+</span><span class="cm"> */</span>
+
+<span class="c1">// 去除微信公众号文章内广告
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">$response</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span><span class="p">;</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">advertisement_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">advertisement_info</span> <span class="o">=</span> <span class="p">[</span><span class="p">]</span><span class="p">;</span>
+<span class="k">delete</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">appid</span><span class="p">;</span>
+<span class="nx">$done</span><span class="p">(</span><span class="p">{</span> <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div><p>这部分代码很好理解。<code>obj</code> 就是微信公众号返回的数据，<code>obj</code> 里的 <code>appid</code>，<code>advertisement_num</code> 和 <code>advertisement_info</code> 都是和广告有关的数据。如何判断 <code>advertisement_num</code> 和 <code>advertisement_info</code> 分别给 <code>0</code> 和 <code>[]</code> 呢？我们只需要参考一个没有广告的公众号会发现这个请求还会存在，而且返回数据对应正是 <code>0</code> 和 <code>[]</code>。没有广告的响应也没有 <code>appid</code> 字段，所以我们也要删掉。这段代码就是这个意思，看不懂的其他部分是 JavaScript 的语法和一些格式转换。</p>
+<p>使用脚本去广告就做到了微信公众号成功请求了广告，但是我们客户端这边不做展示，是不是比直接拒绝请求要更高级一些？</p>
+<p>大部分可以修改响应的脚本基本都是这个原理，所以你只要稍稍懂一点网络相关知识，就可以抓包来定义自己的去广告脚本。</p>
+<h1 id="签到脚本">签到脚本</h1>
+<p>定时签到对 QuantumultX 的版本有一定的要求，理论上要大于 v1.0.5。</p>
+<p>开启定时执行脚本，QuantumultX 称之为构造请求：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2020/01/27/mOx4J5oBakqzisY.jpg"><img  src="https://i.loli.net/2020/01/27/mOx4J5oBakqzisY.jpg"
+        alt="构造请求"/></a></p>
+<p>构造请求的时候需要用到 cron 定时任务相关知识：</p>
+<div class="highlight"><pre class="chroma"><code class="language-h" data-lang="h"><span class="o">*</span>    <span class="o">*</span>    <span class="o">*</span>    <span class="o">*</span>    <span class="o">*</span>    
+<span class="o">-</span>    <span class="o">-</span>    <span class="o">-</span>    <span class="o">-</span>    <span class="o">-</span>    
+<span class="o">|</span>    <span class="o">|</span>    <span class="o">|</span>    <span class="o">|</span>    <span class="o">|</span>    
+<span class="o">|</span>    <span class="o">|</span>    <span class="o">|</span>    <span class="o">|</span>    <span class="o">+</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span> <span class="err">星</span><span class="err">期</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="mi">7</span><span class="p">)</span>
+<span class="o">|</span>    <span class="o">|</span>    <span class="o">|</span>    <span class="o">+</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span> <span class="err">月</span><span class="err">份</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">12</span><span class="p">)</span>
+<span class="o">|</span>    <span class="o">|</span>    <span class="o">+</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span> <span class="err">日</span><span class="err">期</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">31</span><span class="p">)</span>
+<span class="o">|</span>    <span class="o">+</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span> <span class="err">小</span><span class="err">时</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="mi">23</span><span class="p">)</span>
+<span class="o">+</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span><span class="o">-</span> <span class="err">分</span><span class="err">钟</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="mi">59</span><span class="p">)</span>
+</code></pre></div><p>签到一般都是每日签到，所以我们应该只会用到前两位。</p>
+<p>这里举几个常用例子：</p>
+<div class="highlight"><pre class="chroma"><code class="language-h" data-lang="h"><span class="mi">0</span> <span class="mi">0</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="err">每</span><span class="err">日</span><span class="mi">0</span><span class="err">点</span><span class="err">执</span><span class="err">行</span>
+
+<span class="mi">10</span> <span class="mi">0</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="err">每</span><span class="err">日</span><span class="mi">0</span><span class="err">点</span><span class="mi">10</span><span class="err">分</span><span class="err">执</span><span class="err">行</span>
+
+<span class="mi">0</span> <span class="mi">9</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="err">每</span><span class="err">日</span><span class="mi">9</span><span class="err">点</span><span class="err">执</span><span class="err">行</span>
+
+<span class="mi">0</span> <span class="mi">21</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="err">每</span><span class="err">日</span><span class="mi">21</span><span class="err">点</span><span class="err">执</span><span class="err">行</span>
+
+<span class="mi">0</span> <span class="mi">9</span><span class="o">-</span><span class="mi">21</span><span class="o">/</span><span class="mi">3</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="err">每</span><span class="err">日</span><span class="mi">9</span><span class="err">点</span><span class="o">-</span><span class="mi">21</span><span class="err">点</span><span class="err">，</span><span class="err">每</span><span class="err">隔</span><span class="err">三</span><span class="err">小</span><span class="err">时</span><span class="err">执</span><span class="err">行</span><span class="err">（</span><span class="err">一</span><span class="err">般</span><span class="err">用</span><span class="err">于</span><span class="err">天</span><span class="err">气</span><span class="err">脚</span><span class="err">本</span><span class="err">定</span><span class="err">时</span><span class="err">推</span><span class="err">送</span><span class="err">）</span>
+</code></pre></div><p>其他例子：</p>
+<div class="highlight"><pre class="chroma"><code class="language-h" data-lang="h"><span class="mi">0</span> <span class="mi">0</span> <span class="o">*</span> <span class="o">*</span> <span class="mi">6</span> <span class="err">每</span><span class="err">周</span><span class="err">六</span><span class="mi">0</span><span class="err">点</span><span class="err">执</span><span class="err">行</span>
+
+<span class="mi">0</span> <span class="mi">0</span> <span class="o">*</span> <span class="o">*</span> <span class="mi">0</span> <span class="err">每</span><span class="err">周</span><span class="err">日</span><span class="mi">0</span><span class="err">点</span><span class="err">执</span><span class="err">行</span>
+
+<span class="mi">0</span> <span class="mi">0</span> <span class="mi">15</span> <span class="o">*</span> <span class="o">*</span> <span class="err">每</span><span class="err">月</span><span class="mi">15</span><span class="err">日</span><span class="err">执</span><span class="err">行</span>
+
+<span class="mi">0</span> <span class="mi">0</span> <span class="mi">15</span> <span class="mi">3</span> <span class="o">*</span> <span class="err">每</span><span class="err">年</span><span class="mi">3</span><span class="err">月</span><span class="mi">15</span><span class="err">日</span><span class="err">执</span><span class="err">行</span>
+</code></pre></div><p>如果你还想自定义定时任务，可以使用这个工具来检查 cron 语法是否存在问题：<a href="https://tool.lu/crontab/"target="_blank">https://tool.lu/crontab/</a></p>
+<blockquote>
+<p>打个小广告，如果有需要购买 QuantumultX 的同学可以找我代购。<strong><a href="https://k.ruyu.com/50ymZGlc"target="_blank">请猛戳我！</a></strong></p>
+</blockquote>
+</article><section class="article labels"><a class="article category" href=/categories/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>好物推荐</a><a class="article tag" href=/tags/%E8%84%9A%E6%9C%AC/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>脚本</a><a class="article tag" href=/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>科学上网</a>
+</section><section class="article navigation"><p><a class="link" href="/2020/01/17/%E4%BD%BF%E7%94%A8-1password-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/"><span class="li"></span>使用 1Password 管理你的密码</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

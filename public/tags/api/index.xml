@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API on 简讯</title>
+    <link>/tags/api/</link>
+    <description>Recent content in API on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sun, 12 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何实现简单的微信机器人</title>
+      <link>/2017/03/12/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/12/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <description>&lt;p&gt;最近发现了一个有趣的项目，利用Python制作一个简单的微信机器人。思路就是微信获取到信息，然后接入图灵机器人的API，再把信息发送给对方。听起来很有意思，实践一下吧！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

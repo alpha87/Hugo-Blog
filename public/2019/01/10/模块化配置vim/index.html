@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>模块化配置vim&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">模块化配置vim</h1><p class="article date">Thursday, January 10, 2019<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>之前就想过模块化vim配置, 但是没有合适的教程, 一直拖着, 直到看到此文章<a href="https://zhuanlan.zhihu.com/p/54864654"target="_blank">Vimrc Init.vim太长了？不存在的</a>, 根据Pendragon大佬的vim配置, 模仿并修改了一波.</p>
+<h2 id="deinvimhttpsgithubcomshougodeinvim"><a href="https://github.com/Shougo/dein.vim"target="_blank">dein.vim</a></h2>
+<blockquote>
+<p>Dein.vim is a dark powered Vim/Neovim plugin manager.</p>
+</blockquote>
+<p>我们先安装dein.</p>
+<p>执行</p>
+<p><code>curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh &gt; installer.sh</code></p>
+<p>然后</p>
+<p><code>sh ./installer.sh ~/.cache/dein</code></p>
+<p>好像有些同学喜欢把dein安装到<code>.config</code>下, 本人不是很喜欢, 所以还是按照文档示例中的路径安装.</p>
+<p>安装成功后会提示如下信息, 之后我们会用到, 先保存起来:</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34;dein Scripts-----------------------------</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> &amp;<span class="nx">compatible</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">nocompatible</span>               <span class="c">&#34; Be iMproved</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Required:</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">runtimepath</span><span class="p">+</span><span class="p">=</span><span class="sr">/root/</span>.<span class="nx">cache</span><span class="sr">/dein/</span><span class="nx">repos</span><span class="sr">/github.com/</span><span class="nx">Shougo</span>/<span class="nx">dein</span>.<span class="nx">vim</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Required:</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="nx">dein</span>#<span class="nx">load_state</span><span class="p">(</span><span class="s1">&#39;/root/.cache/dein&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">dein</span>#<span class="nx">begin</span><span class="p">(</span><span class="s1">&#39;/root/.cache/dein&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">  &#34; Let dein manage dein</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Required:</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">dein</span>#<span class="nx">add</span><span class="p">(</span><span class="s1">&#39;/root/.cache/dein/repos/github.com/Shougo/dein.vim&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">  &#34; Add or remove your plugins here like this:</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34;call dein#add(&#39;Shougo/neosnippet.vim&#39;)</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34;call dein#add(&#39;Shougo/neosnippet-snippets&#39;)</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">  &#34; Required:</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">dein</span>#<span class="nx">end</span><span class="p">(</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">dein</span>#<span class="nx">save_state</span><span class="p">(</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Required:</span><span class="err">
+</span><span class="err"></span><span class="nx">filetype</span> <span class="nx">plugin</span> <span class="nx">indent</span> <span class="nx">on</span><span class="err">
+</span><span class="err"></span><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; If you want to install not installed plugins on startup.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34;if dein#check_install()</span><span class="err">
+</span><span class="err"></span><span class="c">&#34;  call dein#install()</span><span class="err">
+</span><span class="err"></span><span class="c">&#34;endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34;End dein Scripts-------------------------</span><span class="err">
+</span></code></pre></div><h2 id="结构">结构</h2>
+<p>具体结构类似这样:
+.
+├── README.md
+├── container
+│   ├── colors
+│   ├── config
+│   ├── deincfg.vim
+│   ├── ftplugin
+│   ├── mapping.vim
+│   ├── normal.vim
+│   └── plugin
+└── init.vim</p>
+<p>接下来分别介绍每个文件和文件夹的作用, 举例一些简单的使用.</p>
+<h2 id="initvim">init.vim</h2>
+<p>完全使用Pendragon的脚本, 只是根据自己的文件夹进行了路径修改.</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">for</span> <span class="nx">file</span> <span class="nx">in</span> <span class="nx">split</span><span class="p">(</span><span class="nx">glob</span><span class="p">(</span><span class="s2">&#34;/root/.config/nvim/container/*.vim&#34;</span><span class="p">)</span><span class="p">,</span> <span class="s1">&#39;\n&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>    <span class="nx">exe</span> <span class="s1">&#39;source&#39;</span> <span class="nx">file</span><span class="err">
+</span><span class="err"></span><span class="nx">endfor</span><span class="err">
+</span></code></pre></div><p>应该很好理解, 遍历执行container路径下所有后缀为vim的文件.</p>
+<h2 id="container">container</h2>
+<p>用来存放所有配置.</p>
+<h3 id="deincfgvim">deincfg.vim</h3>
+<p>加载dein插件, 需要注意以下几点:</p>
+<ul>
+<li>
+<p>添加插件的时候不使用<code>add</code>方法, 而是使用<code>load_toml</code>.</p>
+</li>
+<li>
+<p>dein的路径一定要根据自身安装情况修改.</p>
+</li>
+<li>
+<p>如果想在启动vim的时候, 检测有未安装插件并安装的话, 记得解注:</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> <span class="nx">dein</span>#<span class="nx">check_install</span><span class="p">(</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">call</span> <span class="nx">dein</span>#<span class="nx">install</span><span class="p">(</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span></code></pre></div></li>
+</ul>
+<h3 id="mappingvim">mapping.vim</h3>
+<p>用于存放快捷键.</p>
+<p>例如</p>
+<p><code>map &lt;F2&gt; :NERDTreeToggle&lt;CR&gt;</code></p>
+<p>来开/关目录树.</p>
+<h3 id="normalvim">normal.vim</h3>
+<p>根据情况放一些常用配置.</p>
+<p>例如</p>
+<p><code>syntax on</code></p>
+<p>开启语法高亮.</p>
+<h2 id="colors">colors</h2>
+<p>用来存放自定义主题配色.</p>
+<h2 id="ftplugin">ftplugin</h2>
+<p>用来放一些按需加载的配置, 例如我们可以根据文件类型, 使用不同的配置.</p>
+<h2 id="plugin">plugin</h2>
+<p>安装插件以后需要一些自定义配置, 可以将这些自定义配置以插件名称命名, 写到对应的vim文件下</p>
+<h2 id="config">config</h2>
+<p>保存<code>toml</code>文件, 配合deincfg.vim, 在dein插件加载的时候导入toml里的插件.</p>
+<p>例如</p>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="p">[</span><span class="nx">plugins</span><span class="p">]</span><span class="p">]</span>
+<span class="nx">repo</span> <span class="p">=</span> <span class="s1">&#39;davidhalter/jedi-vim&#39;</span>
+</code></pre></div><p>如果你解注了上述的三行配置, 在启动vim的时候会自动检测插件的安装情况, 进行操作.</p>
+<p>当然你要绑定<code>plugin</code>下的自定义配置, 可以在插件下紧跟着添加:</p>
+<p><code>hook_add = '/root/.config/nvim/container/plugin/jedi-vim.vim'</code></p>
+<p>来使自定义配置生效.</p>
+<p><em>私信了Pendragon, hook_add添加map映射, hook_source添加call的插件方法</em></p>
+<p>具体可以参考 &gt; <a href="https://qiita.com/delphinus/items/cd221a450fd23506e81a"target="_blank">[dein.vim] hook の便利な使い方</a></p>
+<p>主要是:</p>
+<table>
+<thead>
+<tr>
+<th>钩子的名字</th>
+<th>当它被执行时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hook_add</td>
+<td>当dein.vim添加插件时</td>
+</tr>
+<tr>
+<td>hook_source</td>
+<td>就在加载插件之前</td>
+</tr>
+<tr>
+<td>hook_post_source</td>
+<td>插件加载后立即</td>
+</tr>
+<tr>
+<td>hook_post_update</td>
+<td>插件更新后立即生效</td>
+</tr>
+<tr>
+<td>hook_done_update</td>
+<td>更新所有插件后立即</td>
+</tr>
+</tbody>
+</table>
+<h2 id="完事">完事</h2>
+<p>模块化配置便于日后的维护和管理, 不同插件的自定义配置不会混淆或显得不整齐.</p>
+<p>基本这些就是我个人模块化的配置, 有很多不完善的地方.</p>
+<p>github地址: <a href="https://github.com/alpha87/nvim"target="_blank">https://github.com/alpha87/nvim</a></p>
+<p>可以参考一下我的配置.</p>
+<p>目前我还没有用到延迟加载, 如果想延迟加载插件或一些配置, 可参考<a href="https://zhuanlan.zhihu.com/p/55455386"target="_blank">模块化你的vim配置文件</a>.</p></article><section class="article labels"><a class="article category" href=/categories/vim/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Vim</a><a class="article tag" href=/tags/neovim/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Neovim</a><a class="article tag" href=/tags/vim/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Vim</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/01/11/ubuntu16.04%E6%90%AD%E5%BB%BAwordpress/"><span class="li"></span>Ubuntu16.04搭建wordpress</a></p><p><a class="link" href="/2018/12/25/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"><span class="li"></span>冒泡排序</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

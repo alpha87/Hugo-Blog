@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>使用树莓派配合AdguardHome屏蔽局域网内广告&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">使用树莓派配合AdguardHome屏蔽局域网内广告</h1><p class="article date">Friday, February 1, 2019<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>AdGuard算是比较强大的广告拦截工具了。爱奇艺，腾讯视频等主流视频网站的广告都可以被拦截，而且是打开视频后直接跳过广告，不像其他插件还需要等待。屏蔽视频广告只是其功能的一部分，还能保护隐私，屏蔽钓鱼网站等等。</p>
+<p>使用树莓派屏蔽广告使用的是AdGuard的开源项目AdGuard Home。如果家里有正在吃灰的树莓派，可以拿来试试。</p>
+<h2 id="安装">安装</h2>
+<p>打开终端，输入：</p>
+<p><code>wget https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.92-hotfix1/AdGuardHome_v0.92-hotfix1_linux_arm.tar.gz</code></p>
+<p>下载完成后解压：</p>
+<p><code>tar zxvf AdGuardHome_v0.92-hotfix1_linux_arm.tar.gz</code></p>
+<p>运行：</p>
+<p><code>./AdGuardHome -s install &amp;&amp; AdGuardHome -s start</code></p>
+<p>来启动服务。</p>
+<p>如果没有报错继续输入</p>
+<p><code>host doubleclick.net 127.0.0.1</code></p>
+<p>来测试服务是否生效。正常情况会返回：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Using domain server:
+Name: 127.0.0.1
+Address: 127.0.0.1#53
+Aliases:
+
+Host doubleclick.net not found: 3<span class="o">(</span>NXDOMAIN<span class="o">)</span>
+</code></pre></div><p>这样就完成了安装。</p>
+<h2 id="配置">配置</h2>
+<p>打开<code>http://192.168.x.xxx:3000/</code>，记得更换为树莓派的ip地址，就能对AdGuard Home配置了。</p>
+<h2 id="使用">使用</h2>
+<p>官方wiki中也有介绍，以下内容基本就是翻译过来的版本。</p>
+<h3 id="路由器">路由器</h3>
+<p>此设置将自动覆盖连接到家庭路由器的所有设备，您无需手动配置每个设备。</p>
+<p>打开路由器的首选项。通常，您可以通过URL（例如<code>http://192.168.0.1/</code>或<code>http://192.168.1.1/</code>）从浏览器访问它。系统可能会要求您输入密码。如果您不记得它，您通常可以通过按路由器本身上的按钮来重置密码。某些路由器需要特定的应用程序，在这种情况下应该已经安装在您的计算机/电话上。</p>
+<p>找到DHCP / DNS设置。查找字段旁边的“DNS”字母，该字母允许两组或三组数字，每组数字分为四组，每组三到三位。</p>
+<p>在那里输入您的AdGuard Home服务器地址。</p>
+<h3 id="android">Android</h3>
+<p>在Android菜单主屏幕中，点按“设置”，点按菜单上的Wi-Fi。这将显示所有可用网络的列表（无法为移动连接设置自定义DNS）。长按您连接的网络，然后点按“修改网络”。</p>
+<p>在某些设备上，您可能需要选中“高级”复选框以查看更多设置。要调整Android DNS设置，您需要将IP设置从“DHCP”切换为“静态”。</p>
+<p>将“DNS 1”和“DNS 2”值更改为您的AdGuard Home地址。</p>
+<h3 id="ios">iOS</h3>
+<p>在主屏幕中，点按“设置”，在左侧菜单中选择“Wi-Fi”（无法为移动网络配置DNS）。点击当前活动网络的名称。</p>
+<p>在“DNS”字段中输入您的AdGuard Home地址。</p>
+<h3 id="苹果系统">苹果系统</h3>
+<p>单击Apple图标，然后转到“系统偏好设置”。</p>
+<p>点击“网络”。</p>
+<p>选择列表中的第一个连接，然后单击“高级”。</p>
+<p>选择“DNS”标签，然后添加AdGuard Home地址。</p>
+<h3 id="windows">Windows</h3>
+<p>通过“开始”菜单或Windows搜索打开控制面板，转到“网络和Internet”类别，然后转到“网络和共享中心”。</p>
+<p>在屏幕左侧找到“更改适配器设置”并单击它，选择您的活动连接，右键单击它并选择“属性”。</p>
+<p>在列表中找到“Internet协议版本4（TCP / IP）”，选择它，然后再次单击“属性”。</p>
+<p>选择“使用以下DNS服务器地址”并在那里输入您的AdGuard Home地址。</p>
+<p>这样就大功告成了。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://cdn.adguard.com/public/Adguard/Blog/AGHome/dashboard.jpg"><img  src="https://cdn.adguard.com/public/Adguard/Blog/AGHome/dashboard.jpg"
+        alt="来自官网的截图"/></a></p></article><section class="article labels"><a class="article category" href=/categories/%E8%B4%B5%E5%9C%A8%E6%8A%98%E8%85%BE/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>贵在折腾</a><a class="article tag" href=/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>树莓派</a><a class="article tag" href=/tags/adguard/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Adguard</a><a class="article tag" href=/tags/%E5%B1%8F%E8%94%BD%E5%B9%BF%E5%91%8A/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>屏蔽广告</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/02/01/mac-%E5%90%AF%E5%8A%A8%E5%8F%B0%E5%9B%BE%E6%A0%87%E6%95%B0%E9%87%8F%E4%BF%AE%E6%94%B9/"><span class="li"></span>Mac 启动台图标数量修改</a></p><p><a class="link" href="/2019/02/01/%E6%A1%B6%E6%8E%92%E5%BA%8F/"><span class="li"></span>桶排序</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

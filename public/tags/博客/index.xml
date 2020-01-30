@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on 简讯</title>
+    <link>/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Tue, 17 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>基于LNMP搭建wordpress博客</title>
+      <link>/2019/09/17/%E5%9F%BA%E4%BA%8Elnmp%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/17/%E5%9F%BA%E4%BA%8Elnmp%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2/</guid>
+      <description>原谅我最终还是把博客从 hexo 移到了 wordpress。之前搭建 wordpress 使用 Apache，但是已经习惯了 nginx，所以记录一波这次搭建网站的过程。 安装</description>
+    </item>
+    
+    <item>
+      <title>基于Hexo的个人博客搭建</title>
+      <link>/2017/10/15/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/10/15/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description>&lt;p&gt;为什么会有这篇文章的诞生？因为在学习Python的过程中总想给自己找点乐子，为了记录学习也是为了记录生活，总觉得没有一个属于自己的博客不圆满，今天也算是实现了吧。下面我就来分享一下这两天的成果。&lt;/p&gt;
+&lt;p&gt;我们的博客是基于Hexo的，官网的描述只有一句话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A fast, simple, powerful blog framework&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当你看完这篇教程以后，你就会觉得，恩，真的是这样。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>云服务器 on 简讯</title>
+    <link>/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <description>Recent content in 云服务器 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Wed, 03 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>新买来的服务器要怎么配置</title>
+      <link>/2019/07/03/%E6%96%B0%E4%B9%B0%E6%9D%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/03/%E6%96%B0%E4%B9%B0%E6%9D%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE/</guid>
+      <description>记录一下在一台崭新的服务器上必装的工具。 以前经常重装服务器，每次重装都有不一样的体验。 人生苦短，就别瞎折腾了～ Oh My Zsh 安装命令： sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot; 配置</description>
+    </item>
+    
+    <item>
+      <title>解决locale.Error: unsupported locale setting错误</title>
+      <link>/2019/03/18/%E8%A7%A3%E5%86%B3locale.error-unsupported-locale-setting%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/18/%E8%A7%A3%E5%86%B3locale.error-unsupported-locale-setting%E9%94%99%E8%AF%AF/</guid>
+      <description>&lt;p&gt;云服务器中使用&lt;code&gt;pip&lt;/code&gt;工具的时候可能会报此类错误：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;locale.Error: unsupported locale setting&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是因为语言环境配置有误。&lt;/p&gt;
+&lt;p&gt;只需要在环境变量里添加这两行就可以解决这类问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>树莓派 on 简讯 Blog</title>
+    <title>树莓派 on 简讯</title>
     <link>/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
-    <description>Recent content in 树莓派 on 简讯 Blog</description>
+    <description>Recent content in 树莓派 on 简讯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>©2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
-    <lastBuildDate>Tue, 14 Jan 2020 16:20:22 +0800</lastBuildDate>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Tue, 14 Jan 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Adguard, Adblock 过滤器订阅链接</title>
-      <link>/adguard-adblock-filter-url/</link>
-      <pubDate>Tue, 14 Jan 2020 16:20:22 +0800</pubDate>
+      <link>/2020/01/14/adguard-adblock-%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/adguard-adblock-filter-url/</guid>
+      <guid>/2020/01/14/adguard-adblock-%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5/</guid>
       <description>&lt;p&gt;为了不让树莓派继续吃灰，为其安装了 Adguard Home 服务，用来过滤家里联网设备的广告。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用树莓派配合AdguardHome屏蔽局域网内广告</title>
+      <link>/2019/02/01/%E4%BD%BF%E7%94%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E5%90%88adguardhome%E5%B1%8F%E8%94%BD%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%B9%BF%E5%91%8A/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/01/%E4%BD%BF%E7%94%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E5%90%88adguardhome%E5%B1%8F%E8%94%BD%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%B9%BF%E5%91%8A/</guid>
+      <description>&lt;p&gt;AdGuard算是比较强大的广告拦截工具了。爱奇艺，腾讯视频等主流视频网站的广告都可以被拦截，而且是打开视频后直接跳过广告，不像其他插件还需要等待。屏蔽视频广告只是其功能的一部分，还能保护隐私，屏蔽钓鱼网站等等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新手入门树莓派必做的四件事</title>
+      <link>/2016/11/05/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BF%85%E5%81%9A%E7%9A%84%E5%9B%9B%E4%BB%B6%E4%BA%8B/</link>
+      <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/11/05/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BF%85%E5%81%9A%E7%9A%84%E5%9B%9B%E4%BB%B6%E4%BA%8B/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;19年更新一波，最新（只限图形界面）系统，已经不用处理这四步了，系统初始化的时候已经设置好了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于新手来说，开始折腾树莓派有四件事必须完成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.更换国内源。
+2.系统显示中文。
+3.安装中文输入法。
+4.调整时区时间。
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

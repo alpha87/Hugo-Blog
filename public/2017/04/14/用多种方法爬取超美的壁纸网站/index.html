@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>用多种方法爬取超美的壁纸网站&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">用多种方法爬取超美的壁纸网站</h1><p class="article date">Friday, April 14, 2017<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>最近发现了一个国外很不错的壁纸网站 Simple Desktop ，所有的壁纸都是扁平风格。如果你的系统主题是扁平风格，或者你对扁平化的壁纸情有独钟，那么这个网站一定适合你。因为所有的壁纸看着都很喜欢，就利用爬虫把壁纸的原图链接爬取下来。</p>
+<p>首先看一下 <a href="http://simpledesktops.com/browse/"target="_blank">Simple Desktop</a> 网页，网页结构比较整齐，还是很好爬取的。</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/wallpaper.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/wallpaper.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/wallpaper.png"
+        alt="img"/></a></a></p>
+<p>我们先利用最基本的正则爬取网页。</p>
+<h2 id="利用正则表达式爬取">利用正则表达式爬取</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">User-Agent</span><span class="s2">&#34;</span><span class="p">:</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36</span><span class="s2">&#34;</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">return</span> <span class="bp">None</span>
+
+<span class="k">def</span> <span class="nf">parse_index_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">&amp;lt;a href=</span><span class="s1">&#34;</span><span class="s1">(.*?)</span><span class="s1">&#34;</span><span class="s1">&amp;gt;&amp;lt;img src=</span><span class="s1">&#34;</span><span class="s1">.*?</span><span class="s1">&#34;</span><span class="s1"> title=</span><span class="s1">&#34;</span><span class="s1">.*?</span><span class="s1">&#34;</span><span class="s1"> alt=</span><span class="s1">&#34;</span><span class="s1">.*?</span><span class="s1">&#34;</span><span class="s1"> width=</span><span class="s1">&#34;</span><span class="s1">.*?</span><span class="s1">&#34;</span><span class="s1"> height=</span><span class="s1">&#34;</span><span class="s1">.*?</span><span class="s1">&#34;</span><span class="s1"> /&amp;gt;&amp;lt;/a&amp;gt;</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://simpledesktops.com</span><span class="s2">&#34;</span><span class="o">+</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">parse_photo_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">&amp;lt;a href=</span><span class="s1">&#34;</span><span class="s1">.*?</span><span class="s1">&#34;</span><span class="s1">&amp;gt;&amp;lt;img src=</span><span class="s1">&#34;</span><span class="s1">(.*?).625x385_q100.png</span><span class="s1">&#34;</span><span class="s1"> title=</span><span class="s1">&#34;</span><span class="s1">(.*?)</span><span class="s1">&#34;</span><span class="s1"> alt=</span><span class="s1">&#34;</span><span class="s1">.*?</span><span class="s1">&#34;</span><span class="s1"> width=</span><span class="s1">&#34;</span><span class="s1">625px</span><span class="s1">&#34;</span><span class="s1"> height=</span><span class="s1">&#34;</span><span class="s1">385px</span><span class="s1">&#34;</span><span class="s1">/&amp;gt;&amp;lt;/a&amp;gt;</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="p">{</span>
+            <span class="sa"></span><span class="s2">&#34;</span><span class="s2">title</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">,</span>
+            <span class="sa"></span><span class="s2">&#34;</span><span class="s2">url</span><span class="s2">&#34;</span><span class="p">:</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">page</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://simpledesktops.com/browse/{}/</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">parse_index_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">get_page</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="n">htmls</span> <span class="o">=</span> <span class="n">parse_photo_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">html</span> <span class="ow">in</span> <span class="n">htmls</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">__main__</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="p">[</span><span class="n">page</span> <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">)</span><span class="p">]</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Error:</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div><p>代码主要是利用正则爬取每个壁纸的链接，再找到壁纸的原图链接。其实在后来的爬取过程中发现根本没有这么复杂，在爬取到封面图片的链接后，去掉后边的一些内容就是壁纸原图的链接，因为手懒，所以这段代码就没修改。。。</p>
+<h2 id="利用beautifulsoup爬取">利用BeautifulSoup爬取</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">bsobj</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">lxml</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">bsobj</span>
+
+<span class="k">def</span> <span class="nf">parse_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">div</span><span class="s2">&#34;</span><span class="p">,</span><span class="p">{</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">class</span><span class="s2">&#34;</span><span class="p">:</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">desktop</span><span class="s2">&#34;</span><span class="p">}</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">title: {}</span><span class="se">\n</span><span class="s2">url: {}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">title</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">,</span><span class="n">re_page</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">img</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">src</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">re_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">(.*?).295x184_q100.png</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">item</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">page</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://simpledesktops.com/browse/{}/</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">parse_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">__main__</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="p">[</span><span class="n">page</span> <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">)</span><span class="p">]</span><span class="p">)</span>
+</code></pre></div><p>从代码的行数就能看出来，明显少了一半。因为发现这个规律后，只要利用正则提取出壁纸原图的链接就可以了。</p>
+<p>这两部分代码都没有做保存处理，下一篇文章会保存到mongo数据库中。</p>
+<p>效果图：</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/spiderbs.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/spiderbs.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/spiderbs.png"
+        alt="img"/></a></a></p>
+<p>利用了多进程爬取，效率还是很高的。</p></article><section class="article labels"><a class="article category" href=/categories/python/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Python</a><a class="article tag" href=/tags/%E7%88%AC%E8%99%AB/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>爬虫</a><a class="article tag" href=/tags/%E5%A3%81%E7%BA%B8/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>壁纸</a><a class="article tag" href=/tags/%E8%84%9A%E6%9C%AC/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>脚本</a>
+</section><section class="article navigation"><p><a class="link" href="/2017/04/15/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BAss/"><span class="li"></span>云服务器搭建私人SS</a></p><p><a class="link" href="/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99%E7%BB%AD/"><span class="li"></span>用多种方法爬取超美的壁纸网站（续）</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

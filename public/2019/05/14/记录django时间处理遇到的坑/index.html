@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>记录Django时间处理遇到的坑&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">记录Django时间处理遇到的坑</h1><p class="article date">Tuesday, May 14, 2019<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><p>Django新项目生成的时候，我们首先需要更改默认的时区设置。有以下两点需要注意。</p>
+<p>以下代码片段来自Django项目生成后的<code>settings.py</code>文件。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">en</span><span class="s1">&#39;</span>
+
+<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">UTC</span><span class="s1">&#39;</span>
+
+<span class="n">USE_I18N</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">USE_L10N</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">USE_TZ</span> <span class="o">=</span> <span class="bp">True</span>
+</code></pre></div><p>一般情况下，多数教程都会告诉我们修改<code>LANGUAGE_CODE</code>和<code>TIME_ZONE</code>，改为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">zh-hans</span><span class="s1">&#39;</span>
+
+<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">Asia/Shanghai</span><span class="s1">&#39;</span>
+
+<span class="n">USE_I18N</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">USE_L10N</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">USE_TZ</span> <span class="o">=</span> <span class="bp">True</span>
+</code></pre></div><p>开启服务，界面和时间的确没问题。</p>
+<p>但是当我们有入库需求的时候，且字段正好需要显示完整的时间（包括时分秒）。就会发现入库的时间还是<code>UTC</code>时间。</p>
+<p>查看<a href="https://docs.djangoproject.com/zh-hans/2.1/topics/i18n/timezones/"target="_blank">官方文档</a>介绍时区的部分，默认禁用时区支持是避免夏令时转换时造成时间上的错误。</p>
+<blockquote>
+<p>Even if your website is available in only one time zone, it's still good practice to store data in UTC in your database. The main reason is Daylight Saving Time (DST). Many countries have a system of DST, where clocks are moved forward in spring and backward in autumn. If you're working in local time, you're likely to encounter errors twice a year, when the transitions happen. (The pytz documentation discusses these issues in greater detail.) This probably doesn't matter for your blog, but it's a problem if you over-bill or under-bill your customers by one hour, twice a year, every year. The solution to this problem is to use UTC in the code and use local time only when interacting with end users.</p>
+<p>Time zone support is disabled by default.</p>
+</blockquote>
+<p>但是如果你确定你的程序不存在这些问题，入库或其他操作需要显示当地时间，那么就改为<strong><code>USE_TZ = False</code></strong>，这样入库时间就是当时的时间了。</p></article><section class="article labels"><a class="article category" href=/categories/django/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Django</a><a class="article tag" href=/tags/%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>时间处理</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/"><span class="li"></span>Django 中的路径转换器</a></p><p><a class="link" href="/2019/05/13/%E4%BD%BF%E7%94%A8bcrypt%E5%8A%A0%E5%AF%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/"><span class="li"></span>使用bcrypt加密你的密码</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>初学React（四）&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">初学React（四）</h1><p class="article date">Thursday, February 28, 2019<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>我们在构建网页的时候，肯定不只有一个组件。当同时存在多个组件，且多个组件需要共用一些数据时，就产生了<strong>状态提升</strong>的概念，也就是多个组件共用一个状态（数据）。之所以称之为提升，可能就是子组件的数据被提升到了父组件。</p>
+<p>在看官方文档的时候，发现其绕了一个大圈子。</p>
+<p>文档中的demo是先构造一个摄氏温度判断水是否能烧开（一个标准大气压下）。又使用华氏度来判断水的沸点，然后将这两者相结合，在输入摄氏度的时候同步展示华氏度，反之亦然。因为摄氏度和华氏度都需要接收用户输入，此时才用到了状态提升的概念。</p>
+<p>不过文档一步一步讲的非常仔细，保证每个人都能看懂。</p>
+<h2 id="代码部分">代码部分</h2>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+
+<span class="kr">const</span> <span class="nx">scaleNames</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">c</span><span class="o">:</span> <span class="s1">&#39;摄氏&#39;</span><span class="p">,</span>
+    <span class="nx">f</span><span class="o">:</span> <span class="s1">&#39;华氏&#39;</span>
+<span class="p">}</span><span class="p">;</span>
+
+
+<span class="kr">class</span> <span class="nx">BoilingVerdict</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+
+    <span class="nx">render</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">celsius</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">celsius</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">celsius</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">水会烧开</span><span class="o">&lt;</span><span class="err">/</span><span class="err">h</span><span class="err">2</span><span class="err">&gt;</span><span class="err">)</span><span class="err">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">水不会烧开</span><span class="o">&lt;</span><span class="err">/</span><span class="err">h</span><span class="err">2</span><span class="err">&gt;</span><span class="err">)</span><span class="err">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+
+<span class="kd">function</span> <span class="nx">toCelsius</span><span class="p">(</span><span class="nx">fahrenheit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">fahrenheit</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kd">function</span> <span class="nx">toFahrenheit</span><span class="p">(</span><span class="nx">celsius</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">celsius</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kd">function</span> <span class="nx">tryConvert</span><span class="p">(</span><span class="nx">temperature</span><span class="p">,</span> <span class="nx">convert</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">temperature</span><span class="p">)</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kr">const</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span><span class="p">;</span>
+    <span class="kr">const</span> <span class="nx">rounded</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">output</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="nx">rounded</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kr">class</span> <span class="nx">Temperature</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">handleChange</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleChange</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">handleChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onTemperatureChange</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kr">const</span> <span class="nx">temperature</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">temperaturer</span><span class="p">;</span>
+        <span class="kr">const</span> <span class="nx">scale</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">scale</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">fieldset</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="nx">legend</span><span class="o">&gt;</span>
+                            <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">输入</span><span class="p">{</span><span class="nx">scaleNames</span><span class="p">[</span><span class="nx">scale</span><span class="p">]</span><span class="p">}</span><span class="nx">温度</span><span class="o">&lt;</span><span class="err">/</span><span class="err">h</span><span class="err">1</span><span class="err">&gt;</span>
+                        <span class="o">&lt;</span><span class="err">/</span><span class="err">l</span><span class="err">e</span><span class="err">g</span><span class="err">e</span><span class="err">n</span><span class="err">d</span><span class="err">&gt;</span>
+
+                        <span class="o">&lt;</span><span class="nx">b</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">scaleNames</span><span class="p">[</span><span class="nx">scale</span><span class="p">]</span><span class="p">}</span><span class="nx">度</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">/</span><span class="err">b</span><span class="err">&gt;</span>
+
+                        <span class="o">&lt;</span><span class="nx">input</span>
+                            <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">temperature</span><span class="p">}</span>
+                            <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleChange</span><span class="p">}</span>
+                        <span class="o">/</span><span class="o">&gt;</span>
+
+                    <span class="o">&lt;</span><span class="err">/</span><span class="err">f</span><span class="err">i</span><span class="err">e</span><span class="err">l</span><span class="err">d</span><span class="err">s</span><span class="err">e</span><span class="err">t</span><span class="err">&gt;</span>
+                <span class="o">&lt;</span><span class="err">/</span><span class="err">f</span><span class="err">o</span><span class="err">r</span><span class="err">m</span><span class="err">&gt;</span>
+            <span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span>
+        <span class="p">)</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">Calculator</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">handleCelsiusChange</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCelsiusChange</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">handleFahrenheitChange</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleFahrenheitChange</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="nx">temperature</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="nx">scale</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+        <span class="p">}</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">handleCelsiusChange</span><span class="p">(</span><span class="nx">temperaturer</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span><span class="p">{</span> <span class="nx">scale</span><span class="o">:</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="nx">temperature</span><span class="o">:</span> <span class="nx">temperaturer</span> <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">handleFahrenheitChange</span><span class="p">(</span><span class="nx">temperaturer</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span><span class="p">{</span> <span class="nx">scale</span><span class="o">:</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="nx">temperature</span><span class="o">:</span> <span class="nx">temperaturer</span> <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kr">const</span> <span class="nx">scale</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">scale</span><span class="p">;</span>
+        <span class="kr">const</span> <span class="nx">temperature</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">temperature</span><span class="p">;</span>
+
+        <span class="kr">const</span> <span class="nx">celsius</span> <span class="o">=</span> <span class="nx">scale</span> <span class="o">===</span> <span class="s1">&#39;f&#39;</span> <span class="o">?</span> <span class="nx">tryConvert</span><span class="p">(</span><span class="nx">temperature</span><span class="p">,</span> <span class="nx">toCelsius</span><span class="p">)</span> <span class="o">:</span> <span class="nx">temperature</span><span class="p">;</span>
+        <span class="kr">const</span> <span class="nx">fahrenheit</span> <span class="o">=</span> <span class="nx">scale</span> <span class="o">===</span> <span class="s1">&#39;c&#39;</span> <span class="o">?</span> <span class="nx">tryConvert</span><span class="p">(</span><span class="nx">temperature</span><span class="p">,</span> <span class="nx">toFahrenheit</span><span class="p">)</span> <span class="o">:</span> <span class="nx">temperature</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">Temperature</span>
+                    <span class="nx">scale</span><span class="o">=</span><span class="s2">&#34;c&#34;</span>
+                    <span class="nx">temperaturer</span><span class="o">=</span><span class="p">{</span><span class="nx">celsius</span><span class="p">}</span>
+                    <span class="nx">onTemperatureChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleCelsiusChange</span><span class="p">}</span> <span class="o">/</span><span class="o">&gt;</span>
+
+                <span class="o">&lt;</span><span class="nx">Temperature</span>
+                    <span class="nx">scale</span><span class="o">=</span><span class="s2">&#34;f&#34;</span>
+                    <span class="nx">temperaturer</span><span class="o">=</span><span class="p">{</span><span class="nx">fahrenheit</span><span class="p">}</span>
+                    <span class="nx">onTemperatureChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleFahrenheitChange</span><span class="p">}</span> <span class="o">/</span><span class="o">&gt;</span>
+
+                <span class="o">&lt;</span><span class="nx">BoilingVerdict</span> <span class="nx">celsius</span><span class="o">=</span><span class="p">{</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">celsius</span><span class="p">)</span><span class="p">}</span> <span class="o">/</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="err">/</span><span class="err">d</span><span class="err">i</span><span class="err">v</span><span class="err">&gt;</span>
+        <span class="p">)</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="梳理">梳理</h2>
+<p>我们使用<code>Calculator</code>组件共享用户的输入（状态提升），<code>Temperature</code>组件用来复用输入框。不同输入框的<code>scale</code>不同，用来对应不同的名称，输入框不同的表头是根据<code>scale</code>由<code>scaleNames</code>转换的。其他部分就更好理解了，使用<code>setState</code>方法修改<code>state</code>的值，摄氏度和华氏度的转换等等。</p>
+<h2 id="react开发者工具">React开发者工具</h2>
+<p>官方还提供了<a href="https://github.com/facebook/react-devtools"target="_blank">React 开发者工具</a>。</p>
+<p>使用效果基本就是这个样子的，可以清晰看出react组件树：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://ws4.sinaimg.cn/large/006tKfTcly1g0ne5xr8byj31c00u0dpp.jpg"><img  src="https://ws4.sinaimg.cn/large/006tKfTcly1g0ne5xr8byj31c00u0dpp.jpg"
+        alt/></a></p></article><section class="article labels"><a class="article category" href=/categories/react/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>React</a><a class="article tag" href=/tags/javascript/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>JavaScript</a><a class="article tag" href=/tags/web/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Web</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/03/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2/"><span class="li"></span>微信小程序初探</a></p><p><a class="link" href="/2019/02/25/%E5%88%9D%E5%AD%A6react%E4%B8%89/"><span class="li"></span>初学React（三）</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

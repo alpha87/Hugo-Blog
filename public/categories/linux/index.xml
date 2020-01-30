@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 简讯</title>
+    <link>/categories/linux/</link>
+    <description>Recent content in Linux on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Wed, 03 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>新买来的服务器要怎么配置</title>
+      <link>/2019/07/03/%E6%96%B0%E4%B9%B0%E6%9D%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/03/%E6%96%B0%E4%B9%B0%E6%9D%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE/</guid>
+      <description>记录一下在一台崭新的服务器上必装的工具。 以前经常重装服务器，每次重装都有不一样的体验。 人生苦短，就别瞎折腾了～ Oh My Zsh 安装命令： sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot; 配置</description>
+    </item>
+    
+    <item>
+      <title>解决locale.Error: unsupported locale setting错误</title>
+      <link>/2019/03/18/%E8%A7%A3%E5%86%B3locale.error-unsupported-locale-setting%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/18/%E8%A7%A3%E5%86%B3locale.error-unsupported-locale-setting%E9%94%99%E8%AF%AF/</guid>
+      <description>&lt;p&gt;云服务器中使用&lt;code&gt;pip&lt;/code&gt;工具的时候可能会报此类错误：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;locale.Error: unsupported locale setting&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是因为语言环境配置有误。&lt;/p&gt;
+&lt;p&gt;只需要在环境变量里添加这两行就可以解决这类问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>断开SSH后仍然运行命令</title>
+      <link>/2018/02/15/%E6%96%AD%E5%BC%80ssh%E5%90%8E%E4%BB%8D%E7%84%B6%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/15/%E6%96%AD%E5%BC%80ssh%E5%90%8E%E4%BB%8D%E7%84%B6%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;因为经常要在云服务器上跑一些程序，但是一旦断开ssh连接就意味着程序的结束。这里提供两个简单的办法，即使断开连接也能继续运行。&lt;/p&gt;
+&lt;p&gt;我们来简单的了解一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如果Ubuntu没声音怎么办</title>
+      <link>/2017/11/13/%E5%A6%82%E6%9E%9Cubuntu%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/13/%E5%A6%82%E6%9E%9Cubuntu%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
+      <description>&lt;p&gt;先说一种特殊的情况，如果你是双系统，即有可能你是windows和ubuntu系统同时使用的话，完整关机一次可能问题就解决了。如果没有解决就继续往下看。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

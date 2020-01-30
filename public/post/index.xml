@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 简讯</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>QuantumultX 配置文件以及常用的脚本推荐</title>
+      <link>/2020/01/27/quantumultx-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E7%9A%84%E8%84%9A%E6%9C%AC%E6%8E%A8%E8%8D%90/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/27/quantumultx-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E7%9A%84%E8%84%9A%E6%9C%AC%E6%8E%A8%E8%8D%90/</guid>
+      <description>这一段时间把科学上网工具（iOS 平台）从小火箭换成了 QuantumultX，因为不论是颜值，性能，还是自定义配置文件，QuantumultX</description>
+    </item>
+    
+    <item>
+      <title>使用 1Password 管理你的密码</title>
+      <link>/2020/01/17/%E4%BD%BF%E7%94%A8-1password-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/17/%E4%BD%BF%E7%94%A8-1password-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</guid>
+      <description>此次分享的羊毛攻略是免费使用 1Password 一年。 1Password 想必大家都不陌生，密码管理界的 Apple，先不说功能怎样，超高定价就让普通用户不敢想象。 没有了解过 1Password 的</description>
+    </item>
+    
+    <item>
+      <title>Html实现打字机效果</title>
+      <link>/2020/01/15/html%E5%AE%9E%E7%8E%B0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/15/html%E5%AE%9E%E7%8E%B0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C/</guid>
+      <description>&lt;p&gt;怎样让博客的标语更与众不同呢？&lt;/p&gt;
+&lt;p&gt;可以使用打字机效果，让标语一字一字打出来。这样看起来更有动感。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Adguard, Adblock 过滤器订阅链接</title>
+      <link>/2020/01/14/adguard-adblock-%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/14/adguard-adblock-%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5/</guid>
+      <description>&lt;p&gt;为了不让树莓派继续吃灰，为其安装了 Adguard Home 服务，用来过滤家里联网设备的广告。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>管理Mac启动台（Launchpad）图标，删除或移动</title>
+      <link>/2020/01/01/%E7%AE%A1%E7%90%86mac%E5%90%AF%E5%8A%A8%E5%8F%B0launchpad%E5%9B%BE%E6%A0%87%E5%88%A0%E9%99%A4%E6%88%96%E7%A7%BB%E5%8A%A8/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/01/%E7%AE%A1%E7%90%86mac%E5%90%AF%E5%8A%A8%E5%8F%B0launchpad%E5%9B%BE%E6%A0%87%E5%88%A0%E9%99%A4%E6%88%96%E7%A7%BB%E5%8A%A8/</guid>
+      <description>说起 Mac 的启动台（Launchpad），没有强迫症的同学还好，可能对这个不是很敏感。 今天推荐的这款免费应用，一般不会用到，但是想要用却用不到的</description>
+    </item>
+    
+    <item>
+      <title>Pythonista 使用小记</title>
+      <link>/2019/12/28/pythonista-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/12/28/pythonista-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</guid>
+      <description>&lt;p&gt;&lt;span class=&#34;image-container&#34;&gt;&lt;span class=&#34;link&#34;&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://i.loli.net/2019/12/28/miu2vzNfGRqxodM.png&#34;&gt;&lt;img class=&#34;img&#34; src=&#34;https://i.loli.net/2019/12/28/miu2vzNfGRqxodM.png&#34;
+        alt=&#34;pythonista3 Logo&#34;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;pythonistahttpomz-softwarecompythonistaindexhtml&#34;&gt;&lt;a href=&#34;http://omz-software.com/pythonista/index.html&#34;target=&#34;_blank&#34;&gt;Pythonista&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pythonista is a complete development environment for writing Python™ scripts on your iPad or iPhone. Lots of examples are included — from games and animations to plotting, image manipulation, custom user interfaces, and automation scripts.&lt;/p&gt;
+&lt;p&gt;In addition to the powerful standard library, Pythonista provides extensive support for interacting with native iOS features, like contacts, reminders, photos, location data, and more.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>为什么要调试代码</title>
+      <link>/2019/11/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%B0%83%E8%AF%95%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/11/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%B0%83%E8%AF%95%E4%BB%A3%E7%A0%81/</guid>
+      <description>说起调试，相信大家都不陌生。如果你不是经常调试代码，说明代码 bug 比较少，或者错误比较直观，再或者就是你并没有体会到调试代码带来的诸多方便和好处</description>
+    </item>
+    
+    <item>
+      <title>墙外不是法外</title>
+      <link>/2019/11/14/%E5%A2%99%E5%A4%96%E4%B8%8D%E6%98%AF%E6%B3%95%E5%A4%96/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/11/14/%E5%A2%99%E5%A4%96%E4%B8%8D%E6%98%AF%E6%B3%95%E5%A4%96/</guid>
+      <description>总有朋友问我怎么用 Google，怎么看 YouTube 的视频等等类似问题。 答案当然是扶梯上网了。 只是想看看视频，用 Google 查资料，毕竟百度不会直接收录 github 相关页面</description>
+    </item>
+    
+    <item>
+      <title>基于LNMP搭建wordpress博客</title>
+      <link>/2019/09/17/%E5%9F%BA%E4%BA%8Elnmp%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/17/%E5%9F%BA%E4%BA%8Elnmp%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2/</guid>
+      <description>原谅我最终还是把博客从 hexo 移到了 wordpress。之前搭建 wordpress 使用 Apache，但是已经习惯了 nginx，所以记录一波这次搭建网站的过程。 安装</description>
+    </item>
+    
+    <item>
+      <title>使用 pytest 来测试你的代码</title>
+      <link>/2019/09/15/%E4%BD%BF%E7%94%A8-pytest-%E6%9D%A5%E6%B5%8B%E8%AF%95%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/15/%E4%BD%BF%E7%94%A8-pytest-%E6%9D%A5%E6%B5%8B%E8%AF%95%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81/</guid>
+      <description>对于任何软件质量规划来说，测试都是一个重要的组成部分，并且在许多情况下它是唯一的组成部分。 ——《代码大全》 可见测试在整个项目开发过程中的地位</description>
+    </item>
+    
+    <item>
+      <title>Celery 使用小记</title>
+      <link>/2019/08/29/celery-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/29/celery-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</guid>
+      <description>Celery 是一个简单高效可靠的分布式系统。在处理大量消息，实时处理异步任务，定时执行任务，支持任务调度等方面使用起来更为灵活。 简单理解 Celery 就是发布任务</description>
+    </item>
+    
+    <item>
+      <title>宅宅生活收藏夹——项目心得</title>
+      <link>/2019/07/13/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/13/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/</guid>
+      <description>宅宅生活收藏夹是一款用来直接浏览知乎钓鱼贴图片的微信小程序，而且用户可以提供自己收藏的钓鱼贴，在每次例行数据更新后就会展示到首页。 这款小程序</description>
+    </item>
+    
+    <item>
+      <title>Docker 镜像下载慢怎么办</title>
+      <link>/2019/07/07/docker-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/07/docker-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
+      <description>国内使用 docker 下载镜像速度非常慢。 可以使用 daocloud 的加速服务。 Registry mirrors 中输入：http://f1361db2.m.daocloud.io。 设置好重启。</description>
+    </item>
+    
+    <item>
+      <title>新买来的服务器要怎么配置</title>
+      <link>/2019/07/03/%E6%96%B0%E4%B9%B0%E6%9D%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/03/%E6%96%B0%E4%B9%B0%E6%9D%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE/</guid>
+      <description>记录一下在一台崭新的服务器上必装的工具。 以前经常重装服务器，每次重装都有不一样的体验。 人生苦短，就别瞎折腾了～ Oh My Zsh 安装命令： sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot; 配置</description>
+    </item>
+    
+    <item>
+      <title>使用 Python 抓取知乎美图（文末含福利）</title>
+      <link>/2019/07/01/%E4%BD%BF%E7%94%A8-python-%E6%8A%93%E5%8F%96%E7%9F%A5%E4%B9%8E%E7%BE%8E%E5%9B%BE%E6%96%87%E6%9C%AB%E5%90%AB%E7%A6%8F%E5%88%A9/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/01/%E4%BD%BF%E7%94%A8-python-%E6%8A%93%E5%8F%96%E7%9F%A5%E4%B9%8E%E7%BE%8E%E5%9B%BE%E6%96%87%E6%9C%AB%E5%90%AB%E7%A6%8F%E5%88%A9/</guid>
+      <description>之前写到宅宅生活收藏夹的部署方法，见 使用Flask，Nginx，Gunicorn，Supervisor完成网站部署。这次介绍一下如何抓取知乎</description>
+    </item>
+    
+    <item>
+      <title>微信小程序输入框的使用</title>
+      <link>/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>制作微信小程序会经常涉及到输入框的使用。 最简单的输入框 &amp;lt;!--index.wxml --&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; bindconfirm=&amp;#34;searchItem&amp;#34; placeholder=&amp;#34;搜索关键词&amp;#34; confirm-type=&amp;#34;search&amp;#34;&amp;gt;&amp;lt;/input&amp;gt; // index.js searchItem(event) { if (event.detail.value == &amp;#34;&amp;#34;) { wx.showToast({</description>
+    </item>
+    
+    <item>
+      <title>使用Flask，Nginx，Gunicorn，Supervisor完成网站部署</title>
+      <link>/2019/06/14/%E4%BD%BF%E7%94%A8flasknginxgunicornsupervisor%E5%AE%8C%E6%88%90%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/14/%E4%BD%BF%E7%94%A8flasknginxgunicornsupervisor%E5%AE%8C%E6%88%90%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</guid>
+      <description>宅宅生活收藏夹小程序的 web 后端是 flask，因为只涉及到几个接口，flask 简单快速。 这篇文章记录一下整个部署的过程。 当我们使用 flask 开发完成 web 应</description>
+    </item>
+    
+    <item>
+      <title>Windows系统各种错误修复记录</title>
+      <link>/2019/05/28/windows%E7%B3%BB%E7%BB%9F%E5%90%84%E7%A7%8D%E9%94%99%E8%AF%AF%E4%BF%AE%E5%A4%8D%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/28/windows%E7%B3%BB%E7%BB%9F%E5%90%84%E7%A7%8D%E9%94%99%E8%AF%AF%E4%BF%AE%E5%A4%8D%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;各种系统错误记录，一般情况下都要用到万能的PE 启动盘。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信小程序如何使用 UI 组件库</title>
+      <link>/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/</guid>
+      <description>&lt;p&gt;在创建小程序的时候，有些样式并不完全需要自己来写。&lt;/p&gt;
+&lt;p&gt;可以使用已经构建好的框架，比如官方的 UI 组件库 &lt;a href=&#34;https://weui.io/&#34;target=&#34;_blank&#34;&gt;WeUI&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;我们本次使用的组件库是有赞的 &lt;a href=&#34;https://youzan.github.io/vant-weapp/#/intro&#34;target=&#34;_blank&#34;&gt;Vant Weapp&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;使用基于小程序云开发，和本地开发大同小异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django 中的内置模板和过滤器</title>
+      <link>/2019/05/20/django-%E4%B8%AD%E7%9A%84%E5%86%85%E7%BD%AE%E6%A8%A1%E6%9D%BF%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/django-%E4%B8%AD%E7%9A%84%E5%86%85%E7%BD%AE%E6%A8%A1%E6%9D%BF%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8/</guid>
+      <description>&lt;p&gt;Django 中的内置模板和过滤器。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.djangoproject.com/zh-hans/2.2/ref/templates/builtins/#ref-templates-builtins-tags&#34;target=&#34;_blank&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django使用指南——使用表单</title>
+      <link>/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/</guid>
+      <description>&lt;p&gt;表单是网站中最最常见和重要的功能了，可以实现与用户交互和交换数据。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django URL Pattern 学习记录</title>
+      <link>/2019/05/18/django-url-pattern-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/18/django-url-pattern-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;学习 Django 文档的 URL 部分，做些笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django 中的路径转换器</title>
+      <link>/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/</guid>
+      <description>&lt;p&gt;在使用 Django 配置 URL 调度器的时候，多少会涉及到 URL 中参数的使用，那么 Django 中有多少路径转换器可以使用呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录Django时间处理遇到的坑</title>
+      <link>/2019/05/14/%E8%AE%B0%E5%BD%95django%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/14/%E8%AE%B0%E5%BD%95django%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</guid>
+      <description>&lt;p&gt;Django新项目生成的时候，我们首先需要更改默认的时区设置。有以下两点需要注意。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用bcrypt加密你的密码</title>
+      <link>/2019/05/13/%E4%BD%BF%E7%94%A8bcrypt%E5%8A%A0%E5%AF%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/13/%E4%BD%BF%E7%94%A8bcrypt%E5%8A%A0%E5%AF%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</guid>
+      <description>&lt;p&gt;在开发程序期间多多少少会涉及到用户密码的存储，有没有什么方便的办法呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用三种语言实现斐波那契数列</title>
+      <link>/2019/05/08/%E4%BD%BF%E7%94%A8%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/08/%E4%BD%BF%E7%94%A8%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</guid>
+      <description>&lt;p&gt;使用 &lt;code&gt;Python&lt;/code&gt;，&lt;code&gt;Lua&lt;/code&gt; 和 &lt;code&gt;JavaScript&lt;/code&gt; 实现斐波那契数列。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 Pyqt5 Designer 构建桌面应用</title>
+      <link>/2019/04/27/%E4%BD%BF%E7%94%A8-pyqt5-designer-%E6%9E%84%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/27/%E4%BD%BF%E7%94%A8-pyqt5-designer-%E6%9E%84%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/</guid>
+      <description>&lt;p&gt;文章分为三部分，主要是&lt;strong&gt;界面的设计&lt;/strong&gt;，&lt;strong&gt;py文件的代码编写&lt;/strong&gt;和&lt;strong&gt;其余部分的小修小补&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>尚未调用CoInitialize</title>
+      <link>/2019/04/24/%E5%B0%9A%E6%9C%AA%E8%B0%83%E7%94%A8coinitialize/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/24/%E5%B0%9A%E6%9C%AA%E8%B0%83%E7%94%A8coinitialize/</guid>
+      <description>&lt;p&gt;用pyqt写UI的时候，同时使用多线程和win32库操作可能会触发以下错误，顺手记录下来。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flask 框架使用自定义命令</title>
+      <link>/2019/04/23/flask-%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/23/flask-%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;在使用flask构建网页的时候，难免会遇到某一命令重复使用的情况。最典型的例子就是数据库的相关操作。在编码初期，如果操作数据库出错，最简单的办法就是删除重新生成一个新的数据库文件。但是反复生成或删除数据库的工作很无趣，有没有什么更简易的方法？官方提供了一个基于 &lt;code&gt;Click&lt;/code&gt; 命令行接口的自定义命令的功能，用这个功能我们可以把经常用到的操作写成一个方法，直接调用就可以了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac允许任何来源App</title>
+      <link>/2019/04/19/mac%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90app/</link>
+      <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/19/mac%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90app/</guid>
+      <description>&lt;p&gt;如果在安装过程中遇到“应用已损坏”的问题，说明系统不允许安装其他来源的应用。&lt;/p&gt;
+&lt;p&gt;如何让Mac允许安装来自任何来源的app呢？只需一条简单命令。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>强大的Mac自动化工具——Hammerspoon</title>
+      <link>/2019/04/16/%E5%BC%BA%E5%A4%A7%E7%9A%84mac%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7hammerspoon/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/16/%E5%BC%BA%E5%A4%A7%E7%9A%84mac%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7hammerspoon/</guid>
+      <description>&lt;p&gt;前两天有幸看到&lt;a href=&#34;http://www.hammerspoon.org/&#34;target=&#34;_blank&#34;&gt;Hammerspoon&lt;/a&gt;的介绍，可以说可玩性还是很大的，一个实用的脚本可以帮助我们节省不少时间，提升不少的工作效率。当然既然是脚本工具，就会有很多自定义的功能。简单了解Hammerspoon以后自己写了个小工具，用来在Mac菜单栏查看最新的少数派文章，点击后使用默认浏览器打开相关文章的链接。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搭建 Lua 开发环境</title>
+      <link>/2019/04/16/%E6%90%AD%E5%BB%BA-lua-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/16/%E6%90%AD%E5%BB%BA-lua-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.lua.org/&#34;target=&#34;_blank&#34;&gt;Lua&lt;/a&gt; 是一种强大、高效、轻量级、可嵌入的脚本语言。它支持过程编程、面向对象编程、函数编程、数据驱动编程和数据描述。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何用 PhotoShop 制作出镂空的海报效果</title>
+      <link>/2019/04/14/%E5%A6%82%E4%BD%95%E7%94%A8-photoshop-%E5%88%B6%E4%BD%9C%E5%87%BA%E9%95%82%E7%A9%BA%E7%9A%84%E6%B5%B7%E6%8A%A5%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/14/%E5%A6%82%E4%BD%95%E7%94%A8-photoshop-%E5%88%B6%E4%BD%9C%E5%87%BA%E9%95%82%E7%A9%BA%E7%9A%84%E6%B5%B7%E6%8A%A5%E6%95%88%E6%9E%9C/</guid>
+      <description>&lt;p&gt;介绍一种简单大气的海报制作技巧，展示一种镂空字体的效果。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>页面点击出现桃心</title>
+      <link>/2019/04/02/%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/02/%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83/</guid>
+      <description>&lt;p&gt;&lt;code&gt;hexo&lt;/code&gt;博客或其他静态页面鼠标点击出现桃心操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决locale.Error: unsupported locale setting错误</title>
+      <link>/2019/03/18/%E8%A7%A3%E5%86%B3locale.error-unsupported-locale-setting%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/18/%E8%A7%A3%E5%86%B3locale.error-unsupported-locale-setting%E9%94%99%E8%AF%AF/</guid>
+      <description>&lt;p&gt;云服务器中使用&lt;code&gt;pip&lt;/code&gt;工具的时候可能会报此类错误：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;locale.Error: unsupported locale setting&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是因为语言环境配置有误。&lt;/p&gt;
+&lt;p&gt;只需要在环境变量里添加这两行就可以解决这类问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Python和大漠插件进行文字识别</title>
+      <link>/2019/03/12/%E4%BD%BF%E7%94%A8python%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/12/%E4%BD%BF%E7%94%A8python%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</guid>
+      <description>&lt;p&gt;这是有关使用大漠插件的第一篇，之后还会有很多篇，用来介绍大漠插件的使用，和python的结合，到最终实现一个游戏脚本集合（目标）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;家里有一台win7系统的电脑，平时可以用来玩玩游戏消磨时间。但是有时候有一些重复的操作实在是无趣，所以打算写个脚本，让其自动化执行。&lt;/p&gt;
+&lt;p&gt;最终的目标就是把游戏里一些常用的操作都集合到脚本中去，且无序随机执行，模拟真人操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信小程序初探</title>
+      <link>/2019/03/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2/</guid>
+      <description>&lt;p&gt;一直想着学习微信小程序，因为太懒一直耽搁。&lt;/p&gt;
+&lt;p&gt;主要看了请求API和将请求结果保存到&lt;code&gt;data&lt;/code&gt;里的部分，记录一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（四）</title>
+      <link>/2019/02/28/%E5%88%9D%E5%AD%A6react%E5%9B%9B/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/28/%E5%88%9D%E5%AD%A6react%E5%9B%9B/</guid>
+      <description>&lt;p&gt;我们在构建网页的时候，肯定不只有一个组件。当同时存在多个组件，且多个组件需要共用一些数据时，就产生了&lt;strong&gt;状态提升&lt;/strong&gt;的概念，也就是多个组件共用一个状态（数据）。之所以称之为提升，可能就是子组件的数据被提升到了父组件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（三）</title>
+      <link>/2019/02/25/%E5%88%9D%E5%AD%A6react%E4%B8%89/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/25/%E5%88%9D%E5%AD%A6react%E4%B8%89/</guid>
+      <description>&lt;p&gt;这一部分主要讲表单，以及相关的受控组件和非受控组件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（二）</title>
+      <link>/2019/02/18/%E5%88%9D%E5%AD%A6react%E4%BA%8C/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/18/%E5%88%9D%E5%AD%A6react%E4%BA%8C/</guid>
+      <description>&lt;p&gt;学习react就不得不提提&lt;a href=&#34;https://react.docschina.org/docs/introducing-jsx.html&#34;target=&#34;_blank&#34;&gt;JSX&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（一）</title>
+      <link>/2019/02/17/%E5%88%9D%E5%AD%A6react%E4%B8%80/</link>
+      <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/17/%E5%88%9D%E5%AD%A6react%E4%B8%80/</guid>
+      <description>&lt;p&gt;瞎搞来瞎搞去，感觉前端还是挺有意思的，抽一段时间时间学习学习React，感受一下前端的魅力。也写几篇文章记录学习过程（要不然过几天脑袋一片空白，什么都不记得）。&lt;/p&gt;
+&lt;p&gt;这是学习React的第一天，主要以搭建环境和写一个小的测试demo为主。demo想都不用想，那必须是&lt;code&gt;Hello, World!&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac 启动台图标数量修改</title>
+      <link>/2019/02/01/mac-%E5%90%AF%E5%8A%A8%E5%8F%B0%E5%9B%BE%E6%A0%87%E6%95%B0%E9%87%8F%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/01/mac-%E5%90%AF%E5%8A%A8%E5%8F%B0%E5%9B%BE%E6%A0%87%E6%95%B0%E9%87%8F%E4%BF%AE%E6%94%B9/</guid>
+      <description>&lt;p&gt;默认启动台的图标太大，根本放不了几个app，如何修改显示数量呢？&lt;/p&gt;
+&lt;p&gt;当然启动应用也可以使用聚焦搜索。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用树莓派配合AdguardHome屏蔽局域网内广告</title>
+      <link>/2019/02/01/%E4%BD%BF%E7%94%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E5%90%88adguardhome%E5%B1%8F%E8%94%BD%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%B9%BF%E5%91%8A/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/01/%E4%BD%BF%E7%94%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E5%90%88adguardhome%E5%B1%8F%E8%94%BD%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%B9%BF%E5%91%8A/</guid>
+      <description>&lt;p&gt;AdGuard算是比较强大的广告拦截工具了。爱奇艺，腾讯视频等主流视频网站的广告都可以被拦截，而且是打开视频后直接跳过广告，不像其他插件还需要等待。屏蔽视频广告只是其功能的一部分，还能保护隐私，屏蔽钓鱼网站等等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>桶排序</title>
+      <link>/2019/02/01/%E6%A1%B6%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/01/%E6%A1%B6%E6%8E%92%E5%BA%8F/</guid>
+      <description>&lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%A1%B6%E6%8E%92%E5%BA%8F&#34;target=&#34;_blank&#34;&gt;来自维基百科&lt;/a&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;桶排序（Bucket sort）或所谓的箱排序，是一个排序演算法，工作的原理是将阵列分到有限数量的桶里。每个桶再个别排序（有可能再使用别的排序演算法或是以递回方式继续使用桶排序进行排序）。桶排序是鸽巢排序的一种归纳结果。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac下安装MySQL Python包</title>
+      <link>/2019/01/30/mac%E4%B8%8B%E5%AE%89%E8%A3%85mysql-python%E5%8C%85/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/30/mac%E4%B8%8B%E5%AE%89%E8%A3%85mysql-python%E5%8C%85/</guid>
+      <description>&lt;p&gt;简单几步解决问题：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《MySQL必知必会》读书笔记</title>
+      <link>/2019/01/29/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/29/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;*《MySQL必知必会》*读书笔记记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>选择排序</title>
+      <link>/2019/01/25/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/25/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</guid>
+      <description>&lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍&lt;/h2&gt;
+&lt;p&gt;以下介绍来自&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F&#34;target=&#34;_blank&#34;&gt;维基百科&lt;/a&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理如下。首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Neovim 配置记录</title>
+      <link>/2019/01/20/neovim-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/20/neovim-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;第一次接触vim还是在玩树莓派的时候，当时打开 vim 想要退出界面是真的难，只能强行关闭终端。&lt;/p&gt;
+&lt;p&gt;pycharm 用来写 python 很顺手，但是功能太多也显得臃肿。&lt;/p&gt;
+&lt;p&gt;pycharm 的强大莫过于异常自动补全，跳转，代码调试功能，其他功能也很好，但是基本很少用到。&lt;/p&gt;
+&lt;p&gt;所以也是为了学习，还是勉强换成了 vim。用起来也有很多的不顺手。只能慢慢适应。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>归并排序</title>
+      <link>/2019/01/15/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/15/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</guid>
+      <description>&lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;归并排序（英语：Merge sort，或mergesort），是建立在归并操作上的一种有效的排序算法，效率為 {\displaystyle O(n\log n)} {\displaystyle O(n\log n)}（大O符号）。1945年由约翰·冯·诺伊曼首次提出。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F&#34;target=&#34;_blank&#34;&gt;维基百科&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Readfree 签到脚本</title>
+      <link>/2019/01/14/readfree-%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/14/readfree-%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://readfree.me/&#34;target=&#34;_blank&#34;&gt;readfree&lt;/a&gt;是一个电子书分享网站, 不过下载电子书需要通过签到来获取额度.每天签到的事情可以交给定时脚本完成.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu16.04搭建wordpress</title>
+      <link>/2019/01/11/ubuntu16.04%E6%90%AD%E5%BB%BAwordpress/</link>
+      <pubDate>Fri, 11 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/11/ubuntu16.04%E6%90%AD%E5%BB%BAwordpress/</guid>
+      <description>&lt;p&gt;如果尝鲜Ubuntu18.04有些操作会不同，需要自行google。&lt;/p&gt;
+&lt;p&gt;默认root用户下操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>模块化配置vim</title>
+      <link>/2019/01/10/%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AEvim/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/10/%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AEvim/</guid>
+      <description>&lt;p&gt;之前就想过模块化vim配置, 但是没有合适的教程, 一直拖着, 直到看到此文章&lt;a href=&#34;https://zhuanlan.zhihu.com/p/54864654&#34;target=&#34;_blank&#34;&gt;Vimrc Init.vim太长了？不存在的&lt;/a&gt;, 根据Pendragon大佬的vim配置, 模仿并修改了一波.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>冒泡排序</title>
+      <link>/2018/12/25/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Tue, 25 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/12/25/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</guid>
+      <description>&lt;h1 id=&#34;简单介绍&#34;&gt;简单介绍&lt;/h1&gt;
+&lt;p&gt;以下介绍来自&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F&#34;target=&#34;_blank&#34;&gt;维基百科&lt;/a&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;冒泡排序（英语：Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢「浮」到数列的顶端。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用virtualenv和virtualenvwrapper搭建python虚拟环境</title>
+      <link>/2018/12/15/%E4%BD%BF%E7%94%A8virtualenv%E5%92%8Cvirtualenvwrapper%E6%90%AD%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/12/15/%E4%BD%BF%E7%94%A8virtualenv%E5%92%8Cvirtualenvwrapper%E6%90%AD%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;使用python语言编程的过程中，难免会在系统里安装多个python版本。可能根据开发项目的需要，同一库会使用到不同版本，不同库之间版本不一致出现冲突等情况。这时候可以使用virtualenv管理虚拟环境。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>终端Proxychains4使用记录</title>
+      <link>/2018/10/15/%E7%BB%88%E7%AB%AFproxychains4%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/15/%E7%BB%88%E7%AB%AFproxychains4%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;因为日常生活中经常遇到使用wget下载文件且文件在国内下载比较慢或不能下载的情况, 需要在终端使用代理, 试过一些方法, 还是觉得使用proxychains更方便一些.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>断开SSH后仍然运行命令</title>
+      <link>/2018/02/15/%E6%96%AD%E5%BC%80ssh%E5%90%8E%E4%BB%8D%E7%84%B6%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/15/%E6%96%AD%E5%BC%80ssh%E5%90%8E%E4%BB%8D%E7%84%B6%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;因为经常要在云服务器上跑一些程序，但是一旦断开ssh连接就意味着程序的结束。这里提供两个简单的办法，即使断开连接也能继续运行。&lt;/p&gt;
+&lt;p&gt;我们来简单的了解一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>将py文件转换为exe可执行文件</title>
+      <link>/2017/12/15/%E5%B0%86py%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAexe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/15/%E5%B0%86py%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAexe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;有一个库可以实现py文件转换为exe可执行文件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如果Ubuntu没声音怎么办</title>
+      <link>/2017/11/13/%E5%A6%82%E6%9E%9Cubuntu%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/13/%E5%A6%82%E6%9E%9Cubuntu%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
+      <description>&lt;p&gt;先说一种特殊的情况，如果你是双系统，即有可能你是windows和ubuntu系统同时使用的话，完整关机一次可能问题就解决了。如果没有解决就继续往下看。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于Hexo的个人博客搭建</title>
+      <link>/2017/10/15/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/10/15/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description>&lt;p&gt;为什么会有这篇文章的诞生？因为在学习Python的过程中总想给自己找点乐子，为了记录学习也是为了记录生活，总觉得没有一个属于自己的博客不圆满，今天也算是实现了吧。下面我就来分享一下这两天的成果。&lt;/p&gt;
+&lt;p&gt;我们的博客是基于Hexo的，官网的描述只有一句话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A fast, simple, powerful blog framework&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当你看完这篇教程以后，你就会觉得，恩，真的是这样。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（六）</title>
+      <link>/2017/07/15/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</link>
+      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/15/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</guid>
+      <description>&lt;p&gt;本文是介绍Scrapy基础用法的最后一篇，介绍Scrapy中Download Middleware的用法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（五）</title>
+      <link>/2017/07/12/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/12/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/</guid>
+      <description>&lt;p&gt;本篇介绍scrapy的item pipeline，具体操作要根据爬取的内容决定。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（四）</title>
+      <link>/2017/07/08/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</link>
+      <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/08/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</guid>
+      <description>&lt;p&gt;学习scrapy中spider的用法，主要介绍一些方法的使用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（三）</title>
+      <link>/2017/06/25/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/25/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</guid>
+      <description>&lt;p&gt;我们来聊聊scrapy中选择器的用法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（二）</title>
+      <link>/2017/06/22/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/22/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</guid>
+      <description>&lt;p&gt;通过这篇文章，我们会了解scrapy的命令行工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（一）</title>
+      <link>/2017/06/20/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
+      <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/20/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
+      <description>&lt;p&gt;作为scrapy学习笔记的第一篇，主要是了解此框架的基本使用。并通过一个demo感受scrapy框架的强大。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vim快捷用法</title>
+      <link>/2017/05/16/vim%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/16/vim%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/</guid>
+      <description>&lt;p&gt;整理了一些vim的快捷键用法和技巧操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>学python就业前景怎么样</title>
+      <link>/2017/04/21/%E5%AD%A6python%E5%B0%B1%E4%B8%9A%E5%89%8D%E6%99%AF%E6%80%8E%E4%B9%88%E6%A0%B7/</link>
+      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/21/%E5%AD%A6python%E5%B0%B1%E4%B8%9A%E5%89%8D%E6%99%AF%E6%80%8E%E4%B9%88%E6%A0%B7/</guid>
+      <description>&lt;p&gt;学了python之后能找到工作吗？相信很多小伙伴都有过这个困扰，刚入门的我，作为新手练习，那我们今天就用python来分析一下，学了python以后能找到工作吗？能找到什么样的工作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>云服务器搭建私人SS</title>
+      <link>/2017/04/15/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BAss/</link>
+      <pubDate>Sat, 15 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/15/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BAss/</guid>
+      <description>&lt;p&gt;如果你有一台海外的云服务器, 最简单的操作就是搭梯子了.&lt;/p&gt;
+&lt;p&gt;总得看看墙外的世界.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用多种方法爬取超美的壁纸网站</title>
+      <link>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;p&gt;最近发现了一个国外很不错的壁纸网站 Simple Desktop ，所有的壁纸都是扁平风格。如果你的系统主题是扁平风格，或者你对扁平化的壁纸情有独钟，那么这个网站一定适合你。因为所有的壁纸看着都很喜欢，就利用爬虫把壁纸的原图链接爬取下来。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用多种方法爬取超美的壁纸网站（续）</title>
+      <link>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99%E7%BB%AD/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99%E7%BB%AD/</guid>
+      <description>&lt;p&gt;继续接着上篇文章介绍如何利用另外两种方式爬取 Simple Desktop 网站的壁纸。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>做一个魔力盒视频下载器——含GUI</title>
+      <link>/2017/03/16/%E5%81%9A%E4%B8%80%E4%B8%AA%E9%AD%94%E5%8A%9B%E7%9B%92%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%99%A8%E5%90%ABgui/</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/16/%E5%81%9A%E4%B8%80%E4%B8%AA%E9%AD%94%E5%8A%9B%E7%9B%92%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%99%A8%E5%90%ABgui/</guid>
+      <description>&lt;p&gt;昨天抽空做了一个魔力盒视频下载器。可以实现的功能有随机搜索视频下载，和一个简单的界面。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何实现简单的微信机器人</title>
+      <link>/2017/03/12/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/12/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <description>&lt;p&gt;最近发现了一个有趣的项目，利用Python制作一个简单的微信机器人。思路就是微信获取到信息，然后接入图灵机器人的API，再把信息发送给对方。听起来很有意思，实践一下吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>学习mongoDB（二）</title>
+      <link>/2017/03/02/%E5%AD%A6%E4%B9%A0mongodb%E4%BA%8C/</link>
+      <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/02/%E5%AD%A6%E4%B9%A0mongodb%E4%BA%8C/</guid>
+      <description>&lt;p&gt;这篇文章主要介绍了查找集合的命令。如何查找所有集合，如何指定条件查找数据，使用运算符查找，查询结果排序等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>学习mongoDB（一）</title>
+      <link>/2017/03/01/%E5%AD%A6%E4%B9%A0mongodb%E4%B8%80/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/01/%E5%AD%A6%E4%B9%A0mongodb%E4%B8%80/</guid>
+      <description>&lt;p&gt;决定要系统学习在Python中使用mongoDB，那就从看文档开始。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Python连接mongoDB</title>
+      <link>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</link>
+      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</guid>
+      <description>&lt;p&gt;之前使用的MySQL是关系型数据库，mongoDB是非关系型数据库（NoSQL）。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用selenium&#43;PhantomJS进行网络爬虫</title>
+      <link>/2017/02/26/%E4%BD%BF%E7%94%A8selenium-phantomjs%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/26/%E4%BD%BF%E7%94%A8selenium-phantomjs%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</guid>
+      <description>&lt;p&gt;Selenium本是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。PhantomJS是一个基于WebKit的服务器端 JavaScript API。它全面支持web而不需浏览器支持。使用selenium和PhantomJS这两个工具来爬虫，可以实现很多功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>BeautifulSoup4 文档学习记录</title>
+      <link>/2017/01/19/beautifulsoup4-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/01/19/beautifulsoup4-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>花了点时间阅读了 Beautiful Soup 的官方文档。说实话，之前看到这些东西就头疼，密密麻麻全是字，真是不想看，不过没办法，东西总是要学习的，哪能说不看就不看呢</description>
+    </item>
+    
+    <item>
+      <title>看书与实践|初学 Python 心得</title>
+      <link>/2017/01/14/%E7%9C%8B%E4%B9%A6%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%88%9D%E5%AD%A6-python-%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/01/14/%E7%9C%8B%E4%B9%A6%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%88%9D%E5%AD%A6-python-%E5%BF%83%E5%BE%97/</guid>
+      <description>这段时间买了一些有关 Python 的书，每天一边看，一边写一些爬虫的代码，导致博文一直没有跟上进度，没有及时记录自己的学习状况。 从学习 Python 的第一天起，到现</description>
+    </item>
+    
+    <item>
+      <title>利用Python发邮件</title>
+      <link>/2016/12/09/%E5%88%A9%E7%94%A8python%E5%8F%91%E9%82%AE%E4%BB%B6/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/09/%E5%88%A9%E7%94%A8python%E5%8F%91%E9%82%AE%E4%BB%B6/</guid>
+      <description>&lt;p&gt;在搜索python教程的时候，碰巧遇到了「 利用 python 发送电子邮件 」的教程，觉得很实用也比较有意思，所以就花了点时间学习发送邮件的脚本是怎样实现的。&lt;/p&gt;
+&lt;p&gt;我主要是利用SMTP（简单邮件传输协议）来实现邮件的发送。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新手入门树莓派必做的四件事</title>
+      <link>/2016/11/05/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BF%85%E5%81%9A%E7%9A%84%E5%9B%9B%E4%BB%B6%E4%BA%8B/</link>
+      <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/11/05/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BF%85%E5%81%9A%E7%9A%84%E5%9B%9B%E4%BB%B6%E4%BA%8B/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;19年更新一波，最新（只限图形界面）系统，已经不用处理这四步了，系统初始化的时候已经设置好了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于新手来说，开始折腾树莓派有四件事必须完成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.更换国内源。
+2.系统显示中文。
+3.安装中文输入法。
+4.调整时区时间。
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

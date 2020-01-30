@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>使用 Pyqt5 Designer 构建桌面应用&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">使用 Pyqt5 Designer 构建桌面应用</h1><p class="article date">Saturday, April 27, 2019<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><p>文章分为三部分，主要是<strong>界面的设计</strong>，<strong>py文件的代码编写</strong>和<strong>其余部分的小修小补</strong>。</p>
+<h2 id="设计界面">设计界面</h2>
+<p>执行<code>pip install pyqt5-tools</code>命令，安装好可以在包目录（类似<code>C:\Programs\Python\Python37-32\Lib\site-packages\pyqt5_tools</code>。）下找到<code>designer.exe</code>应用程序。</p>
+<p>打开后可以看到如下界面：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2019/04/27/5cc40db074a15.png"><img  src="https://i.loli.net/2019/04/27/5cc40db074a15.png"
+        alt="应用界面"/></a></p>
+<p>应用的左边是构成用户界面的各种组件，右边是窗口以及组件的属性和设置，中间就是你构建用户界面的窗口。</p>
+<p>我们可以结合自己的需求，发挥想象力设计出独特的用户界面。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2019/04/27/5cc40f32ba7fc.png"><img  src="https://i.loli.net/2019/04/27/5cc40f32ba7fc.png"
+        alt="Onmyoji"/></a></p>
+<p>设计过程中，可以使用<code>Ctrl+R</code>预览界面。也可以初步体验一些交互功能。</p>
+<p>我们在界面右边靠下部分，注意到有<code>Signal/Slot Editor</code>，我们可以在这里绑定一些事件。</p>
+<p>例如我将<code>spinBox</code>的<code>valueChanged(int)</code>和<code>progressBar</code>的<code>setValue(int)</code>绑定，我们在预览界面的时候，不断增加数值，可以看到进度条也在同时改变。这些交互部分在生成代码之后也有体现。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2019/04/27/5cc4147f12122.png"><img  src="https://i.loli.net/2019/04/27/5cc4147f12122.png"
+        alt="预览"/></a></p>
+<h2 id="转换为py代码">转换为py代码</h2>
+<p>设计好界面以后，我们需要转换成python代码，和我们的程序相结合，从单纯的操作或命令行输出，到用户界面的诞生，我们还需要基于设计好的界面，再添砖加瓦。</p>
+<p>转换为python代码是非常简单的，只需要在设计保存好的ui文件目录下，执行命令：</p>
+<p><code>pyuic5 -o test.py test.ui</code></p>
+<p>这里需要两个参数，第一个是转换成py代码的文件名，第二个是需要转换成py文件的ui文件。</p>
+<p>转换好以后就可以通过代码与设计好的界面相结合了。</p>
+<p>直接生成好的文件，我们还需要在底部添加如下代码才能运行：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">__main__</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">MainWindow</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">ui</span> <span class="o">=</span> <span class="n">Ui_Form</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">ui</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+    <span class="n">MainWindow</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><p>现在我们只是需要以代码的形式来生成用户见面，不需要考虑太多。我个人认为使用命令行生成的代码并不美观，因为以上生成的代码执行过程中，需要给<code>Ui_Form</code>类的<code>setupUi</code>方法传递<code>QtWidgets.QMainWindow()</code>，其实更好的写法是继承它而不是作为参数传递它，如果使用继承，将代码里的<code>Form</code>直接更换为<code>self</code>，更为合理一些。当然现在不着急改这些。</p>
+<h2 id="组件交互">组件交互</h2>
+<p>这里简单罗几个我在使用过程中遇到的，组件需要和方法绑定的交互操作。</p>
+<h3 id="pushbutton">pushButton</h3>
+<p><code>self.pushButton.clicked.connect(self.show_good_key)</code></p>
+<h3 id="spinbox">spinBox</h3>
+<p><code>self.spinBox.valueChanged['int'].connect(self.set_num)</code></p>
+<h3 id="lineedit">lineEdit</h3>
+<p><code>self.lineEdit.textChanged['QString'].connect(self.set_num)</code></p>
+<p>结合设计界面时的绑定操作，还是很好分析出每个组件具体有怎样的属性，以及如何绑定或改变。注意括号里都是方法名，名称尾部没有括号，因为我们只是将方法和组件绑定在一起，当组件发生改变时再调用方法。</p>
+<h2 id="补充">补充</h2>
+<h3 id="多线程的支持">多线程的支持</h3>
+<p>我们设计好界面并和程序相结合，当我们执行的时候会发现点击一个按钮后，如果程序正在执行，那么界面会呈现假死状态，是因为现在的程序还只支持单线程工作，就好比在开发web界面的时候，如果设计到后台发送邮件，如果不使用多线程或<code>celery</code>队列等方式，那么页面也会呈现假死状态。</p>
+<p>官方提供了QtCore.QThread类，但是由于我的程序比较特殊，无法使用这种方法，所以另辟蹊径，使用python自带的<code>threading</code>库。</p>
+<p>具体实现看以下代码，需要根据实际情况自行修改：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 导入 Thread</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+
+<span class="k">def</span> <span class="nf">thread_run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
+    <span class="sa"></span><span class="s2">&#34;&#34;&#34;</span><span class="s2">创建线程</span><span class="s2">&#34;&#34;&#34;</span>
+    <span class="n">thr</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">app_run</span><span class="p">)</span>
+    <span class="n">thr</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">app_run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
+    <span class="sa"></span><span class="s2">&#34;&#34;&#34;</span><span class="s2">这部分是耗时操作</span><span class="s2">&#34;&#34;&#34;</span>
+    <span class="o">.</span><span class="o">.</span><span class="o">.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="p">)</span>
+
+<span class="c1"># 调用创建线程的方法</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">thread_run</span><span class="p">)</span>
+</code></pre></div><p>简单来说很简单，就是将具有耗时操作的方法，单独用线程创建，按钮绑定创建线程的方法即可。</p>
+<p>但是在实际过程中我们会发现存在这样一个问题，在你关闭界面后，如果线程所在的任务没有执行完毕，线程还是会继续执行，这一般来说不是我们想要的结果，我们一般希望在关闭界面后，所有任务也一同结束。</p>
+<p>所以需要在<code>thread_run</code>方法里添加一行：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">thread_run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
+    <span class="sa"></span><span class="s2">&#34;&#34;&#34;</span><span class="s2">创建线程</span><span class="s2">&#34;&#34;&#34;</span>
+    <span class="n">thr</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">app_run</span><span class="p">)</span>
+    <span class="n">thr</span><span class="o">.</span><span class="n">setDaemon</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">thr</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="p">)</span>
+</code></pre></div><p>将子线程设置为守护线程，在主程序退出的时候同时结束任务，无需等待子线程执行完。</p>
+<p>这样以后我们在关闭程序界面的时候，按钮绑定的任务也会同时结束。</p>
+<h3 id="尚未调用-coinitialize">尚未调用 CoInitialize</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">IDispatch</span> <span class="o">=</span> pythoncom.CoCreateInstance<span class="o">(</span>IDispatch, None, clsctx, pythoncom.IID_IDispatch<span class="o">)</span>
+pywintypes.com_error: <span class="o">(</span>-2147221008, <span class="s1">&#39;尚未调用 CoInitialize。&#39;</span>, None, None<span class="o">)</span>
+</code></pre></div><p>因为我的程序中同时使用了多线程和win32，所以引发了这个问题。解决办法也很简单。</p>
+<p><code>import pythoncom</code></p>
+<p>并在使用线程的地方加入一行：</p>
+<p><code>pythoncom.CoInitialize()</code></p>
+<p>例如上边的例子就是在<code>app_run</code>方法中添加一行</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">app_run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
+    <span class="sa"></span><span class="s2">&#34;&#34;&#34;</span><span class="s2">这部分是耗时操作</span><span class="s2">&#34;&#34;&#34;</span>
+    <span class="n">pythoncom</span><span class="o">.</span><span class="n">CoInitialize</span><span class="p">(</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="p">)</span>
+</code></pre></div><p>这样就不会报错了。</p>
+<h3 id="点击按钮弹出新窗口">点击按钮弹出新窗口</h3>
+<p>需要我们再设计一个界面，例如：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2019/04/27/5cc41da085b28.png"><img  src="https://i.loli.net/2019/04/27/5cc41da085b28.png"
+        alt="鼓励作者"/></a></p>
+<p>设计好后使用命令行转换成py代码。</p>
+<p>然后在主界面中导入，并将该方法绑定需要弹出窗口的按钮即可。</p>
+<p>例如：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">show_good</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
+    <span class="sa"></span><span class="s2">&#34;&#34;&#34;</span><span class="s2">展示赞赏码</span><span class="s2">&#34;&#34;&#34;</span>
+    <span class="kn">from</span> <span class="nn">good</span> <span class="kn">import</span> <span class="n">Ui_Form</span>
+    <span class="n">ui</span> <span class="o">=</span> <span class="n">Ui_Form</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">MainWindow</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QDialog</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">ui</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+    <span class="n">MainWindow</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">MainWindow</span><span class="o">.</span><span class="n">exec_</span><span class="p">(</span><span class="p">)</span>
+</code></pre></div><p>这样下来一个简单的桌面应用就搞定了。</p>
+<p><strong>具体可以参考<a href="https://github.com/alpha87/OnmyojiHelperGUI/releases"target="_blank">阴阳师桌面版助手</a></strong></p></article><section class="article labels"><a class="article category" href=/categories/python/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Python</a><a class="article tag" href=/tags/pyqt5/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Pyqt5</a><a class="article tag" href=/tags/gui/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>GUI</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/05/08/%E4%BD%BF%E7%94%A8%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"><span class="li"></span>使用三种语言实现斐波那契数列</a></p><p><a class="link" href="/2019/04/24/%E5%B0%9A%E6%9C%AA%E8%B0%83%E7%94%A8coinitialize/"><span class="li"></span>尚未调用CoInitialize</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

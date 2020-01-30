@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>Celery 使用小记&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">Celery 使用小记</h1><p class="article date">Thursday, August 29, 2019<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>Celery 是一个简单高效可靠的分布式系统。在处理大量消息，实时处理异步任务，定时执行任务，支持任务调度等方面使用起来更为灵活。</p>
+<p>简单理解 Celery 就是发布任务(Producer)，消息中间件(Broker)接收任务，执行任务(Worker)或定时执行任务(Celery Beat)。</p>
+<!-- more -->
+<h1 id="任务队列">任务队列</h1>
+<p>任务队列，顾名思义就是任务工作单元的集合，集合中存放了等待执行的任务。</p>
+<p>何时使用任务队列？假如当前我们需要执行某项任务，但是该任务比较耗时，且可以放在后台执行，为了不影响当前操作，我们就把该任务放在任务队列，等待调用和执行。最常使用的场景是在 web 开发中。例如我们需要实现一个用户认证发送电子邮件的功能，如果不使用异步执行，我们需要等待电子邮件发送完成才可执行下步操作，但是发送邮件的过程中，web 页面会处于假死状态，影响用户使用体验。简单的 web 应用可以用多线程来完成该任务，一旦任务量加重，还是需要使用更为强大的 Celery。</p>
+<p>定时执行任务，可以理解为 crontab。</p>
+<h1 id="安装">安装</h1>
+<p>使用 Celery 的第一步就是选择消息中间件。这里我们选择 redis，上手快好操作。</p>
+<h2 id="安装-redis">安装 redis</h2>
+<p><a href="https://redis.io/download#installation"target="_blank">官方文档</a>有详细的源码安装说明。</p>
+<p>这里介绍在 Ubuntu 16.04 下通过 apt 工具安装：</p>
+<p><code>apt-get install redis-server -y</code></p>
+<p>启动 redis：</p>
+<p><code>redis-server</code></p>
+<p>测试是否成功安装：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">➜  ~ redis-cli
+127.0.0.1:6379&gt; PING
+PONG
+</code></pre></div><p>说明安装成功。</p>
+<p>终端输入：</p>
+<p><code>python3 -m pip install redis</code></p>
+<p>这样我们可以使用 python 操作 redis。</p>
+<h2 id="安装-celery">安装 Celery</h2>
+<p>终端执行：</p>
+<p><code>python3 -m pip install celery</code></p>
+<p>这样就完成了 redis 和 Celery 的安装。</p>
+<h1 id="简单应用">简单应用</h1>
+<p>当我们安装好 redis，并启动服务后，可以创建一个新的文件夹用来练习 celery。</p>
+<p><code>mkdir celery_test</code></p>
+<p>进入该目录后，创建文件 <code>test.py</code>，输入以下内容：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">hello</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="n">broker</span><span class="o">=</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">redis://127.0.0.1:6379/1</span><span class="s2">&#34;</span>
+<span class="p">)</span>
+
+<span class="nd">@app.task</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="c1"># 耗时需要异步执行的任务</span>
+    <span class="k">return</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">hello world</span><span class="s1">&#39;</span>
+</code></pre></div><p>这就完成了 Celery 的简单应用。</p>
+<p>如何使用呢？</p>
+<p>我们需要在终端启动 Celery 服务。输入：</p>
+<p><code>celery worker -A test --loglevel INFO</code></p>
+<p>如果看到以下界面说明成功启动！</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2019/08/29/9nZkF73uJPfGh6v.png"><img  src="https://i.loli.net/2019/08/29/9nZkF73uJPfGh6v.png"
+        alt="celery 启动界面"/></a></p>
+<p>使用 python shell 简单试一下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&gt;&gt;&gt; from <span class="nb">test</span> import hello
+&gt;&gt;&gt; hello.delay<span class="o">(</span><span class="o">)</span>
+&lt;AsyncResult: 182f57d7-71fc-4c61-b6b4-dbdd76ac4068&gt;
+</code></pre></div><p>然后查看 Celery，可以看到最下方有一个新的 Worker 被执行：</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2019/08/29/dAPzc2F6bHSGkvj.png"><img  src="https://i.loli.net/2019/08/29/dAPzc2F6bHSGkvj.png"
+        alt="任务被执行"/></a></p>
+<p>是不是很简单？这样就完成了 Celery 的简单使用。</p>
+<h1 id="使用配置文件">使用配置文件</h1>
+<p>我们可以将 Celery 任务单独做成模块的形式，并通过配置文件来配置 Celery。</p>
+<p>结构如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">.
+├── app
+│   ├── __init__.py
+│   ├── config.py
+│   └── tasks.py
+└── test.py
+</code></pre></div><p><code>app</code> 文件夹下存放 Celery 相关配置和任务。</p>
+<p><code>__init__.py</code> 用来初始化 Celery，<code>config.py</code> 是 Celery 的配置文件，<code>tasks.py</code> 存放任务。</p>
+<p><code>test.py</code> 用来测试执行任务。</p>
+<h2 id="__init__py"><strong>init</strong>.py</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">hello</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="c1"># 使用配置文件</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config_from_object</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">app.config</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></div><h2 id="configpy">config.py</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="sa"></span><span class="s2">&#34;&#34;&#34;</span><span class="s2">
+</span><span class="s2"></span><span class="s2">Celery 配置</span><span class="s2">
+</span><span class="s2"></span><span class="s2">&#34;&#34;&#34;</span>
+
+<span class="n">broker_url</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">redis://127.0.0.1:6379/1</span><span class="s2">&#34;</span>
+</code></pre></div><p>很多教程基本使用都是大写配置，但官方文档中介绍在 4.0 以后开始推荐使用小写配置，所以依据文档这里使用小写配置。</p>
+<p>具体更多详细配置可以查看<a href="http://docs.celeryproject.org/en/latest/userguide/configuration.html#new-lowercase-settings"target="_blank">Configuration and defaults</a>。</p>
+<h2 id="taskspy">tasks.py</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span>
+
+
+<span class="nd">@app.task</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">return</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">hello, world!</span><span class="s2">&#34;</span>
+</code></pre></div><p>这个文件存放耗时任务。</p>
+<p>在终端启动 Celery：</p>
+<p><code>celery worker -A app.tasks --loglevel INFO</code></p>
+<p>启动成功后在 python shell 中测试：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&gt;&gt;&gt; from app import tasks
+&gt;&gt;&gt; tasks.hello.delay<span class="o">(</span><span class="o">)</span>
+&lt;AsyncResult: 3aaa9e64-66ea-42dc-bed7-b1921275e9f9&gt;
+</code></pre></div><p>查看 Celery，和之前一样，说明就执行成功啦！</p>
+<h1 id="部署-celery-和-redis">部署 Celery 和 redis</h1>
+<p>我们需要使用 supervisor 启动和管理 Celery 和 redis 服务。</p>
+<p><code>pip install supervisor</code></p>
+<p>安装完成后修改配置文件 <code>/etc/supervisord.conf</code>，加入以下配置（redis 的配置要写在 Celery 之前）：</p>
+<pre><code class="language-config" data-lang="config">[program:redis]
+user = root
+directory=/root/celery_test
+command=redis-server
+numprocs=1
+startsecs = 5
+startretries = 3
+autostart=true
+autorestart=true
+; stdout 日志文件，需要注意当指定目录不存在时无法正常启动，所以需要手动创建目录（supervisord 会自动创建日志文件）
+stdout_logfile = /root/logs/redis_stdout.log
+
+[program:celery_worker]
+user = root
+directory=/root/celery_test
+command=celery worker -A app.tasks --loglevel INFO --logfile /root/celery_worker.log
+numprocs=1
+startsecs = 5
+startretries = 3
+autostart=true
+autorestart=true
+stdout_logfile = /root/logs/celery_stdout.log
+</code></pre><p>输入命令启动服务：</p>
+<p><code>supervisord -c /etc/supervisord.conf</code></p>
+<p>这样就完成了 redis 和 Celery 的部署。</p>
+</article><section class="article labels"><a class="article category" href=/categories/python/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Python</a><a class="article tag" href=/tags/celery/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Celery</a><a class="article tag" href=/tags/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>任务队列</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/09/15/%E4%BD%BF%E7%94%A8-pytest-%E6%9D%A5%E6%B5%8B%E8%AF%95%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81/"><span class="li"></span>使用 pytest 来测试你的代码</a></p><p><a class="link" href="/2019/07/13/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/"><span class="li"></span>宅宅生活收藏夹——项目心得</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on 简讯</title>
+    <link>/tags/nginx/</link>
+    <description>Recent content in Nginx on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Fri, 14 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Flask，Nginx，Gunicorn，Supervisor完成网站部署</title>
+      <link>/2019/06/14/%E4%BD%BF%E7%94%A8flasknginxgunicornsupervisor%E5%AE%8C%E6%88%90%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/14/%E4%BD%BF%E7%94%A8flasknginxgunicornsupervisor%E5%AE%8C%E6%88%90%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</guid>
+      <description>宅宅生活收藏夹小程序的 web 后端是 flask，因为只涉及到几个接口，flask 简单快速。 这篇文章记录一下整个部署的过程。 当我们使用 flask 开发完成 web 应</description>
+    </item>
+    
+  </channel>
+</rss>

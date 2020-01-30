@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MongoDB on 简讯</title>
+    <link>/tags/mongodb/</link>
+    <description>Recent content in MongoDB on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Thu, 02 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>学习mongoDB（二）</title>
+      <link>/2017/03/02/%E5%AD%A6%E4%B9%A0mongodb%E4%BA%8C/</link>
+      <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/02/%E5%AD%A6%E4%B9%A0mongodb%E4%BA%8C/</guid>
+      <description>&lt;p&gt;这篇文章主要介绍了查找集合的命令。如何查找所有集合，如何指定条件查找数据，使用运算符查找，查询结果排序等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>学习mongoDB（一）</title>
+      <link>/2017/03/01/%E5%AD%A6%E4%B9%A0mongodb%E4%B8%80/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/01/%E5%AD%A6%E4%B9%A0mongodb%E4%B8%80/</guid>
+      <description>&lt;p&gt;决定要系统学习在Python中使用mongoDB，那就从看文档开始。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Python连接mongoDB</title>
+      <link>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</link>
+      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</guid>
+      <description>&lt;p&gt;之前使用的MySQL是关系型数据库，mongoDB是非关系型数据库（NoSQL）。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

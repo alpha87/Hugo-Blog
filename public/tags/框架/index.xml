@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>框架 on 简讯</title>
+    <link>/tags/%E6%A1%86%E6%9E%B6/</link>
+    <description>Recent content in 框架 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微信小程序输入框的使用</title>
+      <link>/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>制作微信小程序会经常涉及到输入框的使用。 最简单的输入框 &amp;lt;!--index.wxml --&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; bindconfirm=&amp;#34;searchItem&amp;#34; placeholder=&amp;#34;搜索关键词&amp;#34; confirm-type=&amp;#34;search&amp;#34;&amp;gt;&amp;lt;/input&amp;gt; // index.js searchItem(event) { if (event.detail.value == &amp;#34;&amp;#34;) { wx.showToast({</description>
+    </item>
+    
+    <item>
+      <title>微信小程序如何使用 UI 组件库</title>
+      <link>/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/</guid>
+      <description>&lt;p&gt;在创建小程序的时候，有些样式并不完全需要自己来写。&lt;/p&gt;
+&lt;p&gt;可以使用已经构建好的框架，比如官方的 UI 组件库 &lt;a href=&#34;https://weui.io/&#34;target=&#34;_blank&#34;&gt;WeUI&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;我们本次使用的组件库是有赞的 &lt;a href=&#34;https://youzan.github.io/vant-weapp/#/intro&#34;target=&#34;_blank&#34;&gt;Vant Weapp&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;使用基于小程序云开发，和本地开发大同小异。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>羊毛攻略 on 简讯</title>
+    <link>/tags/%E7%BE%8A%E6%AF%9B%E6%94%BB%E7%95%A5/</link>
+    <description>Recent content in 羊毛攻略 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Fri, 17 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E7%BE%8A%E6%AF%9B%E6%94%BB%E7%95%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 1Password 管理你的密码</title>
+      <link>/2020/01/17/%E4%BD%BF%E7%94%A8-1password-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/17/%E4%BD%BF%E7%94%A8-1password-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</guid>
+      <description>此次分享的羊毛攻略是免费使用 1Password 一年。 1Password 想必大家都不陌生，密码管理界的 Apple，先不说功能怎样，超高定价就让普通用户不敢想象。 没有了解过 1Password 的</description>
+    </item>
+    
+  </channel>
+</rss>

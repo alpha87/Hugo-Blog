@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>学python就业前景怎么样&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">学python就业前景怎么样</h1><p class="article date">Friday, April 21, 2017<span class="reading-time"> • 8 minutes to read</span></p></section><article class="article markdown-body"><p>学了python之后能找到工作吗？相信很多小伙伴都有过这个困扰，刚入门的我，作为新手练习，那我们今天就用python来分析一下，学了python以后能找到工作吗？能找到什么样的工作。</p>
+<h2 id="抓取信息">抓取信息</h2>
+<p>分析数据的前提是有数据。</p>
+<p>这次主要爬取智联招聘python的职位信息。因为我个人感觉智联招聘的信息更全面一点，不过找工作的网站都大同小异，爬取适合自己的就可以。</p>
+<p>完整代码见github: <a href="https://github.com/alpha87/Zhilian"target="_blank">https://github.com/alpha87/Zhilian</a></p>
+<h2 id="代码部分">代码部分</h2>
+<p>还是老规矩，先把完整的代码贴上来，然后慢慢分析每个函数的用法。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pymongo</span>
+<span class="kn">from</span> <span class="nn">pyquery</span> <span class="kn">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+
+
+<span class="k">def</span> <span class="nf">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">User-Agent</span><span class="s2">&#34;</span><span class="p">:</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4</span><span class="s2">&#34;</span>
+    <span class="p">}</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">return</span> <span class="bp">None</span>
+
+
+<span class="k">def</span> <span class="nf">parse_index_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="n">job_urls</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">#newlist_list_content_table</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">a</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">url</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">job_urls</span> <span class="k">if</span> <span class="n">url</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">http://jobs</span><span class="s1">&#39;</span><span class="p">)</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">parse_detail_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.inner-left.fl h1</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">company</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.inner-left.fl h2</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">company_url</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.inner-left.fl h2 a</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span>
+    <span class="n">treatment</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.welfare-tab-box span</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(1) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminal-ul.clearfix li strong #span4freshdate</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(7) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(2) strong a</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">education</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(6) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">catrgory</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(8) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">experience</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(5) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="nb">property</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(4) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.tab-cont-box .tab-inner-cont h2</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">demand</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.tab-inner-cont p</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="p">{</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">job</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">公司</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">company</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">公司介绍</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">company_url</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">待遇</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">treatment</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位月薪</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">salary</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">发布日期</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">招聘人数</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作性质</span><span class="s2">&#34;</span><span class="p">:</span> <span class="nb">property</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">地点</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">location</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作经验</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">experience</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">最低学历</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">education</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位类别</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">catrgory</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位描述</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">demand</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作地点</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">address</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">save_to_mongo</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">MongoClient</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="n">client</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">Job</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="n">collection</span> <span class="o">=</span> <span class="n">database</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">Zhilian</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">collection</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位描述</span><span class="s1">&#39;</span><span class="p">:</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位描述</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">}</span><span class="p">,</span> <span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">$set</span><span class="s1">&#39;</span><span class="p">:</span> <span class="n">content</span><span class="p">}</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span> <span class="ow">and</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">工作</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">&#34;</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Saved</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位月薪</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">***************</span><span class="se">\n</span><span class="s2">Failed! {}</span><span class="se">\n</span><span class="s2">***************</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">公司</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">)</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">save_catrgory</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">catrgory.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">a</span><span class="s2">&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位类别已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">save_education</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">education.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">a</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">最低学历已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">save_experience</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">experience.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">a</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作经验已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">save_demand</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">demand.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">a</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位描述已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">save_location</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">location.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">a</span><span class="s2">&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">地点已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">save_salary</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">salary.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">a</span><span class="s2">&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位月薪已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">save_treatment</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">treatment.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">a</span><span class="s2">&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">待遇已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">page</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://sou.zhaopin.com/jobs/searchresult.ashx?jl=</span><span class="si">%E</span><span class="s2">5</span><span class="si">%85%</span><span class="s2">A8</span><span class="si">%E</span><span class="s2">5</span><span class="s2">%</span><span class="s2">9B</span><span class="s2">%</span><span class="s2">BD&amp;amp;kw=python&amp;amp;sm=0&amp;amp;p={}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">docs</span> <span class="o">=</span> <span class="n">parse_index_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">休息后继续...</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="n">get_page</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="n">job_infors</span> <span class="o">=</span> <span class="n">parse_detail_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">job_infor</span> <span class="ow">in</span> <span class="n">job_infors</span><span class="p">:</span>
+            <span class="n">save_to_mongo</span><span class="p">(</span><span class="n">job_infor</span><span class="p">)</span>
+            <span class="n">save_demand</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位描述</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_location</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">地点</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_salary</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位月薪</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_treatment</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">待遇</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_education</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">最低学历</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_catrgory</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位类别</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_experience</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">工作经验</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">休息...</span><span class="s2">&#34;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">__main__</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="p">[</span><span class="n">page</span> <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span><span class="p">]</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">采集完成!</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></div><h2 id="分部讲解">分部讲解</h2>
+<h3 id="库">库</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pymongo</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">pyquery</span> <span class="kn">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+</code></pre></div><p>这些算是爬取信息最常用的库了。</p>
+<ol>
+<li>pymongo是python和mongo数据库相关操作的库；</li>
+<li>requests这个库应该不用介绍了吧，网站爬虫的老朋友了；</li>
+<li>pyquery主要是作为CSS选择器，指定网页中的对应信息；</li>
+<li>multiprocessing是多进程库。</li>
+</ol>
+<h3 id="解析网页">解析网页</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">User-Agent</span><span class="s2">&#34;</span><span class="p">:</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4</span><span class="s2">&#34;</span>
+    <span class="p">}</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">return</span> <span class="bp">None</span>
+</code></pre></div><p>这部分的作用是模拟浏览器访问网页，如果状态码是200就返回网页内容，如果是其他就返回None。因为网页正常响应返回的状态码是200,我们在这里做一个简单的判断。这样的话在之后爬取过程中出现特殊情况我们可以做其他对策。</p>
+<p>在这里给大家推荐一个python库：<code>fake-useragent</code>。这个库可以模拟多种浏览器，安装也非常简单。</p>
+<p><code>pip install fake-useragent</code></p>
+<p>使用也很简单：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">fake_useragent</span> <span class="kn">import</span> <span class="n">UserAgent</span>
+
+
+<span class="n">UA</span> <span class="o">=</span> <span class="n">UserAgent</span><span class="p">(</span><span class="p">)</span>
+<span class="n">UA</span><span class="o">.</span><span class="n">Safari</span>
+<span class="c1"># User-Agent&#34;:&#34;Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4</span>
+</code></pre></div><p>输入不同的浏览器名就生成对应的请求头。</p>
+<h3 id="解析工作详细信息网页">解析工作详细信息网页</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">parse_index_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="n">job_urls</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">#newlist_list_content_table</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">a</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">url</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">job_urls</span> <span class="k">if</span> <span class="n">url</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">http://jobs</span><span class="s1">&#39;</span><span class="p">)</span><span class="p">]</span>
+</code></pre></div><p>这部分把上一个函数返回的网页信息用pyquery解析成可以用CSS定位的内容。然后我们获取每一条工作信息的url，因为返回的url有些不符合条件，所以就加了一条判断，http://jobs开头的才是我们需要的职位信息的url。</p>
+<h3 id="定位工作的详细信息">定位工作的详细信息</h3>
+<p>我们需要获取职位的名称，提供职位的公司名称，公司介绍url，职位月薪，工作地点，发布日期，工作性质，工作经验，最低学历，招聘人数，职位类别，职位描述和工作地址这些信息。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">parse_detail_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.inner-left.fl h1</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">company</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.inner-left.fl h2</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">company_url</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.inner-left.fl h2 a</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span>
+    <span class="n">treatment</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.welfare-tab-box span</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(1) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminal-ul.clearfix li strong #span4freshdate</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(7) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(2) strong a</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">education</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(6) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">catrgory</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(8) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">experience</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(5) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="nb">property</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.terminalpage-left .terminal-ul.clearfix li:nth-child(4) strong</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.tab-cont-box .tab-inner-cont h2</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">demand</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.tab-inner-cont p</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="p">{</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">job</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">公司</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">company</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">公司介绍</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">company_url</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">待遇</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">treatment</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位月薪</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">salary</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">发布日期</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">招聘人数</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作性质</span><span class="s2">&#34;</span><span class="p">:</span> <span class="nb">property</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">地点</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">location</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作经验</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">experience</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">最低学历</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">education</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位类别</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">catrgory</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位描述</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">demand</span><span class="p">,</span>
+        <span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作地点</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">address</span>
+    <span class="p">}</span>
+</code></pre></div><p>这些代码分别抓取到上述有关职位的信息。利用生成器生成这些信息。在使用CSS选择器定位的时候如果出现信息不准确的问题，就定位该标签的父标签。一般都能解决，如果还是显示无关的内容，就试试使用正则或者字符串方法处理。</p>
+<h3 id="保存到mongo数据库">保存到mongo数据库</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">save_to_mongo</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">MongoClient</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="n">client</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">Job</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="n">collection</span> <span class="o">=</span> <span class="n">database</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">Zhilian</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">collection</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位描述</span><span class="s1">&#39;</span><span class="p">:</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位描述</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">}</span><span class="p">,</span> <span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">$set</span><span class="s1">&#39;</span><span class="p">:</span> <span class="n">content</span><span class="p">}</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span> <span class="ow">and</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">工作</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">&#34;</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Saved</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">工作</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span> <span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位月薪</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">***************</span><span class="se">\n</span><span class="s2">Failed! {}</span><span class="se">\n</span><span class="s2">***************</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">content</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">公司</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><p>这部分用来把爬取到的信息保存到数据库。为了爬取到的内容不重复，就使用数据库的更新方法，以“职位描述”为判断依据，因为职位名称可以有重复，职位描述重复的几率估计是没有。如果成功插入信息就输出Saved，如果插入失败就输出Failed。</p>
+<h3 id="保存到txt">保存到txt</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">save_demand</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">demand.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">a</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位描述已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">save_location</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">location.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">a</span><span class="s2">&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">地点已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">save_salary</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">salary.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">a</span><span class="s2">&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">职位月薪已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">save_treatment</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">treatment.txt</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">a</span><span class="s2">&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">待遇已录入...</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></div><p>这些代码把不同的信息分别保存到txt文本中，为了下面的职业分析做准备。</p>
+<h3 id="运行">运行</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">page</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://sou.zhaopin.com/jobs/searchresult.ashx?jl=</span><span class="si">%E</span><span class="s2">5</span><span class="si">%85%</span><span class="s2">A8</span><span class="si">%E</span><span class="s2">5</span><span class="s2">%</span><span class="s2">9B</span><span class="s2">%</span><span class="s2">BD&amp;amp;kw=python&amp;amp;sm=0&amp;amp;p={}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">docs</span> <span class="o">=</span> <span class="n">parse_index_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">docs</span><span class="p">:</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="n">get_page</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="n">job_infors</span> <span class="o">=</span> <span class="n">parse_detail_page</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">job_infor</span> <span class="ow">in</span> <span class="n">job_infors</span><span class="p">:</span>
+            <span class="n">save_to_mongo</span><span class="p">(</span><span class="n">job_infor</span><span class="p">)</span>
+            <span class="n">save_demand</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位描述</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_location</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">地点</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_salary</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">职位月薪</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+            <span class="n">save_treatment</span><span class="p">(</span><span class="n">job_infor</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">待遇</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">__main__</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="p">[</span><span class="n">page</span> <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="p">]</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">可能已经采集完毕。</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></div><p>这部分代码就是将上面的函数运行起来，利用多进程加快爬取速度。</p>
+<p>完成了代码的介绍，接下来就是分析我们爬取到的数据了。</p>
+<h2 id="数据分析">数据分析</h2>
+<h3 id="职位要求">职位要求</h3>
+<p>每份工作都会对应一份公司自己拟定的职位要求，我们在爬取过程中单独保存成txt文件。利用词频统计的方式生成词云。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://ws4.sinaimg.cn/large/006tKfTcly1g0gj4g8c6xj30hs0hs760.jpg"><img  src="https://ws4.sinaimg.cn/large/006tKfTcly1g0gj4g8c6xj30hs0hs760.jpg"
+        alt/></a></p>
+<p>这是处理后的职位要求生成的词云。可以看出公司希望求职者具备扎实的专业技能，良好的沟通能力和合作能力。可以是实习生，可以是学徒，当然更好可以是专家，这些在职位要求中都有体现。</p>
+<h3 id="工作地点">工作地点</h3>
+<p>python在一线城市非常受欢迎，北京、上海、深圳就占据了一半。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://ws2.sinaimg.cn/large/006tKfTcly1g0gj4z8r3cj30gq0a2dg1.jpg"><img  src="https://ws2.sinaimg.cn/large/006tKfTcly1g0gj4z8r3cj30gq0a2dg1.jpg"
+        alt/></a></p>
+<p>北上广深这些地方的同学找工作找实习会方便不少啊，需求量还是蛮大的。</p>
+<h3 id="职业薪资">职业薪资</h3>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://ws1.sinaimg.cn/large/006tKfTcly1g0gj5jna31j30hs0arq34.jpg"><img  src="https://ws1.sinaimg.cn/large/006tKfTcly1g0gj5jna31j30hs0arq34.jpg"
+        alt/></a></p>
+<p>这个图大家感受一下，python工作的薪资主要集中在8000~15000元左右，配合上图工作地点的分布，说明北上广地区的工资集中在8000～20000元左右，还是比较有诱惑力的。这也为你继续深入学习python提供了动力啊！</p>
+<h3 id="工作经验">工作经验</h3>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://ws3.sinaimg.cn/large/006tKfTcly1g0gj6rvc36j30gq0a2aab.jpg"><img  src="https://ws3.sinaimg.cn/large/006tKfTcly1g0gj6rvc36j30gq0a2aab.jpg"
+        alt/></a></p>
+<p>公司对工作经验的要求还是蛮高的，3～5年出现的次数比较多。</p>
+<h3 id="员工福利">员工福利</h3>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://ws3.sinaimg.cn/large/006tKfTcly1g0gj6yifz2j30hs0fgwg7.jpg"><img  src="https://ws3.sinaimg.cn/large/006tKfTcly1g0gj6yifz2j30hs0fgwg7.jpg"
+        alt/></a></p>
+<p>给你们一张图感受一下，其实福利还是蛮不错的，还有的总会有的。</p>
+<h3 id="python热度">python热度</h3>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://ws4.sinaimg.cn/large/006tKfTcly1g0gj76iwroj30hs0eb3z4.jpg"><img  src="https://ws4.sinaimg.cn/large/006tKfTcly1g0gj76iwroj30hs0eb3z4.jpg"
+        alt/></a></p>
+<p>这张图相信大家已经不是第一次见到了。python已经进了最流行编程语言的前五，而且python还被运用于各个方面，不论是科学计算，数据分析，还是艺术，游戏，都有python的身影。这么有用的语言，有什么理由不坚持下来学习呢？</p>
+<h2 id="总结">总结</h2>
+<p>我们爬取了python职位的相关信息，然后利用这些信息做了简单的分析。得出python还是比较有前途的，不论是为了工作，还是自己的兴趣，我们都应该尝试学学这门语言。入门简单，而且网上的资源也很丰富。</p>
+<p>文章的最后附上那句经典：</p>
+<p><strong>“ Life is short, you need Python. “</strong></p></article><section class="article labels"><a class="article category" href=/categories/python/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Python</a><a class="article tag" href=/tags/%E7%88%AC%E8%99%AB/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>爬虫</a><a class="article tag" href=/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>数据分析</a>
+</section><section class="article navigation"><p><a class="link" href="/2017/05/16/vim%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/"><span class="li"></span>Vim快捷用法</a></p><p><a class="link" href="/2017/04/15/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BAss/"><span class="li"></span>云服务器搭建私人SS</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

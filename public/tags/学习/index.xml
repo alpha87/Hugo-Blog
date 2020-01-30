@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习 on 简讯</title>
+    <link>/tags/%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 学习 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sat, 14 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>看书与实践|初学 Python 心得</title>
+      <link>/2017/01/14/%E7%9C%8B%E4%B9%A6%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%88%9D%E5%AD%A6-python-%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/01/14/%E7%9C%8B%E4%B9%A6%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%88%9D%E5%AD%A6-python-%E5%BF%83%E5%BE%97/</guid>
+      <description>这段时间买了一些有关 Python 的书，每天一边看，一边写一些爬虫的代码，导致博文一直没有跟上进度，没有及时记录自己的学习状况。 从学习 Python 的第一天起，到现</description>
+    </item>
+    
+  </channel>
+</rss>

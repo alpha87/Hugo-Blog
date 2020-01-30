@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>Scrapy学习笔记（一）&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">Scrapy学习笔记（一）</h1><p class="article date">Tuesday, June 20, 2017<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><p>作为scrapy学习笔记的第一篇，主要是了解此框架的基本使用。并通过一个demo感受scrapy框架的强大。</p>
+<h1 id="scrapy">scrapy</h1>
+<p>来自<a href="https://scrapy.org/"target="_blank">Scrapy官网</a>的介绍：</p>
+<blockquote>
+<p>Scrapy is a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their pages. It can be used for a wide range of purposes, from data mining to monitoring and automated testing.</p>
+</blockquote>
+<p>我们暂时就认为它是一个功能加大的爬虫框架即可。</p>
+<h1 id="quotes-to-scrape">Quotes to Scrape</h1>
+<p>我们要练习抓取的是scrapy官方提供的网站：<a href="http://alpha87.cn/2017/06/20/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/quotes.toscrape.com"target="_blank">quotes.toscrape.com</a>。对这个网站的抓取让我们对scrapy框架有个基本的认识，可以更轻松的入门。因为在我最初接触框架的时候，总觉得它是一个很神秘很复杂的东西，还不如使用requests库更容易。</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-20%2017-44-58.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-20%2017-44-58.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-20%2017-44-58.png"
+        alt="Quotes to Scrape"/></a></a></p>
+<p>这个网站主要是一些名人名言，虽然看似简陋，却包含了文本，标签，超链接等大多数网站都具备的格式。所以这个网站用来入门scrapy是不二选择啊！</p>
+<h1 id="demo">Demo</h1>
+<h2 id="抓取流程">抓取流程</h2>
+<p>我们通过抓取第一页的信息，获取该页的内容和下一页的链接，实现翻页抓取，然后将抓取到的网页内容保存为特定的格式并存入数据库。</p>
+<h2 id="创建项目">创建项目</h2>
+<p>在命令行输入</p>
+<pre><code>scrapy startproject quotes
+</code></pre><p><a href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-20%2018-10-27.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-20%2018-10-27.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-20%2018-10-27.png"
+        alt="Tree"/></a></a></p>
+<p>然后输入命令创建spider</p>
+<pre><code>cd quotes
+scrapy genspider quote quotes.toscrape.com
+</code></pre><p>创建好spider文件后,我们就可以继续完善代码了。</p>
+<h2 id="初步测试">初步测试</h2>
+<p>我们先来测试下框架，在生成好的spider文件中，我们先抓取网页的状态码和网页源码。</p>
+<p>代码为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">scrapy</span>
+
+<span class="k">class</span> <span class="nc">QuoteSpider</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">quote</span><span class="s2">&#34;</span>
+    <span class="n">allowed_domains</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">quotes.toscrape.com</span><span class="s2">&#34;</span><span class="p">]</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">http://quotes.toscrape.com/</span><span class="s1">&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div><p>这是运行的部分截图，正常输出了网页的状态码和网页源码。</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2016-05-50.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2016-05-50.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2016-05-50.png"
+        alt="img"/></a></a></p>
+<p>接下来我们就开始正式抓取了。</p>
+<h2 id="完善代码">完善代码</h2>
+<h3 id="itemspy">items.py</h3>
+<p>我们要抓取这个网页的名人名言，作者和标签，首先要在items.py文件下定义字段。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">scrapy</span>
+
+<span class="k">class</span> <span class="nc">QuotesItem</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Item</span><span class="p">)</span><span class="p">:</span>
+    <span class="c1"># define the fields for your item here like:</span>
+    <span class="c1"># name = scrapy.Field()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="p">)</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="p">)</span>
+</code></pre></div><h3 id="spiderpy">spider.py</h3>
+<p>在讲这部分代码时，先介绍一个强大的工具：shell，有了这个工具，在抓取网页内容的时候会更加得心应手。</p>
+<p>在命令行输入：</p>
+<pre><code>scrapy shell http://quotes.toscrape.com/
+</code></pre><p>这样就进入了命令行交互模式，做一些调试。</p>
+<p>这是我做的一些简单调试，相信你也会充分利用这个工具。</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2016-59-16.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2016-59-16.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2016-59-16.png"
+        alt="img"/></a></a></p>
+<p>继续完善代码。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">quotes.items</span> <span class="kn">import</span> <span class="n">QuotesItem</span>
+
+<span class="k">class</span> <span class="nc">QuoteSpider</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">quote</span><span class="s2">&#34;</span>
+    <span class="n">allowed_domains</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">quotes.toscrape.com</span><span class="s2">&#34;</span><span class="p">]</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">http://quotes.toscrape.com/</span><span class="s1">&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span><span class="p">:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">QuotesItem</span><span class="p">(</span><span class="p">)</span>
+
+        <span class="n">quotes</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.quote</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">quotes</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">quote</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.text::text</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract_first</span><span class="p">(</span><span class="p">)</span>
+            <span class="n">author</span> <span class="o">=</span> <span class="n">quote</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.author::text</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract_first</span><span class="p">(</span><span class="p">)</span>
+            <span class="n">tags</span> <span class="o">=</span> <span class="n">quote</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.tags .tag::text</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="p">)</span>
+
+            <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">text</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">text</span>
+            <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">author</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">author</span>
+            <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">tags</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tags</span>
+
+            <span class="k">yield</span> <span class="n">item</span>
+</code></pre></div><p>这样基本能看到抓取的结果了：</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2017-07-50.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2017-07-50.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2017-07-50.png"
+        alt="img"/></a></a></p>
+<p>不过只有第一页的内容，接下来我们要抓取所有页的内容。想要抓取下一页的内容也非常简单，只要在本页找到下一页的链接，生成下一页的链接后不断重复这个过程，直到最后一页停止抓取。</p>
+<p>抓取所有页数的完整代码为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">quotes.items</span> <span class="kn">import</span> <span class="n">QuotesItem</span>
+
+<span class="k">class</span> <span class="nc">QuoteSpider</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">quote</span><span class="s2">&#34;</span>
+    <span class="n">allowed_domains</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">quotes.toscrape.com</span><span class="s2">&#34;</span><span class="p">]</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">http://quotes.toscrape.com/</span><span class="s1">&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span><span class="p">:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">QuotesItem</span><span class="p">(</span><span class="p">)</span>
+
+        <span class="n">quotes</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.quote</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">quotes</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">quote</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.text::text</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract_first</span><span class="p">(</span><span class="p">)</span>
+            <span class="n">author</span> <span class="o">=</span> <span class="n">quote</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.author::text</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract_first</span><span class="p">(</span><span class="p">)</span>
+            <span class="n">tags</span> <span class="o">=</span> <span class="n">quote</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.tags .tag::text</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="p">)</span>
+
+            <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">text</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">text</span>
+            <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">author</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">author</span>
+            <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">tags</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tags</span>
+
+            <span class="k">yield</span> <span class="n">item</span>
+
+        <span class="nb">next</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">.pager .next a::attr(href)</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract_first</span><span class="p">(</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span><span class="nb">next</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parse</span><span class="p">)</span>
+</code></pre></div><p>解释一下新增的三行代码。第一行用来找到下一页的超链接；第二行生成一个绝对的URL，第三行使用Request方法，传入新生成的url，使用回调来递归调用parse函数解析新生成的url。运行以后就能采集所有页的名人名言了。</p>
+<h2 id="保存结果">保存结果</h2>
+<h3 id="保存到本地文件">保存到本地文件</h3>
+<p>抓取好网页的内容如何保存呢？可以使用scrapy的命令保存成多种文件格式。</p>
+<p>输入命令：</p>
+<pre><code>scrapy crawl quote -o quotes.json
+</code></pre><p>运行以后会生成一个json文件，保存了刚才我们抓取到的所有内容。</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2017-37-41.png"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2017-37-41.png"><img  src="http://olzlqlgy5.bkt.clouddn.com/Screenshot%20from%202017-06-21%2017-37-41.png"
+        alt="img"/></a></a></p>
+<h3 id="保存到数据库">保存到数据库</h3>
+<p>在保存到数据库前，我们先要对抓取到的文本做一些处理，如果名人名言的长度大于50，那就切断并显示为省略号。实现也很简单，要用到pipelines.py文件。</p>
+<p>处理文本的代码为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">scrapy.exceptions</span> <span class="kn">import</span> <span class="n">DropItem</span>
+
+<span class="k">class</span> <span class="nc">TextPipeline</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="k">def</span> <span class="nf">process_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">spider</span><span class="p">)</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">text</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">text</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">limit</span><span class="p">:</span>
+                <span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">text</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">text</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">limit</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="p">)</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">...</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">item</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">DropItem</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">Missing Text.</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div><p>然后在settings.py文件中开启。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">ITEM_PIPELINES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">quotes.pipelines.TextPipeline</span><span class="s1">&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div><p>这样设置以后，运行得到的结果就是我们已经处理后的结果了。接下来我们就要保存到数据库中。</p>
+<p>我们先在setting.py文件中插入mongo数据库的相关信息：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">MONGO_URI</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">localhost</span><span class="s1">&#39;</span>
+<span class="n">MONGO_DB</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">quotes</span><span class="s1">&#39;</span>
+</code></pre></div><p>回到piplines.py文件编辑：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pymongo</span>
+
+<span class="k">class</span> <span class="nc">MongoPipline</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mongo_uri</span><span class="p">,</span> <span class="n">mongo_db</span><span class="p">)</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mongo_uri</span> <span class="o">=</span> <span class="n">mongo_uri</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mongo_db</span> <span class="o">=</span> <span class="n">mongo_db</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_crawler</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">crawler</span><span class="p">)</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">mongo_uri</span><span class="o">=</span><span class="n">crawler</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">MONGO_URI</span><span class="s1">&#39;</span><span class="p">)</span><span class="p">,</span>
+            <span class="n">mongo_db</span><span class="o">=</span><span class="n">crawler</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">MONGO_DB</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">open_spider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spider</span><span class="p">)</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">MongoClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mongo_uri</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">mongo_db</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">process_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">spider</span><span class="p">)</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">quotes</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="p">)</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">ok.</span><span class="s2">&#34;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">item</span>
+
+<span class="err">这</span><span class="err">段</span><span class="err">代</span><span class="err">码</span><span class="err">实</span><span class="err">现</span><span class="err">的</span><span class="err">功</span><span class="err">能</span><span class="err">是</span><span class="err">传</span><span class="err">入</span><span class="err">参</span><span class="err">数</span><span class="err">后</span><span class="err">，</span><span class="err">获</span><span class="err">取</span><span class="n">mongo数据库的配置信息</span><span class="err">，</span><span class="err">然</span><span class="err">后</span><span class="err">在</span><span class="n">spider运行前开启mongo服务</span><span class="err">，</span><span class="err">运</span><span class="err">行</span><span class="err">过</span><span class="err">程</span><span class="err">中</span><span class="err">插</span><span class="err">入</span><span class="err">到</span><span class="err">数</span><span class="err">据</span><span class="err">库</span><span class="err">。</span>
+
+<span class="err">再</span><span class="err">次</span><span class="err">运</span><span class="err">行</span><span class="err">后</span><span class="err">打</span><span class="err">开</span><span class="n">mongo数据库</span><span class="err">，</span><span class="err">就</span><span class="err">能</span><span class="err">看</span><span class="err">到</span><span class="err">处</span><span class="err">理</span><span class="err">过</span><span class="err">的</span><span class="err">文</span><span class="err">本</span><span class="err">信</span><span class="err">息</span><span class="err">都</span><span class="err">已</span><span class="err">经</span><span class="err">保</span><span class="err">存</span><span class="err">好</span><span class="err">了</span><span class="err">。</span>
+
+<span class="p">[</span><span class="err">!</span><span class="p">[</span><span class="n">img</span><span class="p">]</span><span class="p">(</span><span class="n">http</span><span class="p">:</span><span class="o">/</span><span class="o">/</span><span class="n">olzlqlgy5</span><span class="o">.</span><span class="n">bkt</span><span class="o">.</span><span class="n">clouddn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Screenshot</span><span class="o">%</span><span class="mi">20</span><span class="n">from</span><span class="o">%</span><span class="mi">202017</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mi">22</span><span class="o">%</span><span class="mi">2010</span><span class="o">-</span><span class="mi">47</span><span class="o">-</span><span class="mf">10.</span><span class="n">png</span><span class="p">)</span><span class="p">]</span><span class="p">(</span><span class="n">http</span><span class="p">:</span><span class="o">/</span><span class="o">/</span><span class="n">olzlqlgy5</span><span class="o">.</span><span class="n">bkt</span><span class="o">.</span><span class="n">clouddn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Screenshot</span><span class="o">%</span><span class="mi">20</span><span class="n">from</span><span class="o">%</span><span class="mi">202017</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mi">22</span><span class="o">%</span><span class="mi">2010</span><span class="o">-</span><span class="mi">47</span><span class="o">-</span><span class="mf">10.</span><span class="n">png</span><span class="p">)</span>
+
+<span class="c1"># 总结</span>
+
+<span class="err">本</span><span class="err">文</span><span class="err">涉</span><span class="err">及</span><span class="err">的</span><span class="err">代</span><span class="err">码</span><span class="err">见</span> <span class="p">[</span><span class="n">github</span><span class="p">]</span><span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">/</span><span class="o">/</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">alpha87</span><span class="o">/</span><span class="n">quotes</span><span class="p">)</span><span class="err">。</span>
+
+<span class="err">从</span><span class="err">这</span><span class="err">个</span><span class="err">简</span><span class="err">单</span><span class="err">的</span><span class="err">项</span><span class="err">目</span><span class="err">中</span><span class="err">我</span><span class="err">们</span><span class="err">就</span><span class="err">能</span><span class="err">体</span><span class="err">会</span><span class="err">到</span><span class="n">scrapy的强大</span><span class="err">。</span><span class="err">不</span><span class="err">过</span><span class="err">这</span><span class="err">只</span><span class="err">是</span><span class="err">冰</span><span class="err">山</span><span class="err">一</span><span class="err">角</span><span class="err">，</span><span class="err">需</span><span class="err">要</span><span class="err">我</span><span class="err">们</span><span class="err">学</span><span class="err">习</span><span class="err">的</span><span class="err">内</span><span class="err">容</span><span class="err">还</span><span class="err">有</span><span class="err">很</span><span class="err">多</span><span class="err">很</span><span class="err">多</span><span class="err">，</span><span class="err">在</span><span class="err">之</span><span class="err">后</span><span class="err">的</span><span class="err">教</span><span class="err">程</span><span class="err">中</span><span class="err">会</span><span class="err">更</span><span class="err">加</span><span class="err">详</span><span class="err">细</span><span class="err">的</span><span class="err">介</span><span class="err">绍</span><span class="n">scrapy每一个模块的用法</span><span class="err">。</span>
+
+<span class="p">[</span><span class="n">scrapy中文教程</span><span class="p">]</span><span class="p">(</span><span class="n">http</span><span class="p">:</span><span class="o">/</span><span class="o">/</span><span class="n">scrapy</span><span class="o">-</span><span class="n">chs</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">zh_CN</span><span class="o">/</span><span class="mf">0.24</span><span class="o">/</span><span class="n">intro</span><span class="o">/</span><span class="n">tutorial</span><span class="o">.</span><span class="n">html</span><span class="p">)</span>
+
+<span class="p">[</span><span class="n">scrapy英文教程</span><span class="p">]</span><span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">/</span><span class="o">/</span><span class="n">doc</span><span class="o">.</span><span class="n">scrapy</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">en</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="p">)</span>
+
+<span class="err">让</span><span class="err">我</span><span class="err">们</span><span class="err">共</span><span class="err">同</span><span class="err">进</span><span class="err">步</span><span class="err">！</span> <span class="p">:</span><span class="p">)</span></code></pre></div></article><section class="article labels"><a class="article category" href=/categories/scrapy/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Scrapy</a><a class="article tag" href=/tags/python/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Python</a><a class="article tag" href=/tags/%E7%88%AC%E8%99%AB/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>爬虫</a><a class="article tag" href=/tags/%E6%95%99%E7%A8%8B/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>教程</a>
+</section><section class="article navigation"><p><a class="link" href="/2017/06/22/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/"><span class="li"></span>Scrapy学习笔记（二）</a></p><p><a class="link" href="/2017/05/16/vim%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/"><span class="li"></span>Vim快捷用法</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

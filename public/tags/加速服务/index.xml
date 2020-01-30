@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>加速服务 on 简讯</title>
+    <link>/tags/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1/</link>
+    <description>Recent content in 加速服务 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sun, 07 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker 镜像下载慢怎么办</title>
+      <link>/2019/07/07/docker-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/07/docker-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
+      <description>国内使用 docker 下载镜像速度非常慢。 可以使用 daocloud 的加速服务。 Registry mirrors 中输入：http://f1361db2.m.daocloud.io。 设置好重启。</description>
+    </item>
+    
+  </channel>
+</rss>

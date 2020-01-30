@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>使用selenium&#43;PhantomJS进行网络爬虫&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">使用selenium+PhantomJS进行网络爬虫</h1><p class="article date">Sunday, February 26, 2017<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><p>Selenium本是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。PhantomJS是一个基于WebKit的服务器端 JavaScript API。它全面支持web而不需浏览器支持。使用selenium和PhantomJS这两个工具来爬虫，可以实现很多功能。</p>
+<h1 id="selenium和phantomjs">Selenium和PhantomJS</h1>
+<p>selenium是一个强大的网络数据采集工具，最初是为了网站自动化测试而开发的。它可以让浏览器自动加载页面，获取需要的数据，也可以截屏，或判断网站上某些动作是否发生。</p>
+<p>PhantomJS是一个无头浏览器，它不会向用户展示网页的图形界面。</p>
+<p>简单理解selenium就是完成模拟用户所有操作的工具，而PhantomJS则是一个没有图形界面，可供selenium实现各种操作的浏览器。</p>
+<h1 id="代码部分">代码部分</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">PhantomJS</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">C:</span><span class="s2">\</span><span class="s2">phantomjs.exe</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">implicitly_wait</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://210.31.122.109</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">txtUserName</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">txtUserName</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">201303010121</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">TextBox2</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">TextBox2</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">password</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="n">browser</span><span class="o">.</span><span class="n">save_screenshot</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">登录界面.jpg</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">txtSecretCode</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">输入验证码</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; </span><span class="s2">&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">btn_dl</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="p">)</span>
+</code></pre></div><h2 id="分析代码">分析代码</h2>
+<pre><code class="language-from" data-lang="from"></code></pre><p>用来导入selenium库。</p>
+<pre><code class="language-browser" data-lang="browser"></code></pre><p>用来指明PhantomJS可执行文件的路径。</p>
+<pre><code class="language-browser.implicitly_wait(30)" data-lang="browser.implicitly_wait(30)"></code></pre><p>是隐式等待30秒。一旦设定，browser对象实例的整个生命周期的隐式调用也就设定好了。</p>
+<pre><code class="language-browser.get("http://210.31.122.189")" data-lang="browser.get("http://210.31.122.189")"></code></pre><p>打开指定网址。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">txtUserName</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">txtUserName</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">201303010121</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">TextBox2</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">TextBox2</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">password</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></div><p>这四行代码分别对应的是：</p>
+<p>1.清除用户名中原来的信息。</p>
+<p>2.键入学号。</p>
+<p>3.清除密码中原来的信息。</p>
+<p>4.键入密码。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">browser</span><span class="o">.</span><span class="n">save_screenshot</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">登录界面.jpg</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">txtSecretCode</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">输入验证码</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; </span><span class="s2">&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">btn_dl</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
+</code></pre></div><p>这四行代码分别实现的功能是：</p>
+<p>1.把登录页面截图，保存到当前文件夹下。（保存登录页面的截图是为了可以查看当前网页的验证码。）</p>
+<p>2.键入验证码。</p>
+<p>3.点击登录。</p>
+<p>4.打印登录以后页面的源码。</p>
+<pre><code class="language-browser.close()" data-lang="browser.close()"></code></pre><p>用来关闭操作。</p>
+<p><a href="http://olzlqlgy5.bkt.clouddn.com/%E6%95%99%E5%8A%A1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E6%BA%90%E7%A0%81.jpg"target="_blank"><a target="_blank" rel="noopener noreferrer" 
+  href="http://olzlqlgy5.bkt.clouddn.com/%E6%95%99%E5%8A%A1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E6%BA%90%E7%A0%81.jpg"><img  src="http://olzlqlgy5.bkt.clouddn.com/%E6%95%99%E5%8A%A1%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E6%BA%90%E7%A0%81.jpg"
+        alt="用户登录界面源码"/></a></a></p>
+<h1 id="selenium用法拓展">selenium用法拓展</h1>
+<h2 id="元素定位">元素定位</h2>
+<p>Selenium提供了下面的方法进行元素定位：</p>
+<p>find_element_by_id
+find_element_by_name
+find_element_by_xpath
+find_element_by_link_text
+find_element_by_partial_link_text
+find_element_by_tag_name
+find_element_by_class_name
+find_element_by_css_selector</p>
+<p>寻找多个元素（下列方法会返回一个列表）：</p>
+<p>find_elements_by_id
+find_elements_by_name
+find_elements_by_xpath
+find_elements_by_link_text
+find_elements_by_partial_link_text
+find_elements_by_tag_name
+find_elements_by_class_name
+find_elements_by_css_selector</p>
+<p>例如：</p>
+<pre><code class="language-<html>" data-lang="<html>"> &lt;body&gt;
+  &lt;form id=&quot;loginForm&quot;&gt;
+   &lt;input name=&quot;username&quot; type=&quot;text&quot; /&gt;
+   &lt;input name=&quot;password&quot; type=&quot;password&quot; /&gt;
+   &lt;input name=&quot;continue&quot; type=&quot;submit&quot; value=&quot;Login&quot; /&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;html&gt;
+</code></pre><p>可以这样定位表单元素form：</p>
+<pre><code class="language-login_form" data-lang="login_form"></code></pre><h2 id="异步加载">异步加载</h2>
+<blockquote>
+<p>现在很多Web应用都在使用AJAX技术。浏览器载入一个页面时，页面内的元素可能是在不同的时间载入的， 这会加大定位元素的困难程度，因为元素不在DOM里，会抛出 ElementNotVisibleException 异常， 使用 waits，我们就可以解决这个问题。</p>
+</blockquote>
+<h3 id="显式等待">显式等待</h3>
+<p>显式的 waits 等待一个确定的条件触发然后才进行更深一步的执行。 最糟糕的的做法是 time.sleep()，这指定的条件是等待一个指定的时间段。 这里提供一些便利的方法让你编写的代码只等待需要的时间，WebDriverWait 结合ExpectedCondition 是一种实现的方法：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="p">)</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://somedomain/url_that_delay_loading</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">element</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+        <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">(</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">myDynamicElement</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">(</span><span class="p">)</span>
+</code></pre></div><p>这段代码会等待10秒，如果10秒内找到元素则立即返回，否则会抛出 TimeoutException 异常， WebDriverWait默认每500毫秒调用一下 ExpectedCondition<code>直到它返回成功为止。</code>ExpectedCondition 类型是布尔的，成功的返回值就是true,其他类型的 ExpectedCondition 成功的返回值就是 not null。</p>
+<h4 id="expected-conditions">Expected Conditions</h4>
+<p>自动化网页操作时，有许多频繁使用到的通用条件。下面列出的是每一个条件的实现。 Selenium + Python 提供了许多方便的方法，因此你不需要自己编写 expected_condition 的类， 或者创建你自己的通用包。</p>
+<p><strong>title_is</strong>
+<strong>title_contains</strong>
+<strong>presence_of_element_located</strong>
+<strong>visibility_of_element_located</strong>
+<strong>visibility_of</strong>
+<strong>presence_of_all_elements_located</strong>
+<strong>text_to_be_present_in_element</strong>
+<strong>text_to_be_present_in_element_value</strong>
+<strong>frame_to_be_available_and_switch_to_it</strong>
+<strong>invisibility_of_element_located</strong>
+<strong>element_to_be_clickable it</strong>
+<strong>is Displayed and Enabled.</strong>
+<strong>staleness_of</strong>
+<strong>element_to_be_selected</strong>
+<strong>element_located_to_be_selected</strong>
+<strong>element_selection_state_to_be</strong>
+<strong>element_located_selection_state_to_be</strong>
+<strong>alert_is_present</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">element</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">(</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">someid</span><span class="s1">&#39;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><p>expected_conditions 模块包含了一系列预定义的条件来和WebDriverWait使用。</p>
+<h3 id="隐式等待">隐式等待</h3>
+<p>当我们要找一个或者一些不能立即可用的元素的时候，隐式 waits 会告诉WebDriver轮询DOM指定的次数，默认设置是0次。 一旦设定，WebDriver对象实例的整个生命周期的隐式调用也就设定好了。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="p">)</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">implicitly_wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">http://somedomain/url_that_delays_loading</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">myDynamicElement</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">myDynamicElement</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div><h2 id="其他用法">其他用法</h2>
+<p>这部分是我看其他教程总结的一些零碎用法。</p>
+<p>1.浏览器最大化：</p>
+<pre><code>browser.maximize_window()
+</code></pre><p>2.查看页面：</p>
+<pre><code>browser.page_sources
+</code></pre><p>3.设置浏览器宽和高：</p>
+<pre><code>browser.set_window_size(480,800)
+</code></pre><p>4.操作对象常用方法：</p>
+<pre><code>click() #点击对象
+send_keys() #在对象上模拟输入
+text #获取元素的文本信息
+submit() #用于提交表单，某些情况下和click()用法相同
+</code></pre><p>5.截图：</p>
+<pre><code>browser.save_screenshot
+</code></pre><p>6.用链接文本定位超链接：</p>
+<pre><code>#源码部分
+&lt;a href=&quot;continue.html&quot;&gt;Continue&lt;/a&gt;
+</code></pre><pre><code>#定位
+continue_link = browser.find_element_by_link_text('Continue')
+</code></pre><p>7.使用cookies：</p>
+<pre><code>cookies = {
+  &quot;name&quot;:&quot;foo&quot;
+  &quot;value&quot;:&quot;bar&quot;
+}
+browser.add_cookie(cookies)
+# And now output all the available cookies for the current URL
+driver.get_cookies()
+</code></pre><p>8.前进和后退页面：</p>
+<pre><code>browser.forward() #前进
+browser.back() #后退
+</code></pre></article><section class="article labels"><a class="article category" href=/categories/python/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Python</a><a class="article tag" href=/tags/%E7%88%AC%E8%99%AB/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>爬虫</a><a class="article tag" href=/tags/selenium/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>selenium</a><a class="article tag" href=/tags/phantomjs/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>PhantomJS</a>
+</section><section class="article navigation"><p><a class="link" href="/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/"><span class="li"></span>使用Python连接mongoDB</a></p><p><a class="link" href="/2017/01/19/beautifulsoup4-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><span class="li"></span>BeautifulSoup4 文档学习记录</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

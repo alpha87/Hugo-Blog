@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adguard on 简讯</title>
+    <link>/tags/adguard/</link>
+    <description>Recent content in Adguard on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/adguard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用树莓派配合AdguardHome屏蔽局域网内广告</title>
+      <link>/2019/02/01/%E4%BD%BF%E7%94%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E5%90%88adguardhome%E5%B1%8F%E8%94%BD%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%B9%BF%E5%91%8A/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/01/%E4%BD%BF%E7%94%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E5%90%88adguardhome%E5%B1%8F%E8%94%BD%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%B9%BF%E5%91%8A/</guid>
+      <description>&lt;p&gt;AdGuard算是比较强大的广告拦截工具了。爱奇艺，腾讯视频等主流视频网站的广告都可以被拦截，而且是打开视频后直接跳过广告，不像其他插件还需要等待。屏蔽视频广告只是其功能的一部分，还能保护隐私，屏蔽钓鱼网站等等。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

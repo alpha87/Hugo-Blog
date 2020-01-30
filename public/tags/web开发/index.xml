@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web开发 on 简讯</title>
+    <link>/tags/web%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in Web开发 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Mon, 20 May 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/web%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django 中的内置模板和过滤器</title>
+      <link>/2019/05/20/django-%E4%B8%AD%E7%9A%84%E5%86%85%E7%BD%AE%E6%A8%A1%E6%9D%BF%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/django-%E4%B8%AD%E7%9A%84%E5%86%85%E7%BD%AE%E6%A8%A1%E6%9D%BF%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8/</guid>
+      <description>&lt;p&gt;Django 中的内置模板和过滤器。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.djangoproject.com/zh-hans/2.2/ref/templates/builtins/#ref-templates-builtins-tags&#34;target=&#34;_blank&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django使用指南——使用表单</title>
+      <link>/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/</guid>
+      <description>&lt;p&gt;表单是网站中最最常见和重要的功能了，可以实现与用户交互和交换数据。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django URL Pattern 学习记录</title>
+      <link>/2019/05/18/django-url-pattern-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/18/django-url-pattern-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;学习 Django 文档的 URL 部分，做些笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django 中的路径转换器</title>
+      <link>/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/</guid>
+      <description>&lt;p&gt;在使用 Django 配置 URL 调度器的时候，多少会涉及到 URL 中参数的使用，那么 Django 中有多少路径转换器可以使用呢？&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

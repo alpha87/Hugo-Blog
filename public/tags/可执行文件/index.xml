@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>可执行文件 on 简讯</title>
+    <link>/tags/%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
+    <description>Recent content in 可执行文件 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>将py文件转换为exe可执行文件</title>
+      <link>/2017/12/15/%E5%B0%86py%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAexe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/15/%E5%B0%86py%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAexe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;有一个库可以实现py文件转换为exe可执行文件。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

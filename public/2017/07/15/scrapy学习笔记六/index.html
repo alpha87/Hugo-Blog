@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>Scrapy学习笔记（六）&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">Scrapy学习笔记（六）</h1><p class="article date">Saturday, July 15, 2017<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p>本文是介绍Scrapy基础用法的最后一篇，介绍Scrapy中Download Middleware的用法。</p>
+<p>Download Middleware是介于Scrapy的Request/Response处理的钩子框架。是用于全局修改Scrapy Request和Response的一个轻量、底层的系统。</p>
+<h1 id="编写中间件">编写中间件</h1>
+<p>中间件定义了一些方法，只要我们了解这种方法以后，也就可以自己编写中间件了。</p>
+<h2 id="process_requestrequest-spider">Process_request(Request, Spider)</h2>
+<blockquote>
+<p>每个Request通过Download Middleware时,该方法被调用。Process_request()必须返回其一：None；Response；Request；Raise Ignorerequest。</p>
+<p>如果返回None，Scrapy将继续处理该Request，执行其他的中间件的相应方法,直到合适的下载器处理函数被调用,该Request被执行。</p>
+<p>如果返回Response对象,Scrapy将不会调用任何其他的Process_request()或Process_exception()方法,或相应地下载函数; 其将返回该 Response。已安装的中间件的 Process_response()方法则会在每个Response返回时被调用。</p>
+<p>如果其返回Request对象,Scrapy则停止调用Process_request方法并重新调度返回的 Request。当新返回的Request被执行后, 相应地中间件链将会根据下载的Response被调用。</p>
+<p>如果其 Raise 一个 Ignorerequest 异常,则安装的下载中间件的 Process_exception() 方法会被调用。如果没有任何一个方法处理该异常, 则Request的Errback(Request.Errback)方法会被调用。如果没有代码处理抛出的异常, 则该异常被忽略且不记录(不同于其他异常那样)。</p>
+</blockquote>
+<p>如果在爬取过程中想要添加代理，我们可以通过这个方法。</p>
+<h2 id="process_responserequest-response-spider">Process_response(Request, Response, Spider)</h2>
+<blockquote>
+<p>Process_request()必须返回以下之一：返回一个 Response 对象、返回一个 Request 对象或 Raise 一个 Ignorerequest 异常。</p>
+<p>如果其返回一个 Response (可以与传入的Response相同,也可以是全新的对象)该Response 会被在链中的其他中间件的 Process_response()方法处理。</p>
+<p>如果其返回一个 Request 对象,则中间件链停止,返回的 Request 会被重新调度下载。处理类似于 Process_request()返回 Request 所做的那样。</p>
+<p>如果其抛出一个Ignorerequest异常,则调用Request的Errback(Request.Errback)。如果没有代码处理抛出的异常,则该异常被忽略且不记录(不同于其他异常那样)。</p>
+</blockquote>
+<p>我们可以利用这个方法修改爬取网页的状态码。</p>
+<h2 id="process_exceptionrequest-exception-spider">Process_exception(Request, Exception, Spider)</h2>
+<p>当下载处理器(Download Handler)或 Process_request()(下载中间件)抛出异常(包括 Ignorerequest异常)时,Scrapy 调用 Process_exception()。</p>
+<blockquote>
+<p>Process_exception()应该返回以下之一: 返回 None 、一个 Response 对象、或者一个 Request 对象。</p>
+<p>如果其返回 None ,Scrapy 将会继续处理该异常,接着调用已安装的其他中间件的Process_exception()方法,直到所有中间件都被调用完毕,则调用默认的异常处理。</p>
+<p>如果其返回一个 Response 对象,则已安装的中间件链的 Process_response()方法被调用。Scrapy 将不会调用任何其他中间件的 Process_exception() 方法。</p>
+<p>如果其返回一个 Request 对象, 则返回的 Request 将会被重新调用下载。这将停止中间件的 Process_exception()方法执行,就如返回一个 Response 的那样。</p>
+</blockquote>
+<p>这个方法可以在爬虫过程中出现异常提供解决办法。如果出现异常，可以使用该中间件进行下一步操作。</p></article><section class="article labels"><a class="article category" href=/categories/scrapy/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Scrapy</a><a class="article tag" href=/tags/python/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Python</a><a class="article tag" href=/tags/%E7%88%AC%E8%99%AB/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>爬虫</a><a class="article tag" href=/tags/%E6%95%99%E7%A8%8B/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>教程</a>
+</section><section class="article navigation"><p><a class="link" href="/2017/10/15/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="li"></span>基于Hexo的个人博客搭建</a></p><p><a class="link" href="/2017/07/12/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/"><span class="li"></span>Scrapy学习笔记（五）</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

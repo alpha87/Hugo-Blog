@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lua on 简讯</title>
+    <link>/categories/lua/</link>
+    <description>Recent content in Lua on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/categories/lua/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>搭建 Lua 开发环境</title>
+      <link>/2019/04/16/%E6%90%AD%E5%BB%BA-lua-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/16/%E6%90%AD%E5%BB%BA-lua-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.lua.org/&#34;target=&#34;_blank&#34;&gt;Lua&lt;/a&gt; 是一种强大、高效、轻量级、可嵌入的脚本语言。它支持过程编程、面向对象编程、函数编程、数据驱动编程和数据描述。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

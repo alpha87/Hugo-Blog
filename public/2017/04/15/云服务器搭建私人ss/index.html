@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>云服务器搭建私人SS&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">云服务器搭建私人SS</h1><p class="article date">Saturday, April 15, 2017<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><p>如果你有一台海外的云服务器, 最简单的操作就是搭梯子了.</p>
+<p>总得看看墙外的世界.</p>
+<h2 id="准备工作">准备工作</h2>
+<p>首先必须有一台香港或者海外的云服务器, 能搭梯子, 而且搭建blog还不用备案.</p>
+<h2 id="安装">安装</h2>
+<p>执行:</p>
+<p><code>apt-get install -y python-pip</code></p>
+<p>和</p>
+<p><code>pip install shadowsocks</code></p>
+<h2 id="配置">配置</h2>
+<p>编辑配置文件:</p>
+<p><code>vim /etc/shadowsocks.json</code></p>
+<p>输入:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;server&#34;</span><span class="p">:</span> <span class="s2">&#34;0.0.0.0&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;server_port&#34;</span><span class="p">:</span> <span class="mi">8388</span><span class="p">,</span>
+  <span class="nt">&#34;local_address&#34;</span><span class="p">:</span> <span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;local_port&#34;</span><span class="p">:</span> <span class="mi">1080</span><span class="p">,</span>
+  <span class="nt">&#34;password&#34;</span><span class="p">:</span> <span class="s2">&#34;Your Password&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;timeout&#34;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+  <span class="nt">&#34;method&#34;</span><span class="p">:</span> <span class="s2">&#34;aes-256-cfb&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;fast_open&#34;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div><p>保存即可.</p>
+<h2 id="开放端口">开放端口</h2>
+<p>登录到云服务器的管理中心, 编辑相应服务器的安全组规则，新增一行。</p>
+<p>规则协议选择 TCP，端口选择8388，保存即可。</p>
+<h2 id="运行">运行</h2>
+<p><code>ssserver -c /etc/shadowsocks.json -d start</code></p>
+<p>如果没有报错, 那么赶快试一下吧!</p></article><section class="article labels"><a class="article category" href=/categories/%E8%B4%B5%E5%9C%A8%E6%8A%98%E8%85%BE/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>贵在折腾</a><a class="article tag" href=/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>科学上网</a>
+</section><section class="article navigation"><p><a class="link" href="/2017/04/21/%E5%AD%A6python%E5%B0%B1%E4%B8%9A%E5%89%8D%E6%99%AF%E6%80%8E%E4%B9%88%E6%A0%B7/"><span class="li"></span>学python就业前景怎么样</a></p><p><a class="link" href="/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99/"><span class="li"></span>用多种方法爬取超美的壁纸网站</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

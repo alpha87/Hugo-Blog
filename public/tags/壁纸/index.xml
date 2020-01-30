@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>壁纸 on 简讯</title>
+    <link>/tags/%E5%A3%81%E7%BA%B8/</link>
+    <description>Recent content in 壁纸 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Fri, 14 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E5%A3%81%E7%BA%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用多种方法爬取超美的壁纸网站</title>
+      <link>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;p&gt;最近发现了一个国外很不错的壁纸网站 Simple Desktop ，所有的壁纸都是扁平风格。如果你的系统主题是扁平风格，或者你对扁平化的壁纸情有独钟，那么这个网站一定适合你。因为所有的壁纸看着都很喜欢，就利用爬虫把壁纸的原图链接爬取下来。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用多种方法爬取超美的壁纸网站（续）</title>
+      <link>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99%E7%BB%AD/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99%E7%BB%AD/</guid>
+      <description>&lt;p&gt;继续接着上篇文章介绍如何利用另外两种方式爬取 Simple Desktop 网站的壁纸。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

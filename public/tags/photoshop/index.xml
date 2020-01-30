@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Photoshop on 简讯</title>
+    <link>/tags/photoshop/</link>
+    <description>Recent content in Photoshop on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/photoshop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何用 PhotoShop 制作出镂空的海报效果</title>
+      <link>/2019/04/14/%E5%A6%82%E4%BD%95%E7%94%A8-photoshop-%E5%88%B6%E4%BD%9C%E5%87%BA%E9%95%82%E7%A9%BA%E7%9A%84%E6%B5%B7%E6%8A%A5%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/14/%E5%A6%82%E4%BD%95%E7%94%A8-photoshop-%E5%88%B6%E4%BD%9C%E5%87%BA%E9%95%82%E7%A9%BA%E7%9A%84%E6%B5%B7%E6%8A%A5%E6%95%88%E6%9E%9C/</guid>
+      <description>&lt;p&gt;介绍一种简单大气的海报制作技巧，展示一种镂空字体的效果。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

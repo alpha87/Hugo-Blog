@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>新买来的服务器要怎么配置&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">新买来的服务器要怎么配置</h1><p class="article date">Wednesday, July 3, 2019<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><p>记录一下在一台崭新的服务器上必装的工具。</p>
+<p>以前经常重装服务器，每次重装都有不一样的体验。</p>
+<p>人生苦短，就别瞎折腾了～</p>
+<!-- more -->
+<h1 id="oh-my-zsh">Oh My Zsh</h1>
+<p>安装命令：</p>
+<p><code>sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
+<h1 id="配置-zshrc">配置 .zshrc</h1>
+<p>在 <code>~/.zshrc</code> 里加入以下两行：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>C.UTF-8
+<span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>C.UTF-8
+</code></pre></div><p>原因见：<a href="https://lijianxun.top/2019/03/18/%E8%A7%A3%E5%86%B3locale-Error-unsupported-locale-setting%E9%94%99%E8%AF%AF/"target="_blank">解决locale.Error: unsupported locale setting错误</a></p>
+<h1 id="mongo-数据库">mongo 数据库</h1>
+<p>自从网页改版以后，下载页面是真的难找，不过我帮你们找好了：</p>
+<p><a href="https://www.mongodb.com/download-center/community"target="_blank">https://www.mongodb.com/download-center/community</a></p>
+<p>服务器使用的版本是 Ubuntu 16.04.6 LTS。安装链接如下：</p>
+<p><a href="https://fastdl.mongodb.org/linux/mongodb-linux-arm64-ubuntu1604-4.0.10.tgz"target="_blank">https://fastdl.mongodb.org/linux/mongodb-linux-arm64-ubuntu1604-4.0.10.tgz</a></p>
+<h2 id="安装工具">安装工具</h2>
+<p><code>apt-get install libcurl3 openssl wget -y</code></p>
+<p>安装好后使用 <code>wget</code> 工具下载 mongo 数据库。</p>
+<h2 id="安装-mongo-数据库">安装 mongo 数据库</h2>
+<h3 id="下载文件">下载文件</h3>
+<p><code>wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-4.0.10.tgz</code></p>
+<h3 id="解压">解压</h3>
+<p><code>tar -zxvf mongodb-linux-x86_64-ubuntu1604-4.0.10.tgz</code></p>
+<p>移动到 <code>/usr/local/mongodb</code> 下</p>
+<p><code>mv mongodb-linux-x86_64-ubuntu1604-4.0.10 /usr/local/mongodb</code></p>
+<p>创建 <code>data</code> 文件夹</p>
+<p><code>mkdir -p /data/db</code></p>
+<h3 id="赋予权限">赋予权限</h3>
+<p><code>chmod 777 /data/*</code></p>
+<h3 id="启动服务">启动服务</h3>
+<p><code>/usr/local/mongodb/bin/mongod</code></p>
+<h2 id="设置开机启动">设置开机启动</h2>
+<p><code>vim /etc/rc.local</code></p>
+<p>在 <code>exit 0</code> 前加入 <code>/usr/local/mongodb/bin/mongod</code></p>
+<p>mongo 数据库配置完毕。</p>
+<h1 id="配置-ssh-密钥">配置 ssh 密钥</h1>
+<p>终端输入：</p>
+<p><code>ssh-keygen -t rsa -C &quot;git使用的邮箱地址&quot;</code></p>
+<p>一直回车就可以了。</p>
+<p>完成后查看</p>
+<p><code>cat ~/.ssh/id_rsa.pub</code></p>
+<p>在 github 的设置里找到 SSH and GPG Keys，点击右上角的 New SSH Key。</p>
+<p>标题自定，把刚才复制的到 Key 里。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="https://user-images.githubusercontent.com/25655581/60577700-6ffb7200-9db2-11e9-9fac-d5a485fe61d4.png"><img  src="https://user-images.githubusercontent.com/25655581/60577700-6ffb7200-9db2-11e9-9fac-d5a485fe61d4.png"
+        alt/></a></p>
+</article><section class="article labels"><a class="article category" href=/categories/linux/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Linux</a><a class="article tag" href=/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>云服务器</a><a class="article tag" href=/tags/%E9%85%8D%E7%BD%AE/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>配置</a><a class="article tag" href=/tags/%E5%B7%A5%E5%85%B7/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>工具</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/07/07/docker-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%80%8E%E4%B9%88%E5%8A%9E/"><span class="li"></span>Docker 镜像下载慢怎么办</a></p><p><a class="link" href="/2019/07/01/%E4%BD%BF%E7%94%A8-python-%E6%8A%93%E5%8F%96%E7%9F%A5%E4%B9%8E%E7%BE%8E%E5%9B%BE%E6%96%87%E6%9C%AB%E5%90%AB%E7%A6%8F%E5%88%A9/"><span class="li"></span>使用 Python 抓取知乎美图（文末含福利）</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

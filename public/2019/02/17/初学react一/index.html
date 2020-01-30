@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>初学React（一）&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">初学React（一）</h1><p class="article date">Sunday, February 17, 2019<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>瞎搞来瞎搞去，感觉前端还是挺有意思的，抽一段时间时间学习学习React，感受一下前端的魅力。也写几篇文章记录学习过程（要不然过几天脑袋一片空白，什么都不记得）。</p>
+<p>这是学习React的第一天，主要以搭建环境和写一个小的测试demo为主。demo想都不用想，那必须是<code>Hello, World!</code>。</p>
+<h2 id="安装create-react-app工具">安装Create React App工具</h2>
+<p>首先需要安装<a href="https://github.com/facebook/create-react-app"target="_blank">Create React App</a>，有了这个工具，我们就能轻松创建react项目。</p>
+<p>但是这个工具需要安装node，Mac下使用brew安装。</p>
+<p><code>brew install node</code></p>
+<p>node安装完成后就可以使用npm安装Create React App工具了。</p>
+<p><code>npm install -g create-react-app</code></p>
+<h2 id="创建项目">创建项目</h2>
+<p>到指定目录下，执行</p>
+<p><code>create-react-app my_project</code></p>
+<p>耐心等待项目的安装。</p>
+<p>项目安装完成后，目录树基本是这个样子的：</p>
+<pre><code>.
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── Welcome.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+</code></pre><p>执行</p>
+<p><code>npm start</code></p>
+<p>在本地的3000端口成功启动了react项目，看到的是react的欢迎页面。</p>
+<h2 id="第一个demo">第一个demo</h2>
+<p>配置好开发环境后，我们需要写一个小demo测试一波。</p>
+<p>在src目录下新建一个<code>Welcome.js</code>文件，用来写我们的第一段代码。</p>
+<div class="highlight"><pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">Component</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Welcome</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!</span><span class="o">&lt;</span><span class="err">/</span><span class="err">h</span><span class="err">1</span><span class="err">&gt;</span>
+    <span class="p">)</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Welcome</span><span class="p">;</span>
+</code></pre></div><p>写好后保存。修改<code>index.js</code>文件，导入我们新写好的demo：</p>
+<p><code>import Welcome from './Welcome';</code></p>
+<p>然后将</p>
+<p><code>ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</code></p>
+<p>改为</p>
+<p><code>ReactDOM.render(&lt;Welcome /&gt;, document.getElementById('root'));</code></p>
+<p>这一步操作是将React元素渲染到DOM节点，通过把它们传递给<code>ReactDOM.render()</code>的方法来将其渲染到页面上。</p>
+<p>回到终端，再次使用<code>npm start</code>启动项目，react的欢迎页面就改成我们写好的<code>Hello, World!</code>了。</p></article><section class="article labels"><a class="article category" href=/categories/react/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>React</a><a class="article tag" href=/tags/javascript/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>JavaScript</a><a class="article tag" href=/tags/web/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Web</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/02/18/%E5%88%9D%E5%AD%A6react%E4%BA%8C/"><span class="li"></span>初学React（二）</a></p><p><a class="link" href="/2019/02/01/mac-%E5%90%AF%E5%8A%A8%E5%8F%B0%E5%9B%BE%E6%A0%87%E6%95%B0%E9%87%8F%E4%BF%AE%E6%94%B9/"><span class="li"></span>Mac 启动台图标数量修改</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

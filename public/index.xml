@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>简讯 Blog</title>
+    <title>简讯</title>
     <link>/</link>
-    <description>Recent content on 简讯 Blog</description>
+    <description>Recent content on 简讯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>©2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
-    <lastBuildDate>Tue, 14 Jan 2020 16:20:22 +0800</lastBuildDate>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Adguard, Adblock 过滤器订阅链接</title>
-      <link>/adguard-adblock-filter-url/</link>
-      <pubDate>Tue, 14 Jan 2020 16:20:22 +0800</pubDate>
+      <title>Posts</title>
+      <link>/post/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/adguard-adblock-filter-url/</guid>
-      <description>&lt;p&gt;为了不让树莓派继续吃灰，为其安装了 Adguard Home 服务，用来过滤家里联网设备的广告。&lt;/p&gt;</description>
+      <guid>/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>个人项目</title>
+      <link>/projects/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>知乎看图小程序 表白墙社交小程序 Django 用户认证系统 Jsbox 少数派阅读，和风天气 阴阳师桌面版脚本 知乎看图小程序 小程序已经正式上线，主要功能是方便用户查看知</description>
+    </item>
+    
+    <item>
+      <title>关于作者</title>
+      <link>/about/</link>
+      <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>简讯 超业余码农。 没事会写写 Python，JavaScript 代码。 喜欢折腾树莓派。说白了就是喜欢看树莓派吃灰。 ( ͡° ͜ʖ ͡°) 控制不住喜欢购</description>
     </item>
     
   </channel>

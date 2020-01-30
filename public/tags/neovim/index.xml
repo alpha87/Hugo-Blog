@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neovim on 简讯</title>
+    <link>/tags/neovim/</link>
+    <description>Recent content in Neovim on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sun, 20 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Neovim 配置记录</title>
+      <link>/2019/01/20/neovim-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/20/neovim-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;第一次接触vim还是在玩树莓派的时候，当时打开 vim 想要退出界面是真的难，只能强行关闭终端。&lt;/p&gt;
+&lt;p&gt;pycharm 用来写 python 很顺手，但是功能太多也显得臃肿。&lt;/p&gt;
+&lt;p&gt;pycharm 的强大莫过于异常自动补全，跳转，代码调试功能，其他功能也很好，但是基本很少用到。&lt;/p&gt;
+&lt;p&gt;所以也是为了学习，还是勉强换成了 vim。用起来也有很多的不顺手。只能慢慢适应。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>模块化配置vim</title>
+      <link>/2019/01/10/%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AEvim/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/10/%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AEvim/</guid>
+      <description>&lt;p&gt;之前就想过模块化vim配置, 但是没有合适的教程, 一直拖着, 直到看到此文章&lt;a href=&#34;https://zhuanlan.zhihu.com/p/54864654&#34;target=&#34;_blank&#34;&gt;Vimrc Init.vim太长了？不存在的&lt;/a&gt;, 根据Pendragon大佬的vim配置, 模仿并修改了一波.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

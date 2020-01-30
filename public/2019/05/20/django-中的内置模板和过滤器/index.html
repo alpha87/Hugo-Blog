@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script data-ad-client="ca-pub-5265952723806029" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script><title>Django 中的内置模板和过滤器&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.3e4df936a2248a25a647a19d0468640da1a5f169fe50d98c35448fbf1f2d0ac37c27a6e822b983c71fba56fca9928e9d.css" integrity="sha384-Pk35NqIkiiWmR6GdBGhkDaGl8Wn&#43;UNmMNUSPvx8tCsN8J6boIrmDxx&#43;6Vvypko6d"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">Django 中的内置模板和过滤器</h1><p class="article date">Monday, May 20, 2019<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><p>Django 中的内置模板和过滤器。</p>
+<p><a href="https://docs.djangoproject.com/zh-hans/2.2/ref/templates/builtins/#ref-templates-builtins-tags"target="_blank">官方文档</a></p>
+<h1 id="for">for</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="p">{</span> <span class="o">%</span> <span class="k">for</span> <span class="n">athlete</span> <span class="ow">in</span> <span class="n">athlete_list</span> <span class="o">%</span> <span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">{</span> <span class="p">{</span> <span class="n">athlete</span><span class="o">.</span><span class="n">name</span> <span class="p">}</span> <span class="p">}</span><span class="o">&lt;</span><span class="o">/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="p">{</span> <span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span> <span class="p">}</span>
+<span class="o">&lt;</span><span class="o">/</span><span class="n">ul</span><span class="o">&gt;</span>
+</code></pre></div><h1 id="for--empty">for &hellip; empty</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="p">{</span> <span class="o">%</span> <span class="k">for</span> <span class="n">athlete</span> <span class="ow">in</span> <span class="n">athlete_list</span> <span class="o">%</span> <span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">{</span> <span class="p">{</span> <span class="n">athlete</span><span class="o">.</span><span class="n">name</span> <span class="p">}</span> <span class="p">}</span><span class="o">&lt;</span><span class="o">/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="p">{</span> <span class="o">%</span> <span class="n">empty</span> <span class="o">%</span> <span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="n">Sorry</span><span class="p">,</span> <span class="n">no</span> <span class="n">athletes</span> <span class="ow">in</span> <span class="n">this</span> <span class="nb">list</span><span class="o">.</span><span class="o">&lt;</span><span class="o">/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="p">{</span> <span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span> <span class="p">}</span>
+<span class="o">&lt;</span><span class="o">/</span><span class="n">ul</span><span class="o">&gt;</span>
+</code></pre></div><h1 id="if">if</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="p">{</span> <span class="o">%</span> <span class="k">if</span> <span class="n">athlete_list</span> <span class="o">%</span> <span class="p">}</span>
+    <span class="n">Number</span> <span class="n">of</span> <span class="n">athletes</span><span class="p">:</span> <span class="p">{</span> <span class="p">{</span> <span class="n">athlete_list</span><span class="o">|</span><span class="n">length</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">{</span> <span class="o">%</span> <span class="k">elif</span> <span class="n">athlete_in_locker_room_list</span> <span class="o">%</span> <span class="p">}</span>
+    <span class="n">Athletes</span> <span class="n">should</span> <span class="n">be</span> <span class="n">out</span> <span class="n">of</span> <span class="n">the</span> <span class="n">locker</span> <span class="n">room</span> <span class="n">soon</span><span class="err">!</span>
+<span class="p">{</span> <span class="o">%</span> <span class="k">else</span> <span class="o">%</span> <span class="p">}</span>
+    <span class="n">No</span> <span class="n">athletes</span><span class="o">.</span>
+<span class="p">{</span> <span class="o">%</span> <span class="n">endif</span> <span class="o">%</span> <span class="p">}</span>
+</code></pre></div><p>允许在同一标记中使用 <code>and</code> 和 <code>or</code> 子句，<code>and</code> 优先级高于 <code>or</code> 例如：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="p">{</span> <span class="o">%</span> <span class="k">if</span> <span class="n">athlete_list</span> <span class="ow">and</span> <span class="n">coach_list</span> <span class="ow">or</span> <span class="n">cheerleader_list</span> <span class="o">%</span> <span class="p">}</span>
+</code></pre></div><p>将被解释为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">if</span> <span class="p">(</span><span class="n">athlete_list</span> <span class="ow">and</span> <span class="n">coach_list</span><span class="p">)</span> <span class="ow">or</span> <span class="n">cheerleader_list</span>
+</code></pre></div><h1 id="templatetag">templatetag</h1>
+<p>由于模板系统没有“转义”的概念，因此要显示模板标签中使用的其中一个位，必须使用该标签。<code>{ % templatetag % }</code></p>
+<p>参数告诉输出哪个模板位：</p>
+<table>
+<thead>
+<tr>
+<th>争论</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openblock</td>
+<td>{ %</td>
+</tr>
+<tr>
+<td>closeblock</td>
+<td>% }</td>
+</tr>
+<tr>
+<td>openvariable</td>
+<td>{ {</td>
+</tr>
+<tr>
+<td>closevariable</td>
+<td>} }</td>
+</tr>
+<tr>
+<td>openbrace</td>
+<td>{</td>
+</tr>
+<tr>
+<td>closebrace</td>
+<td>}</td>
+</tr>
+<tr>
+<td>opencomment</td>
+<td>{#</td>
+</tr>
+<tr>
+<td>closecomment</td>
+<td>#}</td>
+</tr>
+</tbody>
+</table>
+<p>样品用法：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="p">{</span> <span class="o">%</span> <span class="n">templatetag</span> <span class="n">openblock</span> <span class="o">%</span> <span class="p">}</span> <span class="n">url</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">entry_list</span><span class="s1">&#39;</span> <span class="p">{</span> <span class="o">%</span> <span class="n">templatetag</span> <span class="n">closeblock</span> <span class="o">%</span> <span class="p">}</span>
+</code></pre></div></article><section class="article labels"><a class="article category" href=/categories/python/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>Python</a><a class="article tag" href=/tags/django/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Django</a><a class="article tag" href=/tags/web%E5%BC%80%E5%8F%91/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Web开发</a>
+</section><section class="article navigation"><p><a class="link" href="/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/"><span class="li"></span>微信小程序如何使用 UI 组件库</a></p><p><a class="link" href="/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/"><span class="li"></span>Django使用指南——使用表单</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

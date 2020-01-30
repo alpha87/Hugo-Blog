@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on 简讯</title>
+    <link>/tags/mac/</link>
+    <description>Recent content in Mac on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>管理Mac启动台（Launchpad）图标，删除或移动</title>
+      <link>/2020/01/01/%E7%AE%A1%E7%90%86mac%E5%90%AF%E5%8A%A8%E5%8F%B0launchpad%E5%9B%BE%E6%A0%87%E5%88%A0%E9%99%A4%E6%88%96%E7%A7%BB%E5%8A%A8/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/01/%E7%AE%A1%E7%90%86mac%E5%90%AF%E5%8A%A8%E5%8F%B0launchpad%E5%9B%BE%E6%A0%87%E5%88%A0%E9%99%A4%E6%88%96%E7%A7%BB%E5%8A%A8/</guid>
+      <description>说起 Mac 的启动台（Launchpad），没有强迫症的同学还好，可能对这个不是很敏感。 今天推荐的这款免费应用，一般不会用到，但是想要用却用不到的</description>
+    </item>
+    
+    <item>
+      <title>Mac允许任何来源App</title>
+      <link>/2019/04/19/mac%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90app/</link>
+      <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/19/mac%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90app/</guid>
+      <description>&lt;p&gt;如果在安装过程中遇到“应用已损坏”的问题，说明系统不允许安装其他来源的应用。&lt;/p&gt;
+&lt;p&gt;如何让Mac允许安装来自任何来源的app呢？只需一条简单命令。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac 启动台图标数量修改</title>
+      <link>/2019/02/01/mac-%E5%90%AF%E5%8A%A8%E5%8F%B0%E5%9B%BE%E6%A0%87%E6%95%B0%E9%87%8F%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/01/mac-%E5%90%AF%E5%8A%A8%E5%8F%B0%E5%9B%BE%E6%A0%87%E6%95%B0%E9%87%8F%E4%BF%AE%E6%94%B9/</guid>
+      <description>&lt;p&gt;默认启动台的图标太大，根本放不了几个app，如何修改显示数量呢？&lt;/p&gt;
+&lt;p&gt;当然启动应用也可以使用聚焦搜索。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac下安装MySQL Python包</title>
+      <link>/2019/01/30/mac%E4%B8%8B%E5%AE%89%E8%A3%85mysql-python%E5%8C%85/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/30/mac%E4%B8%8B%E5%AE%89%E8%A3%85mysql-python%E5%8C%85/</guid>
+      <description>&lt;p&gt;简单几步解决问题：&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

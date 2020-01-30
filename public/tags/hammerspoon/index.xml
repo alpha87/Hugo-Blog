@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hammerspoon on 简讯</title>
+    <link>/tags/hammerspoon/</link>
+    <description>Recent content in Hammerspoon on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/hammerspoon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>强大的Mac自动化工具——Hammerspoon</title>
+      <link>/2019/04/16/%E5%BC%BA%E5%A4%A7%E7%9A%84mac%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7hammerspoon/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/16/%E5%BC%BA%E5%A4%A7%E7%9A%84mac%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7hammerspoon/</guid>
+      <description>&lt;p&gt;前两天有幸看到&lt;a href=&#34;http://www.hammerspoon.org/&#34;target=&#34;_blank&#34;&gt;Hammerspoon&lt;/a&gt;的介绍，可以说可玩性还是很大的，一个实用的脚本可以帮助我们节省不少时间，提升不少的工作效率。当然既然是脚本工具，就会有很多自定义的功能。简单了解Hammerspoon以后自己写了个小工具，用来在Mac菜单栏查看最新的少数派文章，点击后使用默认浏览器打开相关文章的链接。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

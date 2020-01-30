@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Celery on 简讯</title>
+    <link>/tags/celery/</link>
+    <description>Recent content in Celery on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Thu, 29 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/celery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Celery 使用小记</title>
+      <link>/2019/08/29/celery-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/29/celery-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</guid>
+      <description>Celery 是一个简单高效可靠的分布式系统。在处理大量消息，实时处理异步任务，定时执行任务，支持任务调度等方面使用起来更为灵活。 简单理解 Celery 就是发布任务</description>
+    </item>
+    
+  </channel>
+</rss>
