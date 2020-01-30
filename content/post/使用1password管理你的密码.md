@@ -1,5 +1,5 @@
 ---
-title: "使用1password管理你的密码"
+title: "使用 1Password 管理你的密码"
 date: 2020-01-17
 categories: ['好物推荐']
 tags: ['1Password', '羊毛攻略']

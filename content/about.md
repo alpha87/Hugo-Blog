@@ -40,6 +40,8 @@ comments: false
 
 ------
 
+如果你也一样喜欢写写代码，请记住：**代码应该是写给其他人来读的，而能让机器运行的仅仅是附带着的**。
+
 Email: jianxun2004@gmail.com
 
 Github: https://github.com/alpha87
