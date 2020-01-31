@@ -54,6 +54,8 @@ comments: false
 
 🖥 Github: https://github.com/alpha87
 
+📱 Telegram: https://t.me/HiAlfred
+
 ![IMG_2329.JPG](https://i.loli.net/2020/01/14/tOP8W3YBcElgf1s.jpg " ")
 
 如果你也一样喜欢写写代码，请记住：
