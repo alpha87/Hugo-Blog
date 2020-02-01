@@ -117,6 +117,8 @@ server {
 
 配置文件来自 [flask 文档](http://flask.pocoo.org/docs/1.0/deploying/wsgi-standalone/#proxy-setups)。
 
+为了避免奇怪的 bug 发生，建议把 `/etc/nginx/nginx.conf` 第一行改为 `user root;`，使用 root 用户。
+
 输入：
 
 `nginx -t`
