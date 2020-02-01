@@ -24,7 +24,9 @@ comments: false
 
 小程序被举报后，用 Flask 做了一个网页版「 [https://fish.lijianxun.top](https://fish.lijianxun.top) 」，可惜使用效果~~UI~~没小程序好，本来打算用 Vue 重写，前端框架已经写好，可在重构后端接口的时候，想到服务器马上到期，只能说一切随缘。
 
-因为担负不起服务器高额的费用，已在 2020-01-27 过期，抱歉各位！
+~~因为担负不起服务器高额的费用，已在 2020-01-27 过期，抱歉各位！~~
+
+因为很多朋友还是需要这样一个工具，正在更新代码，采购服务器，网址应该不会改变，敬请期待。
 
 ------
 
@@ -52,9 +54,9 @@ comments: false
 
 📨 Email: jianxun2004@gmail.com
 
-🖥 Github: https://github.com/alpha87
+🖥 Github: [https://github.com/alpha87](https://github.com/alpha87)
 
-📱 Telegram: https://t.me/HiAlfred
+📱 Telegram: [https://t.me/HiAlfred](https://t.me/HiAlfred)
 
 ![IMG_2329.JPG](https://i.loli.net/2020/01/14/tOP8W3YBcElgf1s.jpg " ")
 
