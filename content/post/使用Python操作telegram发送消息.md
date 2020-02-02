@@ -1,6 +1,6 @@
 ---
 title: "使用Python操作telegram发送消息"
-date: 2020-02-05
+date: 2020-02-01
 categories: ["贵在折腾"]
 tags: ["telegram", "Python"]
 keywords: []
