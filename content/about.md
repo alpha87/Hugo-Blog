@@ -54,8 +54,6 @@ comments: false
 
 📱 Telegram: [https://t.me/HiAlfred](https://t.me/HiAlfred)
 
-📨 Email: jianxun2004@gmail.com
-
 🖥 Github: [https://github.com/alpha87](https://github.com/alpha87)
 
 🛫️ 机场推荐：[卡车极速](http://m8.pw/mddv) | **优惠码：kc_forever_5**
