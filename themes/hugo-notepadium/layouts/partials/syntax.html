@@ -20,5 +20,5 @@
         {{- end -}}
     {{- end -}}
     {{- $fontJs := resources.Get "js/all.js" -}}
-    <script src="{{- $fontJs.RelPermalink -}}" integrity="{{- $fontJs.Data.Integrity -}}"></script>
+    <script async src="{{- $fontJs.RelPermalink -}}" integrity="{{- $fontJs.Data.Integrity -}}"></script>
 {{- end -}}
