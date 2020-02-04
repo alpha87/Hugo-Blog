@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图片引用 on 简讯</title>
+    <link>/tags/%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8/</link>
+    <description>Recent content in 图片引用 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>图片防盗链如何引用</title>
+      <link>/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/</guid>
+      <description>之前做宅宅生活收藏夹小程序的时候，碰巧避免了这个问题。估计是知乎把微信小程序的相关参数划入了白名单。 但是个人在制作网站的时候，一定会遇到个别</description>
+    </item>
+    
+  </channel>
+</rss>

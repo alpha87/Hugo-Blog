@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LNMP on 简讯</title>
+    <link>/tags/lnmp/</link>
+    <description>Recent content in LNMP on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Tue, 17 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/lnmp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>基于LNMP搭建wordpress博客</title>
+      <link>/2019/09/17/%E5%9F%BA%E4%BA%8Elnmp%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/17/%E5%9F%BA%E4%BA%8Elnmp%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2/</guid>
+      <description>原谅我最终还是把博客从 hexo 移到了 wordpress。之前搭建 wordpress 使用 Apache，但是已经习惯了 nginx，所以记录一波这次搭建网站的过程。 安装</description>
+    </item>
+    
+  </channel>
+</rss>

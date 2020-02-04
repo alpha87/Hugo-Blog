@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1278593076'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1278593076%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+<script async src="https://kit.fontawesome.com/8cc90f575c.js" crossorigin="anonymous"></script>
+<script async>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><title>使用Python操作telegram发送消息&nbsp;&ndash;&nbsp;简讯</title><link rel="stylesheet" href="/css/core.min.b82f914f060e48379e318a4f75e484281a018ae6a0b8b7f97cd5329512117eecf7e51b8c996b8dfb27cf023da8a2e4c8.css" integrity="sha384-uC&#43;RTwYOSDeeMYpPdeSEKBoBiuaguLf5fNUylRIRfuz35RuMmWuN&#43;yfPAj2oouTI"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name" style="font-size: 24px;">简讯</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/categories/">
+            <i class="fas fa-align-left"></i>&nbsp;分类
+        </a><a class="nav item" href="/tags/">
+            <i class="fas fa-tags"></i>&nbsp;标签
+        </a><a class="nav item" href="/projects">
+            
+            
+            <i class="fas fa-cubes"></i>&nbsp;个人项目</a><a class="nav item" href="/about">
+            
+            
+            <i class="fas fa-feather-alt"></i>&nbsp;关于</a></nav>
+</div></span></div>
+        <div class="site slogan"><span class="title"></span></div></section>
+
+<script>
+    
+    var typed = new Typed('.title', {
+      strings: ["唯书与爱，不可辜负", "岁月无婷无华"],
+      smartBackspace: true,
+      typeSpeed: 95,
+      backSpeed: 35
+    });
+</script><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">使用Python操作telegram发送消息</h1><p class="article date">Saturday, February 1, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>用过 tg 的朋友一定认同 tg 是宇宙第一通讯工具，没记错的话应该是战斗民族俄罗斯的程序员开发的。</p>
+<!-- more -->
+<h1 id="什么是-telegram">什么是 telegram</h1>
+<blockquote>
+<p>Telegram 是跨平台的即时通信软件。其客户端是自由及开放源代码软件，但服务器是专有软件。用户可以相互交换加密与自毁消息，发送照片、影片等所有类型文件。（维基百科）</p>
+</blockquote>
+<p><span class="image-container"><span class="link"><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2020/02/02/q65wpScnZjbEolv.jpg"><img class="img" src="https://i.loli.net/2020/02/02/q65wpScnZjbEolv.jpg"
+        alt="Telegram"/></a></span></span></p>
+<p>官方网站：<a href="https://telegram.org/"target="_blank">https://telegram.org/</a></p>
+<p>如果打不开，应该是需要代理。插播一则小广告：</p>
+<p>🛫️ 机场推荐：<a href="http://m8.pw/mddv"target="_blank">卡车极速</a> | <strong>优惠码：kc_forever_5</strong></p>
+<h1 id="创建机器人">创建机器人</h1>
+<p>首先需要添加 <a href="https://telegram.me/BotFather"target="_blank">@BotFather</a>。</p>
+<p>发送 <code>/start</code> 根据提示继续操作。</p>
+<p><span class="image-container"><span class="link"><a target="_blank" rel="noopener noreferrer" 
+  href="https://i.loli.net/2020/02/02/CRr76xbFAz4v9pP.jpg"><img class="img" src="https://i.loli.net/2020/02/02/CRr76xbFAz4v9pP.jpg"
+        alt="创建机器人"/></a></span></span></p>
+<p>输入 <code>/newbot</code> 创建机器人，然后是昵称，用户名（必须以 Bot 结尾）。</p>
+<p>创建成功以后我们会得到一个 TOKEN，类似 <code>012345678:xxxxxxxxxxxxxxxxx-xxxxxxxxxx-xxxxxx</code>。</p>
+<h1 id="使用-python-发送消息">使用 Python 发送消息</h1>
+<h2 id="安装">安装</h2>
+<p>需要用到 <a href="https://github.com/python-telegram-bot/python-telegram-bot"target="_blank">python-telegram-bot</a> 库。</p>
+<h2 id="first-blood">First Blood</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">telegram</span>
+
+
+<span class="n">chat_id</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">@xxxxx</span><span class="s2">&#34;</span>  <span class="c1"># 频道地址</span>
+<span class="n">token</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">&#34;</span>  <span class="c1"># 机器人 TOKEN</span>
+<span class="n">bot</span> <span class="o">=</span> <span class="n">telegram</span><span class="o">.</span><span class="n">Bot</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
+<span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">测试</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></div><p>是不是很简单？</p>
+<h2 id="发送带标题网址链接">发送带标题网址链接</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">bot</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+    <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">&lt;a href=</span><span class="s2">&#34;</span><span class="n">https</span><span class="p">:</span><span class="o">/</span><span class="o">/</span><span class="n">lijianxun</span><span class="o">.</span><span class="n">top</span><span class="o">/</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">&gt;简讯的个人博客&lt;/a&gt;</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="n">parse_mode</span><span class="o">=</span><span class="n">telegram</span><span class="o">.</span><span class="n">ParseMode</span><span class="o">.</span><span class="n">HTML</span>
+<span class="p">)</span>
+</code></pre></div><p>ParseMode 支持 html 和 markdown 两种格式。</p>
+<p>html 标签支持加粗 <code>&lt;b&gt;&lt;/b&gt;</code>，斜体 <code>&lt;i&gt;&lt;/i&gt;</code> 等。</p>
+<h2 id="发送图片">发送图片</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">bot</span><span class="o">.</span><span class="n">send_photo</span><span class="p">(</span>
+    <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+    <span class="n">photo</span><span class="o">=</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://i.loli.net/2019/09/19/PcQst46mwUaMEgV.png</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="n">caption</span><span class="o">=</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">非必填的图片描述</span><span class="s2">&#34;</span>
+<span class="p">)</span>
+</code></pre></div><h2 id="发送多张图片">发送多张图片</h2>
+<p>完整代码</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">telegram</span>
+<span class="kn">from</span> <span class="nn">telegram</span> <span class="kn">import</span> <span class="n">InputMediaPhoto</span>
+
+
+<span class="n">photo_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</span><span class="s2">&#34;</span>
+<span class="p">]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">InputMediaPhoto</span><span class="p">(</span><span class="n">media</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">知乎钓鱼贴</span><span class="s2">&#34;</span><span class="p">)</span>
+          <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">photo_list</span><span class="p">]</span>
+
+<span class="n">bot</span><span class="o">.</span><span class="n">send_media_group</span><span class="p">(</span>
+    <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+    <span class="n">media</span><span class="o">=</span><span class="n">result</span>
+<span class="p">)</span>
+</code></pre></div><p>传相册的时候 <code>media</code> 需要 <code>InputMediaPhoto</code> 类型。</p>
+<p>先记录这么多，以后用到其他类型再记录。</p>
+</article><section class="article labels"><a class="article category" href=/categories/%E8%B4%B5%E5%9C%A8%E6%8A%98%E8%85%BE/><span class="hashtag">
+        <i class="fas fa-align-left"></i>
+    </span>贵在折腾</a><a class="article tag" href=/tags/telegram/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>telegram</a><a class="article tag" href=/tags/python/><span class="hashtag">
+        <i class="fas fa-tag"></i>
+    </span>Python</a>
+</section><section class="article navigation"><p><a class="link" href="/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/"><span class="li"></span>Uniapp 开发 H5 简单记录</a></p><p><a class="link" href="/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/"><span class="li"></span>图片防盗链如何引用</a class="link">
+        </p></section><section class="article discussion"><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alpha87" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt = new Date("11/16/2016 00:00:00");
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        "本站已运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <p class="copyright" style="font-family: Verdana, sans-serif;">
+    <i class="far fa-copyright"></i>2016-2020 Jianxun. | 岁月无婷无华✨</p>
+  
+  <p><span id="timeDate">正在载入天数...</span><span id="times">载入时分秒...</span></p>
+  <span style="font-family: Verdana, sans-serif;">
+    <a style="color: #999;" href="http://www.beian.miit.gov.cn/">京ICP备19005249号</a> |
+    <a style="color: #999;" href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <i style="color: cyan;" class="fab fa-creative-commons"></i> BY-NC-ND 3.0</a> | 
+    <a href="https://lijianxun.top/post/index.xml">
+      订阅 <i class="fas fa-rss"></i></a>
+  </p>
+</div>
+</section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script async>hljs.initHighlightingOnLoad();</script></div>
+</body>
+
+</html>

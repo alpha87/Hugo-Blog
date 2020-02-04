@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>宅宅生活收藏夹 on 简讯</title>
+    <link>/tags/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9/</link>
+    <description>Recent content in 宅宅生活收藏夹 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Uniapp 开发 H5 简单记录</title>
+      <link>/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</guid>
+      <description>之前那台服务器过期了，所以网页版的宅宅生活收藏夹暂时不能用。 本来想就此放弃，但是有很多朋友私信问我，所以考虑还是继续开通这个知乎看图平台吧。</description>
+    </item>
+    
+  </channel>
+</rss>

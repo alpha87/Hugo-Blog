@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Email on 简讯</title>
+    <link>/tags/email/</link>
+    <description>Recent content in Email on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Fri, 09 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/email/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>利用Python发邮件</title>
+      <link>/2016/12/09/%E5%88%A9%E7%94%A8python%E5%8F%91%E9%82%AE%E4%BB%B6/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/09/%E5%88%A9%E7%94%A8python%E5%8F%91%E9%82%AE%E4%BB%B6/</guid>
+      <description>&lt;p&gt;在搜索python教程的时候，碰巧遇到了「 利用 python 发送电子邮件 」的教程，觉得很实用也比较有意思，所以就花了点时间学习发送邮件的脚本是怎样实现的。&lt;/p&gt;
+&lt;p&gt;我主要是利用SMTP（简单邮件传输协议）来实现邮件的发送。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

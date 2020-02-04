@@ -31,11 +31,11 @@
     </item>
     
     <item>
-      <title>使用Python连接mongoDB</title>
-      <link>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</link>
+      <title>使用 Python 连接 mongoDB</title>
+      <link>/2017/02/28/%E4%BD%BF%E7%94%A8-python-%E8%BF%9E%E6%8E%A5-mongodb/</link>
       <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</guid>
+      <guid>/2017/02/28/%E4%BD%BF%E7%94%A8-python-%E8%BF%9E%E6%8E%A5-mongodb/</guid>
       <description>&lt;p&gt;之前使用的MySQL是关系型数据库，mongoDB是非关系型数据库（NoSQL）。&lt;/p&gt;</description>
     </item>
     

@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>/categories/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/post/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/categories/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/post/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/quantumultx/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2020/02/03/%E4%BD%BF%E7%94%A8-quantumultx-%E5%AE%9E%E7%8E%B0%E5%8D%A1%E8%BD%A6%E6%9E%81%E9%80%9F%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/categories/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/%E8%84%9A%E6%9C%AC/</loc><lastmod>2020-02-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/h5/</loc><lastmod>2020-02-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/uniapp/</loc><lastmod>2020-02-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</loc><lastmod>2020-02-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/categories/%E5%89%8D%E7%AB%AF/</loc><lastmod>2020-02-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9/</loc><lastmod>2020-02-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/python/</loc><lastmod>2020-02-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/telegram/</loc><lastmod>2020-02-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2020/02/01/%E4%BD%BF%E7%94%A8python%E6%93%8D%E4%BD%9Ctelegram%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/</loc><lastmod>2020-02-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/categories/%E8%B4%B5%E5%9C%A8%E6%8A%98%E8%85%BE/</loc><lastmod>2020-02-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8/</loc><lastmod>2020-01-31T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/</loc><lastmod>2020-01-31T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/%E9%98%B2%E7%9B%97%E9%93%BE/</loc><lastmod>2020-01-31T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2020/01/27/quantumultx-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E7%9A%84%E8%84%9A%E6%9C%AC%E6%8E%A8%E8%8D%90/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/%E8%84%9A%E6%9C%AC/</loc><lastmod>2020-01-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/1password/</loc><lastmod>2020-01-17T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2020/01/17/%E4%BD%BF%E7%94%A8-1password-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</loc><lastmod>2020-01-17T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E7%BE%8A%E6%AF%9B%E6%94%BB%E7%95%A5/</loc><lastmod>2020-01-17T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2020/01/15/html%E5%AE%9E%E7%8E%B0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C/</loc><lastmod>2020-01-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/javascript/</loc><lastmod>2020-01-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/%E5%89%8D%E7%AB%AF/</loc><lastmod>2020-01-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/javascript/</loc><lastmod>2020-01-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2020/01/14/adguard-adblock-%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5/</loc><lastmod>2020-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%B1%8F%E8%94%BD%E5%B9%BF%E5%91%8A/</loc><lastmod>2020-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc><lastmod>2020-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/%E8%B4%B5%E5%9C%A8%E6%8A%98%E8%85%BE/</loc><lastmod>2020-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/mac/</loc><lastmod>2020-01-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%B7%A5%E5%85%B7/</loc><lastmod>2020-01-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%BA%94%E7%94%A8%E6%8E%A8%E8%8D%90/</loc><lastmod>2020-01-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -25,10 +37,12 @@
     <loc>/2019/12/28/pythonista-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</loc><lastmod>2019-12-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/debug/</loc><lastmod>2019-11-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/ipdb/</loc><lastmod>2019-11-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/python/</loc><lastmod>2019-11-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/11/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%B0%83%E8%AF%95%E4%BB%A3%E7%A0%81/</loc><lastmod>2019-11-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/categories/%E7%BC%96%E7%A8%8B/</loc><lastmod>2019-11-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E8%B0%83%E8%AF%95/</loc><lastmod>2019-11-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/11/14/%E5%A2%99%E5%A4%96%E4%B8%8D%E6%98%AF%E6%B3%95%E5%A4%96/</loc><lastmod>2019-11-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/lnmp/</loc><lastmod>2019-09-17T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/wordpress/</loc><lastmod>2019-09-17T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%8D%9A%E5%AE%A2/</loc><lastmod>2019-09-17T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/09/17/%E5%9F%BA%E4%BA%8Elnmp%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2/</loc><lastmod>2019-09-17T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/pytest/</loc><lastmod>2019-09-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -37,12 +51,13 @@
     <loc>/tags/celery/</loc><lastmod>2019-08-29T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/08/29/celery-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</loc><lastmod>2019-08-29T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/</loc><lastmod>2019-08-29T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/categories/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9/</loc><lastmod>2019-07-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/07/13/%E5%AE%85%E5%AE%85%E7%94%9F%E6%B4%BB%E6%94%B6%E8%97%8F%E5%A4%B9%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/</loc><lastmod>2019-07-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc><lastmod>2019-07-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E6%80%BB%E7%BB%93/</loc><lastmod>2019-07-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/docker/</loc><lastmod>2019-07-07T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/docker/</loc><lastmod>2019-07-07T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/07/07/docker-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%80%8E%E4%B9%88%E5%8A%9E/</loc><lastmod>2019-07-07T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1/</loc><lastmod>2019-07-07T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/categories/%E5%AD%A6%E4%B9%A0/</loc><lastmod>2019-07-07T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/categories/linux/</loc><lastmod>2019-07-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc><lastmod>2019-07-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/07/03/%E6%96%B0%E4%B9%B0%E6%9D%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE/</loc><lastmod>2019-07-03T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -50,18 +65,16 @@
     <loc>/2019/07/01/%E4%BD%BF%E7%94%A8-python-%E6%8A%93%E5%8F%96%E7%9F%A5%E4%B9%8E%E7%BE%8E%E5%9B%BE%E6%96%87%E6%9C%AB%E5%90%AB%E7%A6%8F%E5%88%A9/</loc><lastmod>2019-07-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E7%88%AC%E8%99%AB/</loc><lastmod>2019-07-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E7%9F%A5%E4%B9%8E/</loc><lastmod>2019-07-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/%E7%BE%8E%E5%9B%BE/</loc><lastmod>2019-07-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc><lastmod>2019-06-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/</loc><lastmod>2019-06-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E6%A1%86%E6%9E%B6/</loc><lastmod>2019-06-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E7%BB%84%E4%BB%B6%E5%BA%93/</loc><lastmod>2019-06-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/flask/</loc><lastmod>2019-06-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/flask/</loc><lastmod>2019-06-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/gunicorn/</loc><lastmod>2019-06-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/nginx/</loc><lastmod>2019-06-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/supervisor/</loc><lastmod>2019-06-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/06/14/%E4%BD%BF%E7%94%A8flasknginxgunicornsupervisor%E5%AE%8C%E6%88%90%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc><lastmod>2019-06-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/projects/</loc><lastmod>2019-06-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/windows/</loc><lastmod>2019-05-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/05/28/windows%E7%B3%BB%E7%BB%9F%E5%90%84%E7%A7%8D%E9%94%99%E8%AF%AF%E4%BF%AE%E5%A4%8D%E8%AE%B0%E5%BD%95/</loc><lastmod>2019-05-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/windows%E9%94%99%E8%AF%AF/</loc><lastmod>2019-05-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/</loc><lastmod>2019-05-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -71,16 +84,12 @@
     <loc>/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/</loc><lastmod>2019-05-19T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/05/18/django-url-pattern-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc><lastmod>2019-05-18T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/</loc><lastmod>2019-05-18T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/django/</loc><lastmod>2019-05-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86/</loc><lastmod>2019-05-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/05/14/%E8%AE%B0%E5%BD%95django%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</loc><lastmod>2019-05-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/05/13/%E4%BD%BF%E7%94%A8bcrypt%E5%8A%A0%E5%AF%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</loc><lastmod>2019-05-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%AF%86%E7%A0%81/</loc><lastmod>2019-05-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/javascript/</loc><lastmod>2019-05-08T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/lua/</loc><lastmod>2019-05-08T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/python/</loc><lastmod>2019-05-08T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/05/08/%E4%BD%BF%E7%94%A8%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</loc><lastmod>2019-05-08T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/%E5%AD%A6%E4%B9%A0/</loc><lastmod>2019-05-08T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/gui/</loc><lastmod>2019-04-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/pyqt5/</loc><lastmod>2019-04-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/04/27/%E4%BD%BF%E7%94%A8-pyqt5-designer-%E6%9E%84%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/</loc><lastmod>2019-04-27T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -88,9 +97,8 @@
     <loc>/2019/04/23/flask-%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</loc><lastmod>2019-04-23T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%91%BD%E4%BB%A4/</loc><lastmod>2019-04-23T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/</loc><lastmod>2019-04-23T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/2019/04/19/mac%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90app/</loc><lastmod>2019-04-19T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2019/04/19/mac-%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90-app/</loc><lastmod>2019-04-19T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/hammerspoon/</loc><lastmod>2019-04-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/lua/</loc><lastmod>2019-04-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc><lastmod>2019-04-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/04/16/%E5%BC%BA%E5%A4%A7%E7%9A%84mac%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7hammerspoon/</loc><lastmod>2019-04-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/04/16/%E6%90%AD%E5%BB%BA-lua-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc><lastmod>2019-04-16T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -100,10 +108,10 @@
     <loc>/2019/04/02/%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83/</loc><lastmod>2019-04-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E7%BB%88%E7%AB%AF/</loc><lastmod>2019-03-18T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/03/18/%E8%A7%A3%E5%86%B3locale.error-unsupported-locale-setting%E9%94%99%E8%AF%AF/</loc><lastmod>2019-03-18T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/2019/03/12/%E4%BD%BF%E7%94%A8python%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</loc><lastmod>2019-03-12T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2019/03/12/%E4%BD%BF%E7%94%A8-python-%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</loc><lastmod>2019-03-12T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6/</loc><lastmod>2019-03-12T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/03/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2/</loc><lastmod>2019-03-10T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/react/</loc><lastmod>2019-02-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/react/</loc><lastmod>2019-02-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/web/</loc><lastmod>2019-02-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/02/28/%E5%88%9D%E5%AD%A6react%E5%9B%9B/</loc><lastmod>2019-02-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/02/25/%E5%88%9D%E5%AD%A6react%E4%B8%89/</loc><lastmod>2019-02-25T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -123,28 +131,27 @@
     <loc>/2019/01/25/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</loc><lastmod>2019-01-25T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/neovim/</loc><lastmod>2019-01-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/01/20/neovim-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</loc><lastmod>2019-01-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/vim/</loc><lastmod>2019-01-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/vim/</loc><lastmod>2019-01-20T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/01/15/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</loc><lastmod>2019-01-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/01/14/readfree-%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/</loc><lastmod>2019-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/linux/</loc><lastmod>2019-01-11T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/01/11/ubuntu16.04%E6%90%AD%E5%BB%BAwordpress/</loc><lastmod>2019-01-11T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/wordpress/</loc><lastmod>2019-01-11T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc><lastmod>2019-01-11T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2019/01/10/%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AEvim/</loc><lastmod>2019-01-10T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2018/12/25/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</loc><lastmod>2018-12-25T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2018/12/15/%E4%BD%BF%E7%94%A8virtualenv%E5%92%8Cvirtualenvwrapper%E6%90%AD%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</loc><lastmod>2018-12-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</loc><lastmod>2018-12-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E4%BB%A3%E7%90%86/</loc><lastmod>2018-10-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/%E7%BB%88%E7%AB%AF/</loc><lastmod>2018-10-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2018/10/15/%E7%BB%88%E7%AB%AFproxychains4%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc><lastmod>2018-10-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/ssh/</loc><lastmod>2018-02-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2018/02/15/%E6%96%AD%E5%BC%80ssh%E5%90%8E%E4%BB%8D%E7%84%B6%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</loc><lastmod>2018-02-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/exe/</loc><lastmod>2017-12-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</loc><lastmod>2017-12-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/12/15/%E5%B0%86py%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAexe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</loc><lastmod>2017-12-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/ubuntu/</loc><lastmod>2017-11-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/2017/11/13/%E5%A6%82%E6%9E%9Cubuntu%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</loc><lastmod>2017-11-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2017/11/13/%E5%A6%82%E6%9E%9C-ubuntu-%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</loc><lastmod>2017-11-13T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/10/15/%E5%9F%BA%E4%BA%8Ehexo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc><lastmod>2017-10-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/categories/scrapy/</loc><lastmod>2017-07-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/scrapy/</loc><lastmod>2017-07-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/07/15/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</loc><lastmod>2017-07-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E6%95%99%E7%A8%8B/</loc><lastmod>2017-07-15T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/07/12/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/</loc><lastmod>2017-07-12T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
@@ -167,15 +174,17 @@
     <loc>/tags/pymongo/</loc><lastmod>2017-03-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/03/02/%E5%AD%A6%E4%B9%A0mongodb%E4%BA%8C/</loc><lastmod>2017-03-02T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/03/01/%E5%AD%A6%E4%B9%A0mongodb%E4%B8%80/</loc><lastmod>2017-03-01T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</loc><lastmod>2017-02-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/2017/02/28/%E4%BD%BF%E7%94%A8-python-%E8%BF%9E%E6%8E%A5-mongodb/</loc><lastmod>2017-02-28T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/phantomjs/</loc><lastmod>2017-02-26T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/selenium/</loc><lastmod>2017-02-26T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/02/26/%E4%BD%BF%E7%94%A8selenium-phantomjs%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</loc><lastmod>2017-02-26T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/beautifulsoup4/</loc><lastmod>2017-01-19T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/01/19/beautifulsoup4-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc><lastmod>2017-01-19T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
-    <loc>/tags/%E7%BC%96%E7%A8%8B/</loc><lastmod>2017-01-19T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6python/</loc><lastmod>2017-01-19T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/tags/%E5%AD%A6%E4%B9%A0/</loc><lastmod>2017-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2017/01/14/%E7%9C%8B%E4%B9%A6%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%88%9D%E5%AD%A6-python-%E5%BF%83%E5%BE%97/</loc><lastmod>2017-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/%E7%BC%96%E7%A8%8B/</loc><lastmod>2017-01-14T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
+    <loc>/tags/email/</loc><lastmod>2016-12-09T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2016/12/09/%E5%88%A9%E7%94%A8python%E5%8F%91%E9%82%AE%E4%BB%B6/</loc><lastmod>2016-12-09T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/2016/11/05/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BF%85%E5%81%9A%E7%9A%84%E5%9B%9B%E4%BB%B6%E4%BA%8B/</loc><lastmod>2016-11-05T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url>
     <loc>/about/</loc><lastmod>2016-04-06T00:00:00+00:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url></urlset>

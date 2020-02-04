@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSH on 简讯</title>
+    <link>/tags/ssh/</link>
+    <description>Recent content in SSH on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Thu, 15 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>断开SSH后仍然运行命令</title>
+      <link>/2018/02/15/%E6%96%AD%E5%BC%80ssh%E5%90%8E%E4%BB%8D%E7%84%B6%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/15/%E6%96%AD%E5%BC%80ssh%E5%90%8E%E4%BB%8D%E7%84%B6%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;因为经常要在云服务器上跑一些程序，但是一旦断开ssh连接就意味着程序的结束。这里提供两个简单的办法，即使断开连接也能继续运行。&lt;/p&gt;
+&lt;p&gt;我们来简单的了解一下。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

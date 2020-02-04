@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
-    <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Html实现打字机效果</title>
+      <link>/2020/01/15/html%E5%AE%9E%E7%8E%B0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/15/html%E5%AE%9E%E7%8E%B0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C/</guid>
+      <description>&lt;p&gt;怎样让博客的标语更与众不同呢？&lt;/p&gt;
+&lt;p&gt;可以使用打字机效果，让标语一字一字打出来。这样看起来更有动感。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>使用三种语言实现斐波那契数列</title>
@@ -19,6 +29,15 @@
       
       <guid>/2019/05/08/%E4%BD%BF%E7%94%A8%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</guid>
       <description>&lt;p&gt;使用 &lt;code&gt;Python&lt;/code&gt;，&lt;code&gt;Lua&lt;/code&gt; 和 &lt;code&gt;JavaScript&lt;/code&gt; 实现斐波那契数列。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>页面点击出现桃心</title>
+      <link>/2019/04/02/%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/02/%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83/</guid>
+      <description>&lt;p&gt;&lt;code&gt;hexo&lt;/code&gt;博客或其他静态页面鼠标点击出现桃心操作。&lt;/p&gt;</description>
     </item>
     
     <item>

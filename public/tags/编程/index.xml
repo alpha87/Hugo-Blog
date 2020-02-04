@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
-    <lastBuildDate>Thu, 19 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jan 2017 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>BeautifulSoup4 文档学习记录</title>
-      <link>/2017/01/19/beautifulsoup4-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/01/19/beautifulsoup4-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
-      <description>花了点时间阅读了 Beautiful Soup 的官方文档。说实话，之前看到这些东西就头疼，密密麻麻全是字，真是不想看，不过没办法，东西总是要学习的，哪能说不看就不看呢</description>
-    </item>
     
     <item>
       <title>看书与实践|初学 Python 心得</title>

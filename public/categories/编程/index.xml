@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程 on 简讯</title>
+    <link>/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sat, 16 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为什么要调试代码</title>
+      <link>/2019/11/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%B0%83%E8%AF%95%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/11/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%B0%83%E8%AF%95%E4%BB%A3%E7%A0%81/</guid>
+      <description>说起调试，相信大家都不陌生。如果你不是经常调试代码，说明代码 bug 比较少，或者错误比较直观，再或者就是你并没有体会到调试代码带来的诸多方便和好处</description>
+    </item>
+    
+    <item>
+      <title>使用 pytest 来测试你的代码</title>
+      <link>/2019/09/15/%E4%BD%BF%E7%94%A8-pytest-%E6%9D%A5%E6%B5%8B%E8%AF%95%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/15/%E4%BD%BF%E7%94%A8-pytest-%E6%9D%A5%E6%B5%8B%E8%AF%95%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81/</guid>
+      <description>对于任何软件质量规划来说，测试都是一个重要的组成部分，并且在许多情况下它是唯一的组成部分。 ——《代码大全》 可见测试在整个项目开发过程中的地位</description>
+    </item>
+    
+    <item>
+      <title>Celery 使用小记</title>
+      <link>/2019/08/29/celery-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/29/celery-%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/</guid>
+      <description>Celery 是一个简单高效可靠的分布式系统。在处理大量消息，实时处理异步任务，定时执行任务，支持任务调度等方面使用起来更为灵活。 简单理解 Celery 就是发布任务</description>
+    </item>
+    
+    <item>
+      <title>使用 Python 抓取知乎美图（文末含福利）</title>
+      <link>/2019/07/01/%E4%BD%BF%E7%94%A8-python-%E6%8A%93%E5%8F%96%E7%9F%A5%E4%B9%8E%E7%BE%8E%E5%9B%BE%E6%96%87%E6%9C%AB%E5%90%AB%E7%A6%8F%E5%88%A9/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/01/%E4%BD%BF%E7%94%A8-python-%E6%8A%93%E5%8F%96%E7%9F%A5%E4%B9%8E%E7%BE%8E%E5%9B%BE%E6%96%87%E6%9C%AB%E5%90%AB%E7%A6%8F%E5%88%A9/</guid>
+      <description>之前写到宅宅生活收藏夹的部署方法，见 使用Flask，Nginx，Gunicorn，Supervisor完成网站部署。这次介绍一下如何抓取知乎</description>
+    </item>
+    
+    <item>
+      <title>使用Flask，Nginx，Gunicorn，Supervisor完成网站部署</title>
+      <link>/2019/06/14/%E4%BD%BF%E7%94%A8flasknginxgunicornsupervisor%E5%AE%8C%E6%88%90%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/14/%E4%BD%BF%E7%94%A8flasknginxgunicornsupervisor%E5%AE%8C%E6%88%90%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</guid>
+      <description>宅宅生活收藏夹小程序的 web 后端是 flask，因为只涉及到几个接口，flask 简单快速。 这篇文章记录一下整个部署的过程。 当我们使用 flask 开发完成 web 应</description>
+    </item>
+    
+    <item>
+      <title>Django 中的内置模板和过滤器</title>
+      <link>/2019/05/20/django-%E4%B8%AD%E7%9A%84%E5%86%85%E7%BD%AE%E6%A8%A1%E6%9D%BF%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/django-%E4%B8%AD%E7%9A%84%E5%86%85%E7%BD%AE%E6%A8%A1%E6%9D%BF%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8/</guid>
+      <description>&lt;p&gt;Django 中的内置模板和过滤器。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.djangoproject.com/zh-hans/2.2/ref/templates/builtins/#ref-templates-builtins-tags&#34;target=&#34;_blank&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django使用指南——使用表单</title>
+      <link>/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/19/django%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%BD%BF%E7%94%A8%E8%A1%A8%E5%8D%95/</guid>
+      <description>&lt;p&gt;表单是网站中最最常见和重要的功能了，可以实现与用户交互和交换数据。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django URL Pattern 学习记录</title>
+      <link>/2019/05/18/django-url-pattern-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/18/django-url-pattern-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;学习 Django 文档的 URL 部分，做些笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django 中的路径转换器</title>
+      <link>/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/18/django-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84%E8%BD%AC%E6%8D%A2%E5%99%A8/</guid>
+      <description>&lt;p&gt;在使用 Django 配置 URL 调度器的时候，多少会涉及到 URL 中参数的使用，那么 Django 中有多少路径转换器可以使用呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录Django时间处理遇到的坑</title>
+      <link>/2019/05/14/%E8%AE%B0%E5%BD%95django%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/14/%E8%AE%B0%E5%BD%95django%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</guid>
+      <description>&lt;p&gt;Django新项目生成的时候，我们首先需要更改默认的时区设置。有以下两点需要注意。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用bcrypt加密你的密码</title>
+      <link>/2019/05/13/%E4%BD%BF%E7%94%A8bcrypt%E5%8A%A0%E5%AF%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/13/%E4%BD%BF%E7%94%A8bcrypt%E5%8A%A0%E5%AF%86%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81/</guid>
+      <description>&lt;p&gt;在开发程序期间多多少少会涉及到用户密码的存储，有没有什么方便的办法呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用三种语言实现斐波那契数列</title>
+      <link>/2019/05/08/%E4%BD%BF%E7%94%A8%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/08/%E4%BD%BF%E7%94%A8%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</guid>
+      <description>&lt;p&gt;使用 &lt;code&gt;Python&lt;/code&gt;，&lt;code&gt;Lua&lt;/code&gt; 和 &lt;code&gt;JavaScript&lt;/code&gt; 实现斐波那契数列。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 Pyqt5 Designer 构建桌面应用</title>
+      <link>/2019/04/27/%E4%BD%BF%E7%94%A8-pyqt5-designer-%E6%9E%84%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/27/%E4%BD%BF%E7%94%A8-pyqt5-designer-%E6%9E%84%E5%BB%BA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/</guid>
+      <description>&lt;p&gt;文章分为三部分，主要是&lt;strong&gt;界面的设计&lt;/strong&gt;，&lt;strong&gt;py文件的代码编写&lt;/strong&gt;和&lt;strong&gt;其余部分的小修小补&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>尚未调用CoInitialize</title>
+      <link>/2019/04/24/%E5%B0%9A%E6%9C%AA%E8%B0%83%E7%94%A8coinitialize/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/24/%E5%B0%9A%E6%9C%AA%E8%B0%83%E7%94%A8coinitialize/</guid>
+      <description>&lt;p&gt;用pyqt写UI的时候，同时使用多线程和win32库操作可能会触发以下错误，顺手记录下来。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flask 框架使用自定义命令</title>
+      <link>/2019/04/23/flask-%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/23/flask-%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;在使用flask构建网页的时候，难免会遇到某一命令重复使用的情况。最典型的例子就是数据库的相关操作。在编码初期，如果操作数据库出错，最简单的办法就是删除重新生成一个新的数据库文件。但是反复生成或删除数据库的工作很无趣，有没有什么更简易的方法？官方提供了一个基于 &lt;code&gt;Click&lt;/code&gt; 命令行接口的自定义命令的功能，用这个功能我们可以把经常用到的操作写成一个方法，直接调用就可以了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搭建 Lua 开发环境</title>
+      <link>/2019/04/16/%E6%90%AD%E5%BB%BA-lua-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/16/%E6%90%AD%E5%BB%BA-lua-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.lua.org/&#34;target=&#34;_blank&#34;&gt;Lua&lt;/a&gt; 是一种强大、高效、轻量级、可嵌入的脚本语言。它支持过程编程、面向对象编程、函数编程、数据驱动编程和数据描述。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac下安装MySQL Python包</title>
+      <link>/2019/01/30/mac%E4%B8%8B%E5%AE%89%E8%A3%85mysql-python%E5%8C%85/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/30/mac%E4%B8%8B%E5%AE%89%E8%A3%85mysql-python%E5%8C%85/</guid>
+      <description>&lt;p&gt;简单几步解决问题：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用virtualenv和virtualenvwrapper搭建python虚拟环境</title>
+      <link>/2018/12/15/%E4%BD%BF%E7%94%A8virtualenv%E5%92%8Cvirtualenvwrapper%E6%90%AD%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/12/15/%E4%BD%BF%E7%94%A8virtualenv%E5%92%8Cvirtualenvwrapper%E6%90%AD%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;p&gt;使用python语言编程的过程中，难免会在系统里安装多个python版本。可能根据开发项目的需要，同一库会使用到不同版本，不同库之间版本不一致出现冲突等情况。这时候可以使用virtualenv管理虚拟环境。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>将py文件转换为exe可执行文件</title>
+      <link>/2017/12/15/%E5%B0%86py%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAexe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/15/%E5%B0%86py%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAexe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;有一个库可以实现py文件转换为exe可执行文件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（六）</title>
+      <link>/2017/07/15/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</link>
+      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/15/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</guid>
+      <description>&lt;p&gt;本文是介绍Scrapy基础用法的最后一篇，介绍Scrapy中Download Middleware的用法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（五）</title>
+      <link>/2017/07/12/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/12/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/</guid>
+      <description>&lt;p&gt;本篇介绍scrapy的item pipeline，具体操作要根据爬取的内容决定。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（四）</title>
+      <link>/2017/07/08/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</link>
+      <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/08/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</guid>
+      <description>&lt;p&gt;学习scrapy中spider的用法，主要介绍一些方法的使用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（三）</title>
+      <link>/2017/06/25/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/25/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</guid>
+      <description>&lt;p&gt;我们来聊聊scrapy中选择器的用法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（二）</title>
+      <link>/2017/06/22/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/22/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</guid>
+      <description>&lt;p&gt;通过这篇文章，我们会了解scrapy的命令行工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy学习笔记（一）</title>
+      <link>/2017/06/20/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
+      <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/20/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
+      <description>&lt;p&gt;作为scrapy学习笔记的第一篇，主要是了解此框架的基本使用。并通过一个demo感受scrapy框架的强大。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用多种方法爬取超美的壁纸网站</title>
+      <link>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;p&gt;最近发现了一个国外很不错的壁纸网站 Simple Desktop ，所有的壁纸都是扁平风格。如果你的系统主题是扁平风格，或者你对扁平化的壁纸情有独钟，那么这个网站一定适合你。因为所有的壁纸看着都很喜欢，就利用爬虫把壁纸的原图链接爬取下来。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用多种方法爬取超美的壁纸网站（续）</title>
+      <link>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99%E7%BB%AD/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/14/%E7%94%A8%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%88%AC%E5%8F%96%E8%B6%85%E7%BE%8E%E7%9A%84%E5%A3%81%E7%BA%B8%E7%BD%91%E7%AB%99%E7%BB%AD/</guid>
+      <description>&lt;p&gt;继续接着上篇文章介绍如何利用另外两种方式爬取 Simple Desktop 网站的壁纸。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>做一个魔力盒视频下载器——含GUI</title>
+      <link>/2017/03/16/%E5%81%9A%E4%B8%80%E4%B8%AA%E9%AD%94%E5%8A%9B%E7%9B%92%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%99%A8%E5%90%ABgui/</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/16/%E5%81%9A%E4%B8%80%E4%B8%AA%E9%AD%94%E5%8A%9B%E7%9B%92%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%99%A8%E5%90%ABgui/</guid>
+      <description>&lt;p&gt;昨天抽空做了一个魔力盒视频下载器。可以实现的功能有随机搜索视频下载，和一个简单的界面。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何实现简单的微信机器人</title>
+      <link>/2017/03/12/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/12/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <description>&lt;p&gt;最近发现了一个有趣的项目，利用Python制作一个简单的微信机器人。思路就是微信获取到信息，然后接入图灵机器人的API，再把信息发送给对方。听起来很有意思，实践一下吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 Python 连接 mongoDB</title>
+      <link>/2017/02/28/%E4%BD%BF%E7%94%A8-python-%E8%BF%9E%E6%8E%A5-mongodb/</link>
+      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/28/%E4%BD%BF%E7%94%A8-python-%E8%BF%9E%E6%8E%A5-mongodb/</guid>
+      <description>&lt;p&gt;之前使用的MySQL是关系型数据库，mongoDB是非关系型数据库（NoSQL）。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用selenium&#43;PhantomJS进行网络爬虫</title>
+      <link>/2017/02/26/%E4%BD%BF%E7%94%A8selenium-phantomjs%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/26/%E4%BD%BF%E7%94%A8selenium-phantomjs%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</guid>
+      <description>&lt;p&gt;Selenium本是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。PhantomJS是一个基于WebKit的服务器端 JavaScript API。它全面支持web而不需浏览器支持。使用selenium和PhantomJS这两个工具来爬虫，可以实现很多功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>利用Python发邮件</title>
+      <link>/2016/12/09/%E5%88%A9%E7%94%A8python%E5%8F%91%E9%82%AE%E4%BB%B6/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/09/%E5%88%A9%E7%94%A8python%E5%8F%91%E9%82%AE%E4%BB%B6/</guid>
+      <description>&lt;p&gt;在搜索python教程的时候，碰巧遇到了「 利用 python 发送电子邮件 」的教程，觉得很实用也比较有意思，所以就花了点时间学习发送邮件的脚本是怎样实现的。&lt;/p&gt;
+&lt;p&gt;我主要是利用SMTP（简单邮件传输协议）来实现邮件的发送。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

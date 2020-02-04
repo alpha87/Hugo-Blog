@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 QuantumultX 实现卡车极速自动签到</title>
+      <link>/2020/02/03/%E4%BD%BF%E7%94%A8-quantumultx-%E5%AE%9E%E7%8E%B0%E5%8D%A1%E8%BD%A6%E6%9E%81%E9%80%9F%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/03/%E4%BD%BF%E7%94%A8-quantumultx-%E5%AE%9E%E7%8E%B0%E5%8D%A1%E8%BD%A6%E6%9E%81%E9%80%9F%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</guid>
+      <description>卡车极速每天都有签到，机械化的操作最好还是交给机器去执行。 使用前提 QuantumultX（1.0.5版本及以上） 卡车极速账户（其他机场平台应</description>
+    </item>
+    
+    <item>
+      <title>Uniapp 开发 H5 简单记录</title>
+      <link>/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</guid>
+      <description>之前那台服务器过期了，所以网页版的宅宅生活收藏夹暂时不能用。 本来想就此放弃，但是有很多朋友私信问我，所以考虑还是继续开通这个知乎看图平台吧。</description>
+    </item>
+    
+    <item>
+      <title>使用Python操作telegram发送消息</title>
+      <link>/2020/02/01/%E4%BD%BF%E7%94%A8python%E6%93%8D%E4%BD%9Ctelegram%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/01/%E4%BD%BF%E7%94%A8python%E6%93%8D%E4%BD%9Ctelegram%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/</guid>
+      <description>用过 tg 的朋友一定认同 tg 是宇宙第一通讯工具，没记错的话应该是战斗民族俄罗斯的程序员开发的。 什么是 telegram Telegram 是跨平台的即时通信软件。其客户端是自由及开</description>
+    </item>
+    
+    <item>
+      <title>图片防盗链如何引用</title>
+      <link>/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/</guid>
+      <description>之前做宅宅生活收藏夹小程序的时候，碰巧避免了这个问题。估计是知乎把微信小程序的相关参数划入了白名单。 但是个人在制作网站的时候，一定会遇到个别</description>
+    </item>
     
     <item>
       <title>QuantumultX 配置文件以及常用的脚本推荐</title>
@@ -286,11 +322,11 @@
     </item>
     
     <item>
-      <title>Mac允许任何来源App</title>
-      <link>/2019/04/19/mac%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90app/</link>
+      <title>Mac 允许任何来源 App</title>
+      <link>/2019/04/19/mac-%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90-app/</link>
       <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/04/19/mac%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90app/</guid>
+      <guid>/2019/04/19/mac-%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90-app/</guid>
       <description>&lt;p&gt;如果在安装过程中遇到“应用已损坏”的问题，说明系统不允许安装其他来源的应用。&lt;/p&gt;
 &lt;p&gt;如何让Mac允许安装来自任何来源的app呢？只需一条简单命令。&lt;/p&gt;</description>
     </item>
@@ -344,11 +380,11 @@
     </item>
     
     <item>
-      <title>使用Python和大漠插件进行文字识别</title>
-      <link>/2019/03/12/%E4%BD%BF%E7%94%A8python%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</link>
+      <title>使用 Python 和大漠插件进行文字识别</title>
+      <link>/2019/03/12/%E4%BD%BF%E7%94%A8-python-%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</link>
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/03/12/%E4%BD%BF%E7%94%A8python%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</guid>
+      <guid>/2019/03/12/%E4%BD%BF%E7%94%A8-python-%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</guid>
       <description>&lt;p&gt;这是有关使用大漠插件的第一篇，之后还会有很多篇，用来介绍大漠插件的使用，和python的结合，到最终实现一个游戏脚本集合（目标）。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;家里有一台win7系统的电脑，平时可以用来玩玩游戏消磨时间。但是有时候有一些重复的操作实在是无趣，所以打算写个脚本，让其自动化执行。&lt;/p&gt;
@@ -568,11 +604,11 @@
     </item>
     
     <item>
-      <title>如果Ubuntu没声音怎么办</title>
-      <link>/2017/11/13/%E5%A6%82%E6%9E%9Cubuntu%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
+      <title>如果 Ubuntu 没声音怎么办</title>
+      <link>/2017/11/13/%E5%A6%82%E6%9E%9C-ubuntu-%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
       <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/11/13/%E5%A6%82%E6%9E%9Cubuntu%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
+      <guid>/2017/11/13/%E5%A6%82%E6%9E%9C-ubuntu-%E6%B2%A1%E5%A3%B0%E9%9F%B3%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
       <description>&lt;p&gt;先说一种特殊的情况，如果你是双系统，即有可能你是windows和ubuntu系统同时使用的话，完整关机一次可能问题就解决了。如果没有解决就继续往下看。&lt;/p&gt;</description>
     </item>
     
@@ -727,11 +763,11 @@
     </item>
     
     <item>
-      <title>使用Python连接mongoDB</title>
-      <link>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</link>
+      <title>使用 Python 连接 mongoDB</title>
+      <link>/2017/02/28/%E4%BD%BF%E7%94%A8-python-%E8%BF%9E%E6%8E%A5-mongodb/</link>
       <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/28/%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5mongodb/</guid>
+      <guid>/2017/02/28/%E4%BD%BF%E7%94%A8-python-%E8%BF%9E%E6%8E%A5-mongodb/</guid>
       <description>&lt;p&gt;之前使用的MySQL是关系型数据库，mongoDB是非关系型数据库（NoSQL）。&lt;/p&gt;</description>
     </item>
     

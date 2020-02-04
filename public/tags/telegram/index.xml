@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>telegram on 简讯</title>
+    <link>/tags/telegram/</link>
+    <description>Recent content in telegram on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/telegram/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Python操作telegram发送消息</title>
+      <link>/2020/02/01/%E4%BD%BF%E7%94%A8python%E6%93%8D%E4%BD%9Ctelegram%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/01/%E4%BD%BF%E7%94%A8python%E6%93%8D%E4%BD%9Ctelegram%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF/</guid>
+      <description>用过 tg 的朋友一定认同 tg 是宇宙第一通讯工具，没记错的话应该是战斗民族俄罗斯的程序员开发的。 什么是 telegram Telegram 是跨平台的即时通信软件。其客户端是自由及开</description>
+    </item>
+    
+  </channel>
+</rss>

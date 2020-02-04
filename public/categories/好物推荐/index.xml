@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 QuantumultX 实现卡车极速自动签到</title>
+      <link>/2020/02/03/%E4%BD%BF%E7%94%A8-quantumultx-%E5%AE%9E%E7%8E%B0%E5%8D%A1%E8%BD%A6%E6%9E%81%E9%80%9F%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/03/%E4%BD%BF%E7%94%A8-quantumultx-%E5%AE%9E%E7%8E%B0%E5%8D%A1%E8%BD%A6%E6%9E%81%E9%80%9F%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</guid>
+      <description>卡车极速每天都有签到，机械化的操作最好还是交给机器去执行。 使用前提 QuantumultX（1.0.5版本及以上） 卡车极速账户（其他机场平台应</description>
+    </item>
     
     <item>
       <title>QuantumultX 配置文件以及常用的脚本推荐</title>
@@ -71,6 +80,36 @@
       
       <guid>/2019/04/16/%E5%BC%BA%E5%A4%A7%E7%9A%84mac%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7hammerspoon/</guid>
       <description>&lt;p&gt;前两天有幸看到&lt;a href=&#34;http://www.hammerspoon.org/&#34;target=&#34;_blank&#34;&gt;Hammerspoon&lt;/a&gt;的介绍，可以说可玩性还是很大的，一个实用的脚本可以帮助我们节省不少时间，提升不少的工作效率。当然既然是脚本工具，就会有很多自定义的功能。简单了解Hammerspoon以后自己写了个小工具，用来在Mac菜单栏查看最新的少数派文章，点击后使用默认浏览器打开相关文章的链接。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Neovim 配置记录</title>
+      <link>/2019/01/20/neovim-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/20/neovim-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;第一次接触vim还是在玩树莓派的时候，当时打开 vim 想要退出界面是真的难，只能强行关闭终端。&lt;/p&gt;
+&lt;p&gt;pycharm 用来写 python 很顺手，但是功能太多也显得臃肿。&lt;/p&gt;
+&lt;p&gt;pycharm 的强大莫过于异常自动补全，跳转，代码调试功能，其他功能也很好，但是基本很少用到。&lt;/p&gt;
+&lt;p&gt;所以也是为了学习，还是勉强换成了 vim。用起来也有很多的不顺手。只能慢慢适应。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>模块化配置vim</title>
+      <link>/2019/01/10/%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AEvim/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/10/%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AEvim/</guid>
+      <description>&lt;p&gt;之前就想过模块化vim配置, 但是没有合适的教程, 一直拖着, 直到看到此文章&lt;a href=&#34;https://zhuanlan.zhihu.com/p/54864654&#34;target=&#34;_blank&#34;&gt;Vimrc Init.vim太长了？不存在的&lt;/a&gt;, 根据Pendragon大佬的vim配置, 模仿并修改了一波.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vim快捷用法</title>
+      <link>/2017/05/16/vim%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/16/vim%E5%BF%AB%E6%8D%B7%E7%94%A8%E6%B3%95/</guid>
+      <description>&lt;p&gt;整理了一些vim的快捷键用法和技巧操作。&lt;/p&gt;</description>
     </item>
     
   </channel>

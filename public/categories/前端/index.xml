@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on 简讯</title>
+    <link>/categories/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on 简讯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
+    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Uniapp 开发 H5 简单记录</title>
+      <link>/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/02/uniapp-%E5%BC%80%E5%8F%91-h5-%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95/</guid>
+      <description>之前那台服务器过期了，所以网页版的宅宅生活收藏夹暂时不能用。 本来想就此放弃，但是有很多朋友私信问我，所以考虑还是继续开通这个知乎看图平台吧。</description>
+    </item>
+    
+    <item>
+      <title>图片防盗链如何引用</title>
+      <link>/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/31/%E5%9B%BE%E7%89%87%E9%98%B2%E7%9B%97%E9%93%BE%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8/</guid>
+      <description>之前做宅宅生活收藏夹小程序的时候，碰巧避免了这个问题。估计是知乎把微信小程序的相关参数划入了白名单。 但是个人在制作网站的时候，一定会遇到个别</description>
+    </item>
+    
+    <item>
+      <title>Html实现打字机效果</title>
+      <link>/2020/01/15/html%E5%AE%9E%E7%8E%B0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/15/html%E5%AE%9E%E7%8E%B0%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C/</guid>
+      <description>&lt;p&gt;怎样让博客的标语更与众不同呢？&lt;/p&gt;
+&lt;p&gt;可以使用打字机效果，让标语一字一字打出来。这样看起来更有动感。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信小程序输入框的使用</title>
+      <link>/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>制作微信小程序会经常涉及到输入框的使用。 最简单的输入框 &amp;lt;!--index.wxml --&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; bindconfirm=&amp;#34;searchItem&amp;#34; placeholder=&amp;#34;搜索关键词&amp;#34; confirm-type=&amp;#34;search&amp;#34;&amp;gt;&amp;lt;/input&amp;gt; // index.js searchItem(event) { if (event.detail.value == &amp;#34;&amp;#34;) { wx.showToast({</description>
+    </item>
+    
+    <item>
+      <title>微信小程序如何使用 UI 组件库</title>
+      <link>/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-ui-%E7%BB%84%E4%BB%B6%E5%BA%93/</guid>
+      <description>&lt;p&gt;在创建小程序的时候，有些样式并不完全需要自己来写。&lt;/p&gt;
+&lt;p&gt;可以使用已经构建好的框架，比如官方的 UI 组件库 &lt;a href=&#34;https://weui.io/&#34;target=&#34;_blank&#34;&gt;WeUI&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;我们本次使用的组件库是有赞的 &lt;a href=&#34;https://youzan.github.io/vant-weapp/#/intro&#34;target=&#34;_blank&#34;&gt;Vant Weapp&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;使用基于小程序云开发，和本地开发大同小异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>页面点击出现桃心</title>
+      <link>/2019/04/02/%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/02/%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E6%A1%83%E5%BF%83/</guid>
+      <description>&lt;p&gt;&lt;code&gt;hexo&lt;/code&gt;博客或其他静态页面鼠标点击出现桃心操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信小程序初探</title>
+      <link>/2019/03/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2/</guid>
+      <description>&lt;p&gt;一直想着学习微信小程序，因为太懒一直耽搁。&lt;/p&gt;
+&lt;p&gt;主要看了请求API和将请求结果保存到&lt;code&gt;data&lt;/code&gt;里的部分，记录一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（四）</title>
+      <link>/2019/02/28/%E5%88%9D%E5%AD%A6react%E5%9B%9B/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/28/%E5%88%9D%E5%AD%A6react%E5%9B%9B/</guid>
+      <description>&lt;p&gt;我们在构建网页的时候，肯定不只有一个组件。当同时存在多个组件，且多个组件需要共用一些数据时，就产生了&lt;strong&gt;状态提升&lt;/strong&gt;的概念，也就是多个组件共用一个状态（数据）。之所以称之为提升，可能就是子组件的数据被提升到了父组件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（三）</title>
+      <link>/2019/02/25/%E5%88%9D%E5%AD%A6react%E4%B8%89/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/25/%E5%88%9D%E5%AD%A6react%E4%B8%89/</guid>
+      <description>&lt;p&gt;这一部分主要讲表单，以及相关的受控组件和非受控组件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（二）</title>
+      <link>/2019/02/18/%E5%88%9D%E5%AD%A6react%E4%BA%8C/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/18/%E5%88%9D%E5%AD%A6react%E4%BA%8C/</guid>
+      <description>&lt;p&gt;学习react就不得不提提&lt;a href=&#34;https://react.docschina.org/docs/introducing-jsx.html&#34;target=&#34;_blank&#34;&gt;JSX&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初学React（一）</title>
+      <link>/2019/02/17/%E5%88%9D%E5%AD%A6react%E4%B8%80/</link>
+      <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/17/%E5%88%9D%E5%AD%A6react%E4%B8%80/</guid>
+      <description>&lt;p&gt;瞎搞来瞎搞去，感觉前端还是挺有意思的，抽一段时间时间学习学习React，感受一下前端的魅力。也写几篇文章记录学习过程（要不然过几天脑袋一片空白，什么都不记得）。&lt;/p&gt;
+&lt;p&gt;这是学习React的第一天，主要以搭建环境和写一个小的测试demo为主。demo想都不用想，那必须是&lt;code&gt;Hello, World!&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

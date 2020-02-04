@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>2016-2020 Jianxun. | 岁月无婷无华✨</copyright>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 QuantumultX 实现卡车极速自动签到</title>
+      <link>/2020/02/03/%E4%BD%BF%E7%94%A8-quantumultx-%E5%AE%9E%E7%8E%B0%E5%8D%A1%E8%BD%A6%E6%9E%81%E9%80%9F%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/03/%E4%BD%BF%E7%94%A8-quantumultx-%E5%AE%9E%E7%8E%B0%E5%8D%A1%E8%BD%A6%E6%9E%81%E9%80%9F%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</guid>
+      <description>卡车极速每天都有签到，机械化的操作最好还是交给机器去执行。 使用前提 QuantumultX（1.0.5版本及以上） 卡车极速账户（其他机场平台应</description>
+    </item>
     
     <item>
       <title>QuantumultX 配置文件以及常用的脚本推荐</title>

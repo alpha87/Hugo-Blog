@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>使用Python和大漠插件进行文字识别</title>
-      <link>/2019/03/12/%E4%BD%BF%E7%94%A8python%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</link>
+      <title>使用 Python 和大漠插件进行文字识别</title>
+      <link>/2019/03/12/%E4%BD%BF%E7%94%A8-python-%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</link>
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/03/12/%E4%BD%BF%E7%94%A8python%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</guid>
+      <guid>/2019/03/12/%E4%BD%BF%E7%94%A8-python-%E5%92%8C%E5%A4%A7%E6%BC%A0%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</guid>
       <description>&lt;p&gt;这是有关使用大漠插件的第一篇，之后还会有很多篇，用来介绍大漠插件的使用，和python的结合，到最终实现一个游戏脚本集合（目标）。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;家里有一台win7系统的电脑，平时可以用来玩玩游戏消磨时间。但是有时候有一些重复的操作实在是无趣，所以打算写个脚本，让其自动化执行。&lt;/p&gt;
