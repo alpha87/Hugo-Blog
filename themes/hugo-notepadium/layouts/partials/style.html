@@ -75,7 +75,4 @@
 {{- $coreCSS = slice $coreCSS ("" | resources.FromString "css/_core.css") | resources.Concat "css/core.css" -}}
 {{- $coreCSS = $coreCSS | resources.Minify | resources.Fingerprint "sha384" -}}
 
-{{- $fontCSS := resources.Get "css/all.css" -}}
-
 <link rel="stylesheet" href="{{- $coreCSS.RelPermalink -}}" integrity="{{- $coreCSS.Data.Integrity -}}">
-<link rel="stylesheet" href="{{- $fontCSS.RelPermalink -}}" integrity="{{- $fontCSS.Data.Integrity -}}">

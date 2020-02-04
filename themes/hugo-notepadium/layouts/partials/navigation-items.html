@@ -4,33 +4,21 @@
     <nav class="nav">
     {{- if $nav.showCategories -}}
         <a class="nav item" href="{{- `/categories/` | relLangURL -}}">
-            <i class="fas fa-align-left"></i>&nbsp;分类
+            分类
         </a>
     {{- end -}}
     {{- if $nav.showTags -}}
         <a class="nav item" href="{{- `/tags/` | relLangURL -}}">
-            <i class="fas fa-tags"></i>&nbsp;标签
+            标签
         </a>
     {{- end -}}
+
     {{- range $nav.custom -}}
         {{- $url := .url | safeURL -}}
         {{- if strings.HasPrefix $url "/" -}}{{- $url = $url | relLangURL -}}{{- end -}}
         <a class="nav item" href="{{- $url -}}" 
-            {{- if strings.HasPrefix $url "http" -}}target="_blank"
-            {{- end -}}>
-            
-            <!-- 根据页面标题使用不同图标 -->
-            {{- if (eq .title "个人项目")}}
-            <i class="fas fa-cubes"></i>&nbsp;
-            {{- .title -}}
-            {{- end -}}
-            
-            {{- if (eq .title "关于")}}
-            <i class="fas fa-feather-alt"></i>&nbsp;
-            {{- .title -}}
-            {{- end -}}
-
-        </a>
+        {{- if strings.HasPrefix $url "http" -}}target="_blank"
+        {{- end -}}>{{- .title -}}</a>
     {{- end -}}
     </nav>
 </div>
