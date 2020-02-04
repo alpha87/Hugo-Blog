@@ -29,9 +29,9 @@ codeFences = true
 noClasses = false
 
 [params.syntax]
-use = "hljs"
-theme = "atom-one-light"
-darkTheme = "atom-one-dark"
+use = "chroma"
+theme = "vs"
+darkTheme = "xcode-dark"
 
 [params.nav]
 showCategories = true
