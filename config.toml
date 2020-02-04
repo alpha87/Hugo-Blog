@@ -29,7 +29,7 @@ codeFences = true
 noClasses = false
 
 [params.syntax]
-use = "chroma"
+use = "none"
 theme = "vs"
 darkTheme = "xcode-dark"
 
