@@ -1,7 +1,7 @@
 ---
 title: "Neovim 配置记录"
 date: 2019-01-20
-categories: ['Vim']
+categories: ['好物推荐']
 tags: ['Neovim', 'Vim']
 keywords: ['Neovim', '配置', '文件']
 draft: false

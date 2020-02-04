@@ -1,8 +1,8 @@
 ---
 title: "终端Proxychains4使用记录"
 date: 2018-10-15
-categories: ['终端']
-tags: ['代理']
+categories: ['学习']
+tags: ['代理', '终端']
 keywords: [ ]
 draft: false
 ---

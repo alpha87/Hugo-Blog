@@ -1,7 +1,7 @@
 ---
 title: "使用 Pyqt5 Designer 构建桌面应用"
 date: 2019-04-27
-categories: ['Python']
+categories: ['编程']
 tags: ['Pyqt5', 'GUI']
 keywords: ['构建', '用户界面']
 draft: false

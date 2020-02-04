@@ -2,7 +2,7 @@
 title: "断开SSH后仍然运行命令"
 date: 2018-02-15
 categories: ['Linux']
-tags: ['终端']
+tags: ['终端', 'SSH']
 keywords: [ ]
 draft: false
 ---

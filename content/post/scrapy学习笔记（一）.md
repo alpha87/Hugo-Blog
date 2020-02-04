@@ -1,8 +1,8 @@
 ---
 title: "Scrapy学习笔记（一）"
 date: 2017-06-20
-categories: ['Scrapy']
-tags: ['Python', '爬虫', '教程']
+categories: ['编程']
+tags: ['Python', '爬虫', '教程', 'Scrapy']
 keywords: ['Scrapy', '爬虫', 'Quotes']
 draft: false
 ---

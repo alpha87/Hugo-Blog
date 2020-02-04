@@ -1,7 +1,7 @@
 ---
 title: "使用Flask，Nginx，Gunicorn，Supervisor完成网站部署"
 date: 2019-06-14
-categories: ['Flask']
+categories: ['编程']
 tags: ['Flask', 'Nginx', 'Gunicorn', 'Supervisor']
 keywords: ['Web', '部署']
 draft: false

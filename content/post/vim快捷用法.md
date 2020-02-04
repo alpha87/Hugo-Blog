@@ -1,7 +1,7 @@
 ---
 title: "Vim快捷用法"
 date: 2017-05-16
-categories: ['Vim']
+categories: ['好物推荐']
 tags: ['Vim', '笔记']
 keywords: ['Vim', '操作', '快捷键']
 draft: false

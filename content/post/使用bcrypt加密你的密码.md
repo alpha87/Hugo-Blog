@@ -1,8 +1,8 @@
 ---
 title: "使用bcrypt加密你的密码"
 date: 2019-05-13
-categories: ['Python']
-tags: ['密码']
+categories: ['编程']
+tags: ['密码', 'Python']
 keywords: ['加密', '校验']
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: "微信小程序如何使用 UI 组件库"
 date: 2019-05-28
-categories: ['微信小程序']
-tags: ['框架', '组件库']
+categories: ['前端']
+tags: ['框架', '组件库', '微信小程序']
 keywords: [ ]
 draft: false
 ---

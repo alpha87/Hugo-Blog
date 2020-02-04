@@ -1,7 +1,7 @@
 ---
 title: "Windows系统各种错误修复记录"
 date: 2019-05-28
-categories: ['Windows']
+categories: ['学习']
 tags: ['Windows错误']
 keywords: ['Windows', '黑屏']
 draft: false

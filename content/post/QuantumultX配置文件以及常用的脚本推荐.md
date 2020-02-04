@@ -2,7 +2,7 @@
 title: "QuantumultX 配置文件以及常用的脚本推荐"
 date: 2020-01-27
 categories: ['好物推荐']
-tags: ['脚本', '科学上网']
+tags: ['脚本', '科学上网', 'QuantumultX']
 keywords: [ ]
 draft: false
 ---

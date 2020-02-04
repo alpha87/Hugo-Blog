@@ -1,8 +1,8 @@
 ---
 title: "尚未调用CoInitialize"
 date: 2019-04-24
-categories: ['Python']
-tags: ['Pyqt5']
+categories: ['编程']
+tags: ['Pyqt5', 'Python']
 keywords: [ ]
 draft: false
 ---

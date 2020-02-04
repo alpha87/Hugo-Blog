@@ -1,8 +1,8 @@
 ---
 title: "Docker 镜像下载慢怎么办"
 date: 2019-07-07
-categories: ['Docker']
-tags: ['加速服务']
+categories: ['学习']
+tags: ['加速服务', 'Docker']
 keywords: ['Docker', 'Daocloud']
 draft: false
 ---

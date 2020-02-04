@@ -1,7 +1,7 @@
 ---
 title: "模块化配置vim"
 date: 2019-01-10
-categories: ['Vim']
+categories: ['好物推荐']
 tags: ['Neovim', 'Vim']
 keywords: [ ]
 draft: false

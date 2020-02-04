@@ -1,8 +1,8 @@
 ---
 title: "做一个魔力盒视频下载器——含GUI"
 date: 2017-03-16
-categories: ['Python']
-tags: ['爬虫', 'GUI', '脚本']
+categories: ['编程']
+tags: ['爬虫', 'GUI', '脚本', 'Python']
 keywords: ['魔力盒', '视频', '爬取']
 draft: false
 ---

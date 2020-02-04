@@ -1,8 +1,8 @@
 ---
 title: "使用 Python 抓取知乎美图（文末含福利）"
 date: 2019-07-01
-categories: ['Python']
-tags: ['爬虫','知乎', '美图']
+categories: ['编程']
+tags: ['爬虫', '知乎', 'Python']
 keywords: ['抓取', '钓鱼贴', '宅宅生活收藏夹']
 draft: false
 ---

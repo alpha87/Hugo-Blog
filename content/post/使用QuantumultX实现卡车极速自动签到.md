@@ -2,7 +2,7 @@
 title: "使用 QuantumultX 实现卡车极速自动签到"
 date: 2020-02-03
 categories: ['好物推荐']
-tags: ['脚本', '科学上网']
+tags: ['脚本', '科学上网', 'QuantumultX']
 keywords: [ ]
 draft: false
 ---

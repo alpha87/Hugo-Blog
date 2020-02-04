@@ -2,7 +2,7 @@
 title: "基于LNMP搭建wordpress博客"
 date: 2019-09-17
 categories: ['贵在折腾']
-tags: ['博客']
+tags: ['博客', 'wordpress', 'LNMP']
 keywords: [ ]
 draft: false
 ---

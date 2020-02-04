@@ -1,8 +1,8 @@
 ---
 title: "将py文件转换为exe可执行文件"
 date: 2017-12-15
-categories: ['Python']
-tags: ['可执行文件']
+categories: ['编程']
+tags: ['可执行文件', 'Python', 'exe']
 keywords: [ ]
 draft: false
 ---

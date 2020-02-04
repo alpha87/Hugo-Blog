@@ -1,8 +1,8 @@
 ---
 title: "学python就业前景怎么样"
 date: 2017-04-21
-categories: ['Python']
-tags: ['爬虫', '数据分析']
+categories: ['学习']
+tags: ['爬虫', '数据分析', 'Python']
 keywords: [ ]
 draft: false
 ---

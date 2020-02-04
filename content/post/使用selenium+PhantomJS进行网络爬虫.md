@@ -1,8 +1,8 @@
 ---
 title: "使用selenium+PhantomJS进行网络爬虫"
 date: 2017-02-26
-categories: ['Python']
-tags: ['爬虫', 'selenium', 'PhantomJS']
+categories: ['编程']
+tags: ['爬虫', 'selenium', 'PhantomJS', 'Python']
 keywords: ['模拟', '浏览器', '爬虫']
 draft: false
 ---

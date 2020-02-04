@@ -1,8 +1,8 @@
 ---
 title: "Django URL Pattern 学习记录"
 date: 2019-05-18
-categories: ['Python']
-tags: ['Django', 'Web开发']
+categories: ['编程']
+tags: ['Django', 'Python', 'Web开发']
 keywords: ['文档']
 draft: false
 ---

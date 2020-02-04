@@ -2,7 +2,7 @@
 title: "BeautifulSoup4 文档学习记录"
 date: 2017-01-19
 categories: ["零基础学Python"]
-tags: ['Python', '编程']
+tags: ['Python', 'BeautifulSoup4']
 keywords: ["BeautifulSoup4", "文档", "学习"]
 draft: false
 ---

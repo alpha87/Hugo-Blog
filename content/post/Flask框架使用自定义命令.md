@@ -1,8 +1,8 @@
 ---
 title: "Flask 框架使用自定义命令"
 date: 2019-04-23
-categories: ['Flask']
-tags: ['自定义', '命令']
+categories: ['编程']
+tags: ['自定义', '命令', 'Flask']
 keywords: ['网页开发', '自定义命令']
 draft: false
 ---

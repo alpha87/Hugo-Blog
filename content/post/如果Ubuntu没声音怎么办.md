@@ -1,5 +1,5 @@
 ---
-title: "如果Ubuntu没声音怎么办"
+title: "如果 Ubuntu 没声音怎么办"
 date: 2017-11-13
 categories: ['Linux']
 tags: ['Ubuntu']

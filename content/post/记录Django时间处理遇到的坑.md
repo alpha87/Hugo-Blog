@@ -1,8 +1,8 @@
 ---
 title: "记录Django时间处理遇到的坑"
 date: 2019-05-14
-categories: ['Django']
-tags: ['时间处理']
+categories: ['编程']
+tags: ['时间处理', 'Django', 'Python']
 keywords: [ ]
 draft: false
 ---

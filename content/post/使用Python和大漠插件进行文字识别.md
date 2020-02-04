@@ -1,5 +1,5 @@
 ---
-title: "使用Python和大漠插件进行文字识别"
+title: "使用 Python 和大漠插件进行文字识别"
 date: 2019-03-12
 categories: ['学习']
 tags: ['Python', '大漠插件']

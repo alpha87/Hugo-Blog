@@ -1,8 +1,8 @@
 ---
 title: "使用virtualenv和virtualenvwrapper搭建python虚拟环境"
 date: 2018-12-15
-categories: ['Python']
-tags: ['虚拟环境']
+categories: ['编程']
+tags: ['虚拟环境', 'Python']
 keywords: ['搭建', '虚拟环境']
 draft: false
 ---

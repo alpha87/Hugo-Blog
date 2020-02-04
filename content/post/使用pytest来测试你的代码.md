@@ -1,8 +1,8 @@
 ---
 title: "使用 pytest 来测试你的代码"
 date: 2019-09-15
-categories: ['Python']
-tags: ['pytest', '测试']
+categories: ['编程']
+tags: ['pytest', '测试', 'Python']
 keywords: ['测试', '单元测试', '捕获异常']
 draft: false
 ---

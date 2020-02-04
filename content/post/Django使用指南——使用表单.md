@@ -1,8 +1,8 @@
 ---
 title: "Django使用指南——使用表单"
 date: 2019-05-19
-categories: ['Python']
-tags: ['Django', 'Web开发']
+categories: ['编程']
+tags: ['Django', 'Python', 'Web开发']
 keywords: ['文档']
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Mac允许任何来源App"
+title: "Mac 允许任何来源 App"
 date: 2019-04-19
 categories: ['贵在折腾']
 tags: ['Mac']

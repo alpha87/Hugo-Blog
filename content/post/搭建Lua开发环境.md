@@ -1,8 +1,8 @@
 ---
 title: "搭建 Lua 开发环境"
 date: 2019-04-16
-categories: ['Lua']
-tags: ['开发环境']
+categories: ['编程']
+tags: ['开发环境', 'Lua']
 keywords: [ ]
 draft: false
 ---

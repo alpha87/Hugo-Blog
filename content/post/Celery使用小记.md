@@ -1,8 +1,8 @@
 ---
 title: "Celery 使用小记"
 date: 2019-08-29
-categories: ['Python']
-tags: ["Celery", "任务队列"]
+categories: ['编程']
+tags: ["Celery", 'Python', "任务队列"]
 keywords: ["分布式"]
 draft: false
 ---

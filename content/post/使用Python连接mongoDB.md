@@ -1,8 +1,8 @@
 ---
-title: "使用Python连接mongoDB"
+title: "使用 Python 连接 mongoDB"
 date: 2017-02-28
-categories: ['Python']
-tags: ['MongoDB', 'Pymongo']
+categories: ['编程']
+tags: ['MongoDB', 'Pymongo', 'Python']
 keywords: ['mongo数据库', '连接']
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: "利用Python发邮件"
 date: 2016-12-09
-categories: ['Python']
-tags: ['脚本']
+categories: ['编程']
+tags: ['脚本', 'Python', 'Email']
 keywords: ['邮件']
 draft: false
 ---

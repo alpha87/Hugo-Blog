@@ -1,8 +1,8 @@
 ---
-title: "Mac下安装MySQL Python包"
+title: "Mac 下安装 MySQL Python 包"
 date: 2019-01-30
-categories: ['Python']
-tags: ['Mac', 'MySQL', 'MySQL-python']
+categories: ['编程']
+tags: [''Python', Mac', 'MySQL', 'MySQL-python']
 keywords: ['安装', 'MySQL-python']
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Django 中的内置模板和过滤器"
 date: 2019-05-20
-categories: ['Python']
-tags: ['Django', 'Web开发']
+categories: ['编程']
+tags: ['Django', 'Python', 'Web开发']
 keywords: ['文档']
 draft: false
 ---

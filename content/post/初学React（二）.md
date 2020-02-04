@@ -1,8 +1,8 @@
 ---
 title: "初学React（二）"
 date: 2019-02-18
-categories: ['React']
-tags: ['JavaScript', 'Web']
+categories: ['前端']
+tags: ['JavaScript', 'Web', 'React']
 keywords: ['Web开发']
 draft: false
 ---

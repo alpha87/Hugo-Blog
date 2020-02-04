@@ -1,8 +1,8 @@
 ---
 title: "Html实现打字机效果"
 date: 2020-01-15
-categories: ['JavaScript']
-tags: ['前端']
+categories: ['前端']
+tags: ['JavaScript']
 keywords: [ ]
 draft: false
 ---
