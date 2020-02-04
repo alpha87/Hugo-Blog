@@ -13,9 +13,12 @@
 
     {{- if ne $syntaxJS "" -}}
         {{- $js := resources.Get $syntaxJS | resources.Minify | resources.Fingerprint "sha384" -}}
+        
         <script src="{{- $js.RelPermalink -}}" integrity="{{- $js.Data.Integrity -}}"></script>
         {{- if eq $use "hljs" -}}
             <script async>hljs.initHighlightingOnLoad();</script>
         {{- end -}}
     {{- end -}}
+    {{- $fontJs := resources.Get "js/all.js" -}}
+    <script src="{{- $fontJs.RelPermalink -}}" integrity="{{- $fontJs.Data.Integrity -}}"></script>
 {{- end -}}
