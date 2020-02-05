@@ -2,15 +2,13 @@
 <section class="article labels">
     {{- range .Params.categories -}}
     {{- $url := print "/categories/" (. | urlize) "/" -}}
-    <a class="article category" href={{- $url | relLangURL -}}><span class="hashtag">
-        <i class="fas fa-align-left"></i>
-    </span>{{- . -}}</a>
+    <a class="article category" href={{- $url | relLangURL -}}>
+        <span class="hashtag">🍒</span>{{- . -}}</a>
     {{- end -}}
     {{- range .Params.tags -}}
     {{- $url := print "/tags/" ( . | urlize) "/" -}}
-    <a class="article tag" href={{- $url | relLangURL -}}><span class="hashtag">
-        <i class="fas fa-tag"></i>
-    </span>{{- . -}}</a>
+    <a class="article tag" href={{- $url | relLangURL -}}>
+        <span class="hashtag">🥑</span>{{- . -}}</a>
     {{- end -}}
     <!-- {{- range .Params.keywords -}}
     <span class="article keyword"><span class="hashtag">
