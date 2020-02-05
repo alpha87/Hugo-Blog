@@ -1,4 +1,4 @@
-{{- if and (ne .RelPermalink "/about/") (ne .RelPermalink "/projects/")}}
+{{- if and (ne .RelPermalink "/archive/") (ne .RelPermalink "/about/") (ne .RelPermalink "/projects/")}}
     {{- if and (not (eq .Params.single true)) (or .PrevInSection .NextInSection) -}}
     <section class="article navigation">
         {{- with .NextInSection -}}
