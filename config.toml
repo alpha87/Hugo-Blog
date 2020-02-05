@@ -35,6 +35,7 @@ darkTheme = "xcode-dark"
 
 [params.nav]
 showCategories = true
+showArchives = true
 showTags = true
 
 [permalinks]

@@ -6,4 +6,4 @@ one = " • One minute to read"
 other = " • {{ .Count }} minutes to read"
 
 [more]
-other = "more"
+other = " "

@@ -1,0 +1,23 @@
+{{- define "main" -}} {{- partial "article-header.html" . -}}
+<h6>
+  {{ range where .Site.Pages "Section" "post" }} {{ range (.Pages.GroupByDate "2006") }}
+  <details class="menu" open>
+    <summary>{{ .Key }}</summary>
+    {{ range .Pages }}
+    <article>
+      <a class="note title" style="margin-bottom: 10px; color: #838387;" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a class>
+    </article>
+    {{ end }}
+  </details>
+  {{ end }} {{ end }}
+</h6>
+{{- $justify := false -}} {{- if eq .Params.justify true -}} {{- $justify = true -}} {{- end -}}
+<article
+  class="article markdown-body"
+  {{- if $justify -}}style="text-align: justify;"
+  {{- end -}}>
+  {{- .Content -}}
+</article>
+{{- partial "article-labels.html" . -}} {{- partial "article-license.html" . -}}
+{{- partial "article-author.html" . -}} {{- partial "article-bottom-navigation.html" . -}} {{- partial "article-comments.html" . -}}
+{{- end -}}
